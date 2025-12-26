@@ -53,3 +53,30 @@
   object-fit: cover; /* video slider alanına sığar */
   display: block;
 }
+
+
+/* Masaüstü */
+.slider {
+  height: 420px; /* desktop */
+}
+
+/* Tablet (1024px altı) */
+@media (max-width: 1024px) {
+  .slider {
+    height: 360px; /* tablet ekranlar için */
+  }
+}
+
+/* Mobil (768px altı) */
+@media (max-width: 768px) {
+  .slider {
+    height: 240px; /* mobil slider yüksekliği */
+  }
+}
+
+/* Küçük mobil (480px altı) */
+@media (max-width: 480px) {
+  .slider {
+    height: 240px; /* küçük mobil */
+  }
+}
