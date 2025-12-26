@@ -80,3 +80,13 @@
     height: 240px; /* küçük mobil */
   }
 }
+
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* bu çok önemli */
+}
+
