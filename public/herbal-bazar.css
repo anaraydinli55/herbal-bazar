@@ -190,41 +190,36 @@
 }
 
 
-/* ===== SLIDER İLERİ / GERİ İŞARETLERİ – SOL ALT ===== */
+/* ===== SLIDER İLERİ / GERİ İŞARETLERİ – SOL ALT, SADE ===== */
 .slider-nav {
   position: absolute;
-  bottom: 10px;   /* alt boşluk */
-  left: 10px;     /* sol boşluk */
+  bottom: 10px;   /* sol alt köşe boşluğu */
+  left: 10px;
   display: flex;
-  gap: 7mm;       /* işaretler arası mesafe */
+  gap: 7mm;       /* işaretler arası boşluk */
   z-index: 20;
 }
 
 .slider-nav button {
-  background: rgba(0,0,0,0.3); /* hafif şeffaf daire arka plan, istersen 0 yapabilirsin */
-  border: none;
-  border-radius: 50%;           /* yuvarlak şekil */
-  width: 40px;                  /* orta boy daire */
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;                  /* işaret rengi */
-  font-size: 20px;              /* okunaklı boyut */
-  font-weight: 700;             /* kalın */
-  cursor: pointer;
+  background: none;      /* arka plan kaldırıldı */
+  border: none;          /* kenarlık yok */
+  padding: 0;
+  margin: 0;
+  color: #fff;           /* işaret rengi */
+  font-size: 32px;       /* kalın ve orta boy */
+  font-weight: 700;
   line-height: 1;
+  cursor: pointer;
 }
 
+/* Hover efekt (opsiyonel) */
 .slider-nav button:hover {
-  background: rgba(0,0,0,0.5); /* hover hafif koyulaşır */
+  opacity: 0.7;
 }
 
 /* Mobil uyumlu ayar */
 @media (max-width: 768px) {
   .slider-nav button {
-    width: 32px;
-    height: 32px;
-    font-size: 16px;
+    font-size: 26px;
   }
 }
