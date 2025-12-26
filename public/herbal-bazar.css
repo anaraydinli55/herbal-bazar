@@ -1,1 +1,27 @@
-
+.slide-content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #fff;
+  max-width: 400px;
+  background: rgba(0,0,0,0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+.slide-content h2 {
+  font-size: 28px;
+  color: #8e44ad;
+}
+.slide-content p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.slide-content .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #8e44ad;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
