@@ -1,21 +1,65 @@
+/* ================== SLIDER GENEL ================== */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 420px; /* Masaüstü varsayılan yüksekliği */
+  overflow: hidden;
+  background: #000;
+  border-radius: 10px;
+}
+
+/* Slider içindeki tüm slaytlar */
+.slides {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Slider içindeki video/resim */
+.slide img,
+.slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ================== SLIDE CONTENT ================== */
 .slide-content {
   position: absolute;
   bottom: 50px;
   left: 50px;
-  color: #fff;
   max-width: 400px;
-  background: rgba(0,0,0,0.4);
   padding: 20px;
   border-radius: 10px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
+
 .slide-content h2 {
   font-size: 28px;
   color: #8e44ad;
 }
+
 .slide-content p {
   font-size: 16px;
   margin: 10px 0;
 }
+
 .slide-content .btn {
   display: inline-block;
   padding: 10px 20px;
@@ -26,9 +70,43 @@
   font-weight: bold;
 }
 
+/* ================== SLIDER NAV (İLERİ/GERİ) ================== */
+.slider-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 7mm;
+  z-index: 20;
+}
 
+.slider-nav button {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.slider-nav button:hover {
+  opacity: 0.7;
+}
+
+/* ================== MEDYA & MOBİL UYUMLULUK ================== */
+@media (max-width: 1024px) {
+  .slider {
+    height: 360px;
+  }
+}
 
 @media (max-width: 768px) {
+  .slider {
+    height: 240px;
+  }
   .slide-content {
     bottom: 20px;
     left: 20px;
@@ -45,181 +123,13 @@
     padding: 8px 16px;
     font-size: 14px;
   }
-}
-
-/* === SLIDER VIDEO FIX (KIRPMA YOK, MOBIL UYUMLU) === */
-
-.slider {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  background: #000;
-}
-
-.slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* === SLIDER HEIGHT & VIDEO OPTIMIZATION === */
-
-.slider {
-  width: 100%;
-  height: 420px; /* ⬇️ desktop daha kısa */
-  overflow: hidden;
-  background: #000;
-}
-
-.slides {
-  display: flex;
-  width: 300%;
-  height: 100%;
-  transition: transform 0.6s ease;
-}
-
-.slide {
-  position: relative;
-  flex: 0 0 100%;
-  height: 100%;
-  overflow: hidden;
-  background: #000;
-}
-
-/* Video ekranı doldurur ama aşırı kırpmaz */
-.slide video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-/* Mobil ayar */
-@media (max-width: 768px) {
-  .slider {
-    height: 240px; /* ⬇️ mobil ideal */
-  }
-}
-
-@media (max-width: 480px) {
-  .slider {
-    height: 240px; /* ⬇️ küçük ekran */
-  }
-}
-
-/* SLIDER YÜKSEKLİK KONTROLÜ */
-.slider {
-  height: 420px; /* masaüstü */
-}
-
-@media (max-width: 1024px) {
-  .slider {
-    height: 360px; /* tablet */
-  }
-}
-
-@media (max-width: 768px) {
-  .slider {
-    height: 2400px; /* mobil */
-  }
-}
-
-@media (max-width: 480px) {
-  .slider {
-    height: 200px; /* küçük telefon */
-  }
-}
-
-/* VIDEO SLIDER İÇİN TAM OTURMA */
-.slide video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  display: block;
-}
-
-/* ==== SLIDER YÜKSEKLİK KONTROLÜ ==== */
-.slider {
-  width: 100%;
-  height: 420px; /* desktop */
-  position: relative;
-  overflow: hidden;
-}
-
-@media (max-width: 1024px) {
-  .slider {
-    height: 360px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slider {
-    height: 240px; /* mobil */
-  }
-}
-
-@media (max-width: 480px) {
-  .slider {
-    height: 200px; /* küçük mobil */
-  }
-}
-
-/* ==== SLIDE ==== */
-.slide {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-/* ==== VIDEO AYARI (KRİTİK) ==== */
-.slide video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  object-fit: cover;
-}
-
-
-/* ===== SLIDER İLERİ / GERİ İŞARETLERİ – SOL ALT, SADE ===== */
-.slider-nav {
-  position: absolute;
-  bottom: 10px;   /* sol alt köşe boşluğu */
-  left: 10px;
-  display: flex;
-  gap: 7mm;       /* işaretler arası boşluk */
-  z-index: 20;
-}
-
-.slider-nav button {
-  background: none;      /* arka plan kaldırıldı */
-  border: none;          /* kenarlık yok */
-  padding: 0;
-  margin: 0;
-  color: #fff;           /* işaret rengi */
-  font-size: 32px;       /* kalın ve orta boy */
-  font-weight: 700;
-  line-height: 1;
-  cursor: pointer;
-}
-
-/* Hover efekt (opsiyonel) */
-.slider-nav button:hover {
-  opacity: 0.7;
-}
-
-/* Mobil uyumlu ayar */
-@media (max-width: 768px) {
   .slider-nav button {
     font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 200px;
   }
 }
