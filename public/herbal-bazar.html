@@ -3,66 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar - BÜKAŞ</title>
-  <link rel="icon" type="image/png" href="images/ressam.png">
-  <link rel="apple-touch-icon" href="images/ressam.png">
-
-  <!-- Google Fonts -->
+  <title>Herbal Bazar</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="herbal-bazar.css">
+  <style>
+    /* Temel stil */
+    body {
+      margin: 0;
+      font-family: 'Architects Daughter', cursive;
+      background-color: #0a0a0a;
+      color: #eee;
+    }
+    a { text-decoration: none; color: inherit; }
+    h2 { color: #8e44ad; text-align: center; margin-top: 40px; }
 
-  <!-- Tema CSS -->
-  <link rel="stylesheet" href="https://bukas.com.tr/wp-content/themes/goya/style.css">
-  <link rel="stylesheet" href="https://bukas.com.tr/wp-content/themes/goya/assets/css/vendor/magnific-popup.css">
-  <link rel="stylesheet" href="https://bukas.com.tr/wp-content/themes/goya/assets/css/vendor/slick.css">
+    /* Slider */
+    .slider {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      overflow: hidden;
+      margin-bottom: 50px;
+    }
+    .slides {
+      display: flex;
+      width: 300%; /* 3 slide */
+      height: 100%;
+      transition: all 0.5s ease-in-out;
+    }
+    .slide {
+      width: 100%;
+      flex-shrink: 0;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .slider-nav {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .slider-nav button {
+      background-color: rgba(142, 68, 173, 0.7);
+      border: none;
+      padding: 10px 15px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .slider-nav button:hover { background-color: #8e44ad; }
 
-  <!-- WP Rocket & Lazy Load uyumlu -->
+    /* Ürün kartları */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 20px 50px;
+    }
+    .card {
+      background-color: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      padding: 15px;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.05); }
+    .card img { width: 100%; border-radius: 10px; }
+    .card h3 { margin: 10px 0; color: #8e44ad; }
+    .card p { font-size: 14px; color: #ccc; }
+    .card button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background-color: #8e44ad;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .card button:hover { background-color: #6f2a9f; }
+  </style>
 </head>
-<body class="page-template-default page page-id-0">
+<body>
 
-  <!-- Header -->
-  <header class="site-header">
-    <a href="index.html" class="logo">BÜKAŞ</a>
-    <nav class="main-nav">
-      <a href="index.html">Ana səhifə</a>
-      <a href="herbal-bazar.html">Herbal Bazar</a>
-    </nav>
-  </header>
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+      <div class="slide" style="background-image: url('images/slider1.jpg');"></div>
+      <div class="slide" style="background-image: url('images/slider2.jpg');"></div>
+      <div class="slide" style="background-image: url('images/slider3.jpg');"></div>
+    </div>
+    <div class="slider-nav">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
 
-  <!-- Ana İçerik -->
-  <main class="site-main">
-    <section class="hero-section">
-      <h1>Herbal Bazar</h1>
-      <p>Orqanik və təbii məhsulların onlayn bazarı</p>
-    </section>
+  <!-- Ürünler -->
+  <h2>🌿 Herbal Bazar Məhsulları</h2>
+  <div class="products">
+    <div class="card">
+      <img src="images/product1.jpg" alt="Product 1">
+      <h3>Bitki Çayı</h3>
+      <p>Orqanik və təbii qarışıq bitki çayı.</p>
+      <button>Alışveriş et</button>
+    </div>
+    <div class="card">
+      <img src="images/product2.jpg" alt="Product 2">
+      <h3>Ətirli Yağ</h3>
+      <p>100% təbii esansial yağ.</p>
+      <button>Alışveriş et</button>
+    </div>
+    <div class="card">
+      <img src="images/product3.jpg" alt="Product 3">
+      <h3>Bitki Tozu</h3>
+      <p>Orqanik bitki tozu gündəlik istifadəyə.</p>
+      <button>Alışveriş et</button>
+    </div>
+  </div>
 
-    <!-- Ürün veya slider alanı -->
-    <section class="product-section">
-      <div class="product-grid">
-        <!-- Örnek ürün kartı -->
-        <div class="product-card">
-          <img src="images/product-01.jpg" alt="Ürün 1">
-          <h2>Ürün 1</h2>
-          <p>Qısa təsvir</p>
-          <button class="add-to-cart">Səbətə əlavə et</button>
-        </div>
-        <div class="product-card">
-          <img src="images/product-02.jpg" alt="Ürün 2">
-          <h2>Ürün 2</h2>
-          <p>Qısa təsvir</p>
-          <button class="add-to-cart">Səbətə əlavə et</button>
-        </div>
-      </div>
-    </section>
-  </main>
+  <script>
+    // Slider JS
+    const slides = document.querySelector('.slides');
+    const slideCount = slides.children.length;
+    let index = 0;
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <p>© 2025 BÜKAŞ. Bütün hüquqlar qorunur.</p>
-  </footer>
+    document.getElementById('next').addEventListener('click', () => {
+      index = (index + 1) % slideCount;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
+    document.getElementById('prev').addEventListener('click', () => {
+      index = (index - 1 + slideCount) % slideCount;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    });
 
-  <!-- JS Scriptler (bukas sayfasına benzer) -->
-  <script src="https://bukas.com.tr/wp-includes/js/jquery/jquery.min.js"></script>
-  <script src="https://bukas.com.tr/wp-content/themes/goya/assets/js/vendor/slick.min.js"></script>
-  <script src="https://bukas.com.tr/wp-content/themes/goya/assets/js/goya-app.min.js"></script>
+    // Otomatik slider (opsiyonel)
+    setInterval(() => {
+      index = (index + 1) % slideCount;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }, 5000);
+  </script>
 </body>
 </html>
