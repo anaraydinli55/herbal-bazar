@@ -81,16 +81,17 @@
 }
 
 .slider-nav button {
-  background: none;
-  border: none;
+  background: none;   /* arka plan kaldırıldı */
+  border: none;       /* kenarlık yok */
   padding: 0;
   margin: 0;
-  color: #fff;
-  font-size: 32px;
+  color: #fff;        /* ok rengi beyaz */
+  font-size: 32px;    /* kalın ve orta boy */
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
 }
+
 
 .slider-nav button:hover {
   opacity: 0.7;
