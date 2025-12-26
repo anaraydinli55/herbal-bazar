@@ -96,23 +96,21 @@
   bottom: 50px;
   left: 50px;
   max-width: 400px;
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.4); /* her slide için şeffaf arka plan */
-  color: #fff;
-  font-weight: 700;
+  padding: 0; /* arka plan yok, padding isteğe bağlı */
+  color: #fff; /* beyaz yazı */
+  font-weight: 700; /* kalın harfler */
   z-index: 10; /* video üstünde */
 }
 
 .slide-content h2 {
-  font-size: 32px;
+  font-size: 32px; /* büyük başlık */
   color: #fff;
   font-weight: 800;
   margin-bottom: 10px;
 }
 
 .slide-content p {
-  font-size: 18px;
+  font-size: 18px; /* okunaklı metin */
   line-height: 1.4;
   color: #fff;
   font-weight: 700;
@@ -122,7 +120,7 @@
 .slide-content .btn {
   display: inline-block;
   padding: 12px 24px;
-  background-color: rgba(142, 68, 173, 0.8);
+  background-color: rgba(142, 68, 173, 0.8); /* buton varsa renkli */
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
@@ -136,7 +134,6 @@
     bottom: 20px;
     left: 20px;
     max-width: 90%;
-    padding: 15px;
   }
   .slide-content h2 {
     font-size: 24px;
