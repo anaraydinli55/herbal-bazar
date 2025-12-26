@@ -63,40 +63,66 @@
   height: 100%;
 }
 
-/* Video slider içine tam sığar, kırpılmaz */
-.slide video {
+/* === SLIDER & VIDEO FINAL FIX === */
+
+.slider {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: contain;       /* 🔴 KIRPMA YOK */
-  object-position: center;
-  display: block;
+  height: 500px;
+  overflow: hidden;
   background: #000;
 }
 
-/* Üzerindeki yazılar sabit kalsın */
+.slides {
+  display: flex;
+  width: 300%; /* 3 slide */
+  height: 100%;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  position: relative;
+  flex: 0 0 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+/* Video slider alanını TAM doldurur */
+.slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;   /* 🔥 SİYAH ALAN YOK */
+}
+
+/* Üst yazılar */
 .slide-content {
   position: absolute;
   bottom: 50px;
   left: 50px;
-  color: #fff;
+  z-index: 5;
   max-width: 420px;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0,0,0,0.45);
   padding: 20px;
   border-radius: 12px;
-  z-index: 2;
+  color: #fff;
 }
 
-/* Mobil ayarlar */
+/* Mobil */
 @media (max-width: 768px) {
   .slider {
-    height: 300px;
+    height: 320px;
   }
 
   .slide-content {
     bottom: 20px;
     left: 20px;
     max-width: 90%;
-    padding: 15px;
+    padding: 14px;
   }
 
   .slide-content h2 {
@@ -110,8 +136,6 @@
 
 @media (max-width: 480px) {
   .slider {
-    height: 300px;
+    height: 260px;
   }
 }
-
-
