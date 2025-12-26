@@ -144,3 +144,47 @@
   display: block;
 }
 
+/* ==== SLIDER YÜKSEKLİK KONTROLÜ ==== */
+.slider {
+  width: 100%;
+  height: 420px; /* desktop */
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    height: 360px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+    height: 280px; /* mobil */
+  }
+}
+
+@media (max-width: 480px) {
+  .slider {
+    height: 240px; /* küçük mobil */
+  }
+}
+
+/* ==== SLIDE ==== */
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* ==== VIDEO AYARI (KRİTİK) ==== */
+.slide video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
