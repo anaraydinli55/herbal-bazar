@@ -102,7 +102,7 @@
 /* Mobil ayar */
 @media (max-width: 768px) {
   .slider {
-    height: 300px; /* ⬇️ mobil ideal */
+    height: 240px; /* ⬇️ mobil ideal */
   }
 }
 
@@ -125,13 +125,13 @@
 
 @media (max-width: 768px) {
   .slider {
-    height: 300px; /* mobil */
+    height: 2400px; /* mobil */
   }
 }
 
 @media (max-width: 480px) {
   .slider {
-    height: 260px; /* küçük telefon */
+    height: 200px; /* küçük telefon */
   }
 }
 
@@ -160,13 +160,13 @@
 
 @media (max-width: 768px) {
   .slider {
-    height: 280px; /* mobil */
+    height: 240px; /* mobil */
   }
 }
 
 @media (max-width: 480px) {
   .slider {
-    height: 240px; /* küçük mobil */
+    height: 200px; /* küçük mobil */
   }
 }
 
