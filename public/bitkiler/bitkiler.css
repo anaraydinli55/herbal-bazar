@@ -133,3 +133,22 @@ footer {
     padding: 16px 8px;
   }
 }
+
+@media (max-width: 480px) {
+  .instagram-footer img {
+    width: 64px;
+  }
+}
+
+
+.instagram-footer img {
+  width: 80px;
+  height: auto;
+  border-radius: 16px;
+  transition: transform 0.2s ease;
+}
+
+.instagram-footer a:hover img {
+  transform: scale(1.05);
+}
+
