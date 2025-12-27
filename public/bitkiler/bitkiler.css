@@ -89,3 +89,45 @@
   font-weight: 500; /* qalınlıq artırmaq üçün */
 }
 
+/* ========== INSTAGRAM ========== */
+.instagram-footer {
+  display: flex;
+  flex-direction: column;  /* dikey hizalama */
+  align-items: center;
+  gap: 4px;
+  margin: 20px 0 10px;
+  text-align: center;
+}
+
+.instagram-footer img {
+  width: 60px;
+  height: 60px;
+}
+
+.instagram-footer a {
+  color: #E1306C;
+  font-weight: 800;
+  font-size: 18px;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;  /* emoji ve yazı dikey */
+  align-items: center;
+  gap: 4px;
+}
+
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 13px;
+    padding: 16px 8px;
+  }
+}
