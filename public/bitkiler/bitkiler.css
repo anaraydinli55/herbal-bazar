@@ -101,8 +101,10 @@
 
 .instagram-footer img {
   width: 60px;
-  height: 60px;
+  height: auto;
+  display: block;
 }
+
 
 .instagram-footer a {
   color: #E1306C;
