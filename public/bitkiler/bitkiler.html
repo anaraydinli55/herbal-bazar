@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbal Bazar – Bitkilər</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Architects Daughter', cursive;
+      background-color: #000;
+      color: #fff;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    /* Kartlar */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 0 20px 60px;
+    }
+
+    .card {
+      background-color: #111;
+      border-radius: 16px;
+      padding: 16px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .card h3 {
+      margin: 14px 0 8px;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #ccc;
+      line-height: 1.4;
+    }
+
+    .card button {
+      margin-top: 12px;
+      padding: 10px 18px;
+      background-color: #222;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #333;
+    }
+
+    /* Instagram */
+    .instagram-footer {
+      text-align: center;
+      padding: 30px 0 10px;
+    }
+
+    .instagram-footer a {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .instagram-footer img {
+      width: 28px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h2>🌿 Herbal Bazar Məhsulları</h2>
+
+<div class="products">
+
+  <div class="card">
+    <img src="images/mehsul1.jpg" alt="">
+    <h3>Bitki Çayları</h3>
+    <p>Orqanik və təbii bitkilər.</p>
+    <button>Məhsulları gör</button>
+  </div>
+
+  <div class="card">
+    <img src="images/yaglar.jpeg" alt="">
+    <h3>Saf Toxum Yağları</h3>
+    <p>Qarazirə, Balqabaq, Kətan və s.</p>
+    <button>Məhsulları gör</button>
+  </div>
+
+  <div class="card">
+    <img src="images/banka.jpg" alt="">
+    <h3>Təbii Qarışımlar</h3>
+    <p>Müalicəvi məcunlar.</p>
+    <button>Məhsulları gör</button>
+  </div>
+
+  <div class="card">
+    <img src="images/sabun.jpg" alt="">
+    <h3>Təbii Sabunlar</h3>
+    <p>100% bitki tərkibli.</p>
+    <button>Məhsulları gör</button>
+  </div>
+
+</div>
+
+<div class="instagram-footer">
+  <a href="https://instagram.com/derman_bitkileri" target="_blank">
+    <img src="images/instaqram1.jpg" alt="">
+    Instagram
+  </a>
+</div>
+
+<footer>
+  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+</footer>
+
+</body>
+</html>
