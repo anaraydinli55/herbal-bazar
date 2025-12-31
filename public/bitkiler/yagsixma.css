@@ -1,0 +1,38 @@
+/* ÜMUMİ TƏHLÜKƏSİZLİK */
+* {
+  box-sizing: border-box;
+}
+
+/* PRODUCTS KONTEYNERİ */
+.products {
+  max-width: 1200px;   /* desktop üçün */
+  margin: 0 auto;
+  padding: 0 15px;     /* mobil daşmanın qarşısını alır */
+}
+
+/* CARD */
+.card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  overflow: hidden;    /* 🔴 ƏSAS HƏLL */
+}
+
+/* VIDEO */
+.product-video {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* MOBİL ÜÇÜN ƏLAVƏ TƏHLÜKƏ */
+@media (max-width: 768px) {
+  .product-video {
+    max-height: 220px;   /* istəsən dəyiş */
+  }
+}
