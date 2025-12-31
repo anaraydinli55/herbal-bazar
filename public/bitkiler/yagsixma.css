@@ -36,3 +36,26 @@
     max-height: 220px;   /* istəsən dəyiş */
   }
 }
+
+
+.products {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: visible;
+}
+
+.product-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
