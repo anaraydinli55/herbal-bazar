@@ -117,28 +117,35 @@
 <div class="products">
 
   <div class="card">
-    <!-- Video üçün düzgün etiket -->
-    <video class="product-video" src="../images/yagsixma.mp4" autoplay loop muted playsinline></video>
+
+    <!-- Video -->
+    <video class="product-video" autoplay loop muted playsinline>
+      <source src="../images/yagsixma.mp4" type="video/mp4">
+      Brauzeriniz video dəstəkləmir.
+    </video>
 
     <h3>Soyuq Yağ Sıxma Aparatı</h3>
     <h3>100% Təbii Toxum Yağları</h3>
-    <p>
-      <div class="content">
-        <!-- Buraya məhsulun açıqlamasını əlavə edə bilərsiniz -->
-      </div>
-    </p>
+
+    <!-- Açıqlama üçün ayrıca div -->
+    <div class="content">
+      <!-- Buraya məhsul açıqlaması yaza bilərsən -->
+    </div>
+
   </div>
 </div>
 
+<!-- NAV BUTTONLAR -->
 <div class="nav-buttons">
   <a href="bitkiler.html" class="btn">⇦ Geri</a>
   <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
   <a href="bitkiler.html" class="btn">⇨ İrəli</a>
 </div>
 
+<!-- INSTAGRAM -->
 <div class="instagram-footer">
   <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
+    <img src="images/instaqram1.jpg" alt="Instagram">
     Instagram
   </a>
 </div>
@@ -146,52 +153,3 @@
 <footer>
   &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
 </footer>
-
-<style>
-/* Videonu düzgün ölçüləndirmək */
-.product-video {
-  width: 100%;       /* konteynerin eni ilə uyğun olsun */
-  height: auto;      /* proporsional qalmasını təmin edir */
-  border-radius: 10px; /* istəyə görə radius əlavə olunur */
-  display: block;
-  margin-bottom: 15px;
-  object-fit: cover;  /* video konteyneri doldursun */
-}
-
-/* Card stili */
-.card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-}
-
-/* Nav buttonlar */
-.nav-buttons .btn {
-  text-decoration: none;
-  background-color: #6a0dad;
-  color: #fff;
-  padding: 10px 15px;
-  margin: 5px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* Instagram footer */
-.instagram-footer a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  margin-top: 15px;
-}
-
-.instagram-footer img {
-  width: 24px;
-  height: 24px;
-  margin-right: 8px;
-}
-</style>
-
-</body>
