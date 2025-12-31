@@ -118,9 +118,7 @@
 
   <div class="card">
     <!-- Video üçün düzgün etiket -->
-    <video src="images/yagsixma.mp4" autoplay loop muted playsinline>
-      Sizin brauzer video tagını dəstəkləmir.
-    </video>
+    <video class="product-video" src="../images/yagsixma.mp4" autoplay loop muted playsinline></video>
 
     <h3>Soyuq Yağ Sıxma Aparatı</h3>
     <h3>100% Təbii Toxum Yağları</h3>
@@ -149,5 +147,51 @@
   &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
 </footer>
 
+<style>
+/* Videonu düzgün ölçüləndirmək */
+.product-video {
+  width: 100%;       /* konteynerin eni ilə uyğun olsun */
+  height: auto;      /* proporsional qalmasını təmin edir */
+  border-radius: 10px; /* istəyə görə radius əlavə olunur */
+  display: block;
+  margin-bottom: 15px;
+  object-fit: cover;  /* video konteyneri doldursun */
+}
+
+/* Card stili */
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+/* Nav buttonlar */
+.nav-buttons .btn {
+  text-decoration: none;
+  background-color: #6a0dad;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Instagram footer */
+.instagram-footer a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  margin-top: 15px;
+}
+
+.instagram-footer img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+</style>
+
 </body>
-</html>
