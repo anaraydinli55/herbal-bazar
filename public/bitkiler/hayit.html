@@ -3,13 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Hayıt Toxumu – Qadın sağlamlığı üçün faydaları | Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
 
+  <!-- ARTICLE SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Hayıt Toxumu nədir? Faydaları və istifadə qaydası",
+    "description": "Hayıt toxumu qadın sağlamlığını dəstəkləmək üçün istifadə olunur.",
+    "author": { "@type": "Organization", "name": "Herbal Bazar" },
+    "publisher": { "@type": "Organization", "name": "Herbal Bazar" }
+  }
+  </script>
+
+  <!-- PRODUCT SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Hayıt Toxumu",
+    "image": "images/hayit.jpg",
+    "description": "Hayıt toxumu – qadın sağlamlığını dəstəkləyən təbii bitki.",
+    "brand": { "@type": "Brand", "name": "Herbal Bazar" },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "AZN",
+      "price": "10",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- FAQ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Hayıt toxumu nə üçün istifadə olunur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Hayıt toxumu əsasən menstruasiya dövründə rahatlıq və hormonal balans üçün istifadə olunur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Hayıt toxumu çayı necə hazırlanır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 çay qaşığı qurudulmuş hayıt toxumu üzərinə 1 stəkan qaynar su əlavə olunur və 10–15 dəqiqə dəmlənir."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     body {
@@ -27,10 +81,9 @@
       font-weight: 700;
     }
 
-    /* Kartlar */
     .products {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      grid-template-columns: 1fr;
       gap: 20px;
       padding: 0 20px 60px;
     }
@@ -50,37 +103,62 @@
     .card img {
       width: 100%;
       border-radius: 12px;
+      margin-bottom: 20px;
     }
 
     .card h3 {
       margin: 14px 0 8px;
       font-size: 20px;
-      color: #fff;
+      color: #ffa5d8;
       font-weight: 700;
     }
 
-    .card p {
+    .card p, .card ul {
       font-size: 15px;
       color: #ccc;
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
+    ul li {
+      margin-bottom: 8px;
+    }
+
+    h1, h2 {
       color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
     }
 
-    .card button:hover {
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 28px;
+      font-size: 24px;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      background-color: #222;
+      border: 1px solid #444;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
       background-color: #333;
     }
 
-    /* Instagram */
     .instagram-footer {
       text-align: center;
       padding: 30px 0 10px;
@@ -99,7 +177,6 @@
       margin-right: 8px;
     }
 
-    /* Footer */
     footer {
       background-color: #000;
       color: #aaa;
@@ -115,77 +192,71 @@
 <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
 
 <div class="products">
-
   <div class="card">
-    <img src="images/hayit.jpg" alt="1 Aybaşı dövründə ağrı və krampları azaltmağa kömək edir. Menstruasiya dövründə rahatlıq və sakitlik verir.">
+    <img src="images/hayit.jpg" alt="Hayıt toxumu">
     <h3>Hayıt Toxumu - Vitex agnus-castus</h3>
     <h3>100 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Hayıt toxumunun faydaları</h1>
-  <p><strong>Qadınlarda hormonal balansı tənzimləməyə kömək edir.</strong></p>
 
-  <h2>🩺 Hormon balansı:</h2>
-  <ul>
-    <li>Xüsusilə qadınlarda hormonal balansı tənzimləməyə kömək edir.</li>
-    <li>Menstruasiya dövründə rahatlıq verə bilər.</li>
-  </ul>
+    <div class="content">
+      <h1>🌿 Hayıt Toxumu və Qadın Sağlamlığı</h1>
+      <p><strong>Hayıt toxumu menstruasiya dövründə rahatlıq və hormonal balans üçün istifadə olunur.</strong></p>
 
-  <h2>❤️️ Ürək və qan dövranı:</h2>
-  <ul>
-    <li>Ürək fəaliyyətini dəstəkləyir, qan dövranını yaxşılaşdırır.</li>
-  </ul>
+      <h2>🩺 Hormon balansı</h2>
+      <ul>
+        <li>Xüsusilə qadınlarda hormonal balansı tənzimləməyə kömək edir</li>
+        <li>Menstruasiya dövründə rahatlıq və sakitlik verir</li>
+      </ul>
 
-  <h2>🩹 Ümumi gücləndirici təsir:</h2>
-  <ul>
-    <li>Orqanizmin immun sistemini gücləndirir.</li>
-    <li>Enerji səviyyəsini artırır və yorğunluğu azaldır.</li>
-  </ul>
+      <h2>❤️ Ürək və qan dövranı</h2>
+      <ul>
+        <li>Ürək fəaliyyətini dəstəkləyir, qan dövranını yaxşılaşdırır</li>
+      </ul>
 
-  <h2>👁️ Göz sağlamlığı:</h2>
-  <ul>
-    <li>Göz yorğunluğu və görmə zəifliyi üçün faydalı hesab olunur.</li>
-  </ul>
+      <h2>🩹 Ümumi gücləndirici təsir</h2>
+      <ul>
+        <li>Orqanizmin immun sistemini gücləndirir</li>
+        <li>Enerji səviyyəsini artırır, yorğunluğu azaldır</li>
+      </ul>
 
-        <h2>👩‍🦳 Dəri və saç sağlamlığı:</h2>
-  <ul>
-    <li>Dəri problemlərini azaltmağa kömək edə bilər.</li>
-    <li>Saç tökülməsinin qarşısını almağa dəstək olur.</li>
-  </ul>
+      <h2>👁️ Göz sağlamlığı</h2>
+      <ul>
+        <li>Göz yorğunluğu və görmə zəifliyi üçün faydalıdır</li>
+      </ul>
 
-  <h2>🛡️ Ürək-damar sistemi dəstəyi:</h2>
-  <ul>
-    <li>Təbii qan təzyiqini tənzimləyir.</li>
-  </ul>
+      <h2>👩‍🦳 Dəri və saç sağlamlığı</h2>
+      <ul>
+        <li>Dəri problemlərini azaltmağa kömək edir</li>
+        <li>Saç tökülməsinin qarşısını almağa dəstək olur</li>
+      </ul>
 
-              <h2>🌿 Hayıt toxumu – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 çay qaşığı qurudulmuş hayıt toxumu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+      <h2>🌿 İstifadə qaydaları</h2>
+      <ul>
+        <li>☕ Çay şəklində istifadə: 1 çay qaşığı qurudulmuş toxum, 1 stəkan qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir.</li>
+        <li>Gündə 1–2 dəfə, yeməkdən sonra tövsiyə olunur</li>
+        <li>2–3 həftəlik kurs, sonra 7–10 gün fasilə</li>
+      </ul>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Hamiləlik və südvermə dövründə istifadədən əvvəl mütləq həkimlə məsləhətləşmək lazımdır.</li>
-    <li>Həddindən artıq dozada istifadə edilməməlidir.</li>
-  </ul>
-</div>
+      <h2>⚠️ Diqqət</h2>
+      <ul>
+        <li>Hamiləlik və südvermə dövründə istifadədən əvvəl həkimlə məsləhətləşmək lazımdır</li>
+        <li>Həddindən artıq dozada istifadə edilməməlidir</li>
+      </ul>
+    </div>
 
+    <div class="nav-buttons">
+      <a href="aslanpencesi.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="yakiotu.html" class="btn">⇨ İrəli</a>
+    </div>
 
-  <div class="nav-buttons">
-  <a href="aslanpencesi.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="yakiotu.html" class="btn">⇨ İrəli</a>
-</div>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="">
+        Instagram
+      </a>
+    </div>
 
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
+  </div>
 </div>
 
 <footer>
