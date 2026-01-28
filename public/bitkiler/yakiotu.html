@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="bitkiler.css">
 
-
   <style>
     body {
       margin: 0;
@@ -27,60 +26,59 @@
       font-weight: 700;
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    .container {
+      max-width: 900px;
+      margin: auto;
       padding: 0 20px 60px;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    img {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
+      margin: 20px 0;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
+    p, ul {
       color: #ccc;
-      line-height: 1.4;
+      line-height: 1.7;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
+    h1, h2 {
       color: #fff;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 28px;
+      font-size: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 10px 5px 0;
+      padding: 12px 20px;
+      background-color: #222;
       border: 1px solid #444;
       border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
       font-weight: 600;
-      cursor: pointer;
     }
 
-    .card button:hover {
+    .btn:hover {
       background-color: #333;
     }
 
-    /* Instagram */
+    .nav-buttons {
+      text-align: center;
+      margin-top: 30px;
+    }
+
     .instagram-footer {
       text-align: center;
       padding: 30px 0 10px;
@@ -99,7 +97,6 @@
       margin-right: 8px;
     }
 
-    /* Footer */
     footer {
       background-color: #000;
       color: #aaa;
@@ -114,24 +111,20 @@
 
 <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
 
-<div class="products">
+<div class="container">
 
-  <div class="card">
-    <img src="images/yakiotu.jpg" alt="1 <strong>Yakı otu (İvan çayı) xalq təbabətində geniş istifadə olunan, xüsusilə Qafqaz və Şərqi Avropa bölgələrində tanınan qiymətli bitkidir..</strong>">
-    <h3>Yakı Otu - иван-чай</h3>
-    <h3>50 qram - 10 azn</h3>
-    <p><div class="content">
+  <img src="images/yakiotu.jpg" alt="Yakı otu (İvan çayı)">
+
   <h1>🌿 Kişi sağlamlığı baxımından yakı otu xüsusilə dəyərlidir.</h1>
-  <p><strong>Prostat və sidik yolları sağlamlığını dəstəklədiyi, prostat vəzinin funksiyasına müsbət təsir göstərdiyi bildirilir</strong></p>
-        <h2>🌿 Yakı otunun prostata faydaları:</h2>
+  <p><strong>Prostat və sidik yolları sağlamlığını dəstəklədiyi, prostat vəzinin funksiyasına müsbət təsir göstərdiyi bildirilir.</strong></p>
+
+  <h2>🌿 Yakı otunun prostata faydaları:</h2>
   <ul>
     <li>Xroniki prostatit zamanı yaranan ağrı, diskomfort və təzyiq hissinin yüngülləşdirilməsində dəstəkçi rol oynaya bilər.</li>
     <li>Yakı otu iltihab əleyhinə xüsusiyyətlərə malikdir. Bu təsir prostat vəzisində yaranan iltihabın azalmasına kömək edə bilər.</li>
     <li>Prostat böyüməsi zamanı tez-tez sidiyə getmə, sidik axınının zəifləməsi və sidik kisəsinin tam boşalmaması kimi problemlər yaranır.</li>
-    <li>sidik yollarını rahatladır 🌿 sidik axınını yaxşılaşdıra bilər 🌿 gecə sidiyə qalxma hallarını azalda bilər</li>
-    <li><strong>Prostat böyüməsinə qarşı dəstək:</strong>
-
-Yakı otunun tərkibində olan flavonoidlər və bitki polifenolları prostat hüceyrələrinin sağlam fəaliyyətini dəstəkləyir. Bu maddələr prostat toxumasında hüceyrə balansının qorunmasına kömək edə bilər və xoşxassəli prostat böyüməsinin (BPH) irəliləməsini yavaşlada bilər.</li>
+    <li>Sidik yollarını rahatladır 🌿 sidik axınını yaxşılaşdıra bilər 🌿 gecə sidiyə qalxma hallarını azalda bilər</li>
+    <li><strong>Prostat böyüməsinə qarşı dəstək:</strong> Yakı otunun tərkibində olan flavonoidlər və bitki polifenolları prostat hüceyrələrinin sağlam fəaliyyətini dəstəkləyir. Bu maddələr prostat toxumasında hüceyrə balansının qorunmasına kömək edə bilər və xoşxassəli prostat böyüməsinin (BPH) irəliləməsini yavaşlada bilər.</li>
   </ul>
 
   <h2>🌸 Ümumi faydaları:</h2>
@@ -151,7 +144,7 @@ Yakı otunun tərkibində olan flavonoidlər və bitki polifenolları prostat h�
   <h2>🩹 Antioksidant təsir:</h2>
   <ul>
     <li>Güclü antioksidant təsiri sayəsində yakı otu: prostat hüceyrələrini oksidləşdirici zədələrdən qoruyur.</li>
-    <li>Toxumaların vaxtından əvvəl zədələnməsinin qarşısını almağa kömək edirr</li>
+    <li>Toxumaların vaxtından əvvəl zədələnməsinin qarşısını almağa kömək edir</li>
   </ul>
 
   <h2>❤️ Qan dövranına təsiri:</h2>
@@ -160,7 +153,7 @@ Yakı otunun tərkibində olan flavonoidlər və bitki polifenolları prostat h�
     <li>Yakı otu qan dövranını dəstəkləyərək prostat vəzinin daha yaxşı qidalanmasına və funksiyasının qorunmasına yardımçı ola bilər.</li>
   </ul>
 
-        <h2>🌿 Yakı otu – istifadə qaydaları:</h2>
+  <h2>🌿 Yakı otu – istifadə qaydaları:</h2>
   <ul>
     <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
     <li>1 çay qaşığı qurudulmuş yakı otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
@@ -175,21 +168,20 @@ Yakı otunun tərkibində olan flavonoidlər və bitki polifenolları prostat h�
     <li>Uşaqlıq və yumurtalıq problemləri varsa, həkim nəzarəti vacibdir</li>
     <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
   </ul>
-</div>
-
 
   <div class="nav-buttons">
-  <a href="hayit.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="karabas.html" class="btn">⇨ İrəli</a>
-</div>
+    <a href="hayit.html" class="btn">⇦ Geri</a>
+    <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+    <a href="karabas.html" class="btn">⇨ İrəli</a>
+  </div>
 
+  <div class="instagram-footer">
+    <a href="https://instagram.com/derman_bitkileri" target="_blank">
+      <img src="images/instaqram1.jpg" alt="">
+      Instagram
+    </a>
+  </div>
 
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
 </div>
 
 <footer>
