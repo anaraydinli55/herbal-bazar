@@ -19,14 +19,8 @@
     "@type": "Article",
     "headline": "Aslan Pəncəsi nədir? Faydaları və istifadə qaydası",
     "description": "Aslan pəncəsi bitkisi qadın sağlamlığı üçün xalq təbabətində istifadə olunur.",
-    "author": {
-      "@type": "Organization",
-      "name": "Herbal Bazar"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Herbal Bazar"
-    }
+    "author": { "@type": "Organization", "name": "Herbal Bazar" },
+    "publisher": { "@type": "Organization", "name": "Herbal Bazar" }
   }
   </script>
 
@@ -38,10 +32,7 @@
     "name": "Aslan Pəncəsi",
     "image": "https://example.com/images/aslan-pencesi.jpg",
     "description": "Təbii aslan pəncəsi otu. Xalq təbabətində istifadə olunur.",
-    "brand": {
-      "@type": "Brand",
-      "name": "Herbal Bazar"
-    },
+    "brand": { "@type": "Brand", "name": "Herbal Bazar" },
     "offers": {
       "@type": "Offer",
       "priceCurrency": "AZN",
@@ -89,11 +80,13 @@
       text-align: center;
       margin: 40px 20px 20px;
       font-size: 34px;
+      color: #fff;
     }
 
     h2 {
       margin-top: 28px;
       font-size: 24px;
+      color: #fff;
     }
 
     .container {
@@ -113,10 +106,15 @@
       line-height: 1.7;
     }
 
+    ul li {
+      margin-bottom: 8px;
+    }
+
     .price {
       font-size: 22px;
       font-weight: bold;
       margin: 10px 0;
+      color: #ffa5d8; /* rəng vurğusu */
     }
 
     .nav-buttons {
@@ -137,6 +135,10 @@
       font-weight: 600;
     }
 
+    .btn:hover {
+      background-color: #333;
+    }
+
     footer {
       text-align: center;
       color: #aaa;
@@ -148,7 +150,6 @@
 
 <body>
 
-<!-- ✅ SINGLE H1 -->
 <h1>Aslan Pəncəsi nədir? Qadın sağlamlığı üçün faydaları</h1>
 
 <div class="container">
@@ -193,8 +194,9 @@
   </ul>
 
   <div class="nav-buttons">
+    <a href="index.html" class="btn">← Geri</a>
     <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-    <a href="hayit.html" class="btn">⇨ Növbəti</a>
+    <a href="hayit.html" class="btn">İrəli →</a>
   </div>
 
 </div>
