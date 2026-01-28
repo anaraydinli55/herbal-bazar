@@ -3,187 +3,204 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+
+  <title>Aslan Pəncəsi nədir? Faydaları və istifadə qaydası | Herbal Bazar</title>
+
+  <!-- SEO META -->
+  <meta name="description" content="Aslan pəncəsi nədir? Qadın sağlamlığı üçün xalq təbabətində istifadə olunan aslan pəncəsinin faydaları və çay kimi istifadə qaydası.">
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
 
+  <!-- ARTICLE SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Aslan Pəncəsi nədir? Faydaları və istifadə qaydası",
+    "description": "Aslan pəncəsi bitkisi qadın sağlamlığı üçün xalq təbabətində istifadə olunur.",
+    "author": {
+      "@type": "Organization",
+      "name": "Herbal Bazar"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Herbal Bazar"
+    }
+  }
+  </script>
+
+  <!-- PRODUCT SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Aslan Pəncəsi",
+    "image": "https://example.com/images/aslan-pencesi.jpg",
+    "description": "Təbii aslan pəncəsi otu. Xalq təbabətində istifadə olunur.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Herbal Bazar"
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "AZN",
+      "price": "10",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+
+  <!-- FAQ – People Also Ask -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Aslan pəncəsi nə üçün istifadə olunur?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aslan pəncəsi xalq təbabətində əsasən qadın sağlamlığını dəstəkləmək məqsədilə istifadə olunur."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Aslan pəncəsi çayı necə hazırlanır?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "1 çay qaşığı qurudulmuş aslan pəncəsi üzərinə 1 stəkan qaynar su əlavə olunur və 10–15 dəqiqə dəmlənir."
+        }
+      }
+    ]
+  }
+  </script>
 
   <style>
     body {
       margin: 0;
       font-family: 'Architects Daughter', cursive;
-      background-color: #000;
+      background: #000;
       color: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 20px 20px;
+      font-size: 34px;
     }
 
     h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
+      margin-top: 28px;
+      font-size: 24px;
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
+    .container {
+      max-width: 900px;
+      margin: auto;
       padding: 0 20px 60px;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    img {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
+      margin: 20px 0;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
+    p, ul {
       color: #ccc;
-      line-height: 1.4;
+      line-height: 1.7;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
       border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #333;
-    }
-
-    /* Instagram */
-    .instagram-footer {
-      text-align: center;
-      padding: 30px 0 10px;
-    }
-
-    .instagram-footer a {
+      background: #222;
+      border: 1px solid #444;
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      font-weight: 600;
     }
 
-    .instagram-footer img {
-      width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
+      color: #aaa;
       font-size: 14px;
+      padding: 20px;
     }
   </style>
 </head>
 
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<!-- ✅ SINGLE H1 -->
+<h1>Aslan Pəncəsi nədir? Qadın sağlamlığı üçün faydaları</h1>
 
-<div class="products">
+<div class="container">
 
-  <div class="card">
-    <img src="images/aslan-pencesi.jpg" alt="1 Aybaşı dövründə ağrı və krampları azaltmağa kömək edir. Menstruasiya dövründə rahatlıq və sakitlik verir.">
-    <h3>Aslan Pəncəsi</h3>
-    <h3>50 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Aslan pençesi və qadın sağlamlığı</h1>
-  <p><strong>Aslan pəncəsi xalq təbabətində qadın sağlamlığını dəstəkləyən təbii bitki kimi tanınır. Əsasən aybaşı dövrü, hormonal balans və reproduktiv sağlamlıq üçün istifadə olunur.</strong></p>
+  <img src="images/aslan-pencesi.jpg" alt="Aslan pəncəsi otu">
 
-  <h2>🌸 Aybaşı dövrü və menstruasiya</h2>
+  <div class="price">50 qr – 10 AZN</div>
+
+  <p>
+    <strong>
+      Aslan pəncəsi xalq təbabətində qadın sağlamlığını dəstəkləmək məqsədilə
+      istifadə olunan təbii bitkidir.
+    </strong>
+  </p>
+
+  <h2>Aslan pəncəsinin faydaları</h2>
   <ul>
-    <li>Aybaşı dövründə ağrı və krampları azaltmağa kömək edir</li>
-    <li>Həddindən artıq qanaxmanı yüngülləşdirə bilər</li>
-    <li>Menstruasiya dövründə rahatlıq və sakitlik verir</li>
+    <li>Aybaşı dövründə rahatlıq hissini artıra bilər</li>
+    <li>Hormonal tarazlığın dəstəklənməsinə kömək edə bilər</li>
+    <li>Ümumi rahatladıcı təsiri ilə tanınır</li>
   </ul>
 
-  <h2>🩺 Hormonal balans</h2>
+  <h2>Menstruasiya dövründə istifadəsi</h2>
   <ul>
-    <li>Hormonal disbalans zamanı dəstəkçi təsir göstərir</li>
-    <li>Yumurtalıqların sağlam funksiyasına yardım edə bilər</li>
-    <li>Hormonlardan asılı yüngül narahatlıqları azalda bilər</li>
+    <li>Krampların yüngülləşməsinə dəstək ola bilər</li>
+    <li>Rahatlıq və sakitlik hissi verə bilər</li>
   </ul>
 
-  <h2>🩹 Reproduktiv sağlamlıq</h2>
+  <h2>Aslan pəncəsi çayı necə hazırlanır?</h2>
   <ul>
-    <li>Qadın reproduktiv orqanlarının sağlamlığını qorumağa kömək edir</li>
-    <li>Yumurtalıq və uşaqlıq funksiyasını dəstəkləyən təbii vasitə kimi istifadə olunur</li>
+    <li>1 çay qaşığı qurudulmuş bitki</li>
+    <li>1 stəkan qaynar su</li>
+    <li>10–15 dəqiqə dəmlənir, süzülərək içilir</li>
+    <li>Gündə 1–2 dəfə istifadə olunur</li>
   </ul>
 
-  <h2>🛡️ İltihab və infeksiya qarşısı</h2>
+  <h2>İstifadə zamanı diqqət</h2>
   <ul>
-    <li>Sidik yolları və cinsi orqan iltihablarında yüngül dəstək verir</li>
-    <li>Ginekoloji iltihabların azalmasına kömək edə bilər</li>
+    <li>Hamiləlik dövründə mütəxəssis məsləhəti vacibdir</li>
+    <li>Uzun müddət fasiləsiz istifadə tövsiyə edilmir</li>
+    <li>Xroniki narahatlıqlar zamanı həkimə müraciət edilməlidir</li>
   </ul>
-
-  <h2>🌿 Aslan pəncəsi – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 çay qaşığı qurudulmuş aslan pəncəsi otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
-
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
-    <li>Uşaqlıq və yumurtalıq problemləri varsa, həkim nəzarəti vacibdir</li>
-    <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
-  </ul>
-</div>
-
 
   <div class="nav-buttons">
-  <a href="bitkiler.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="hayit.html" class="btn">⇨ İrəli</a>
-</div>
+    <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+    <a href="hayit.html" class="btn">⇨ Növbəti</a>
+  </div>
 
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
 </div>
 
 <footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+  &copy; 2025 Herbal Bazar – Şəfalı bitkilər
 </footer>
 
 </body>
