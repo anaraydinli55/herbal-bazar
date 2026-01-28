@@ -9,62 +9,6 @@
   <link rel="apple-touch-icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
 
-  <!-- ARTICLE SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Hayıt Toxumu nədir? Faydaları və istifadə qaydası",
-    "description": "Hayıt toxumu qadın sağlamlığını dəstəkləmək üçün istifadə olunur.",
-    "author": { "@type": "Organization", "name": "Herbal Bazar" },
-    "publisher": { "@type": "Organization", "name": "Herbal Bazar" }
-  }
-  </script>
-
-  <!-- PRODUCT SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Hayıt Toxumu",
-    "image": "images/hayit.jpg",
-    "description": "Hayıt toxumu – qadın sağlamlığını dəstəkləyən təbii bitki.",
-    "brand": { "@type": "Brand", "name": "Herbal Bazar" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "AZN",
-      "price": "10",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
-
-  <!-- FAQ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Hayıt toxumu nə üçün istifadə olunur?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Hayıt toxumu əsasən menstruasiya dövründə rahatlıq və hormonal balans üçün istifadə olunur."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Hayıt toxumu çayı necə hazırlanır?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "1 çay qaşığı qurudulmuş hayıt toxumu üzərinə 1 stəkan qaynar su əlavə olunur və 10–15 dəqiqə dəmlənir."
-        }
-      }
-    ]
-  }
-  </script>
-
   <style>
     body {
       margin: 0;
@@ -108,15 +52,22 @@
 
     .card h3 {
       margin: 14px 0 8px;
-      font-size: 20px;
-      color: #ffa5d8;
+      font-size: 22px;
+      color: #ffa5d8; /* Məhsul adı */
       font-weight: 700;
+    }
+
+    .card .price {
+      color: #00ffcc; /* Qiymət rəngi */
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 20px;
     }
 
     .card p, .card ul {
       font-size: 15px;
       color: #ccc;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     ul li {
@@ -141,6 +92,8 @@
       display: flex;
       gap: 10px;
       margin-top: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -195,7 +148,7 @@
   <div class="card">
     <img src="images/hayit.jpg" alt="Hayıt toxumu">
     <h3>Hayıt Toxumu - Vitex agnus-castus</h3>
-    <h3>100 qr - 10 AZN</h3>
+    <div class="price">100 qr – 10 AZN</div>
 
     <div class="content">
       <h1>🌿 Hayıt Toxumu və Qadın Sağlamlığı</h1>
@@ -229,11 +182,17 @@
         <li>Saç tökülməsinin qarşısını almağa dəstək olur</li>
       </ul>
 
-      <h2>🌿 İstifadə qaydaları</h2>
+      <h2>🛡️ Ürək-damar sistemi dəstəyi</h2>
       <ul>
-        <li>☕ Çay şəklində istifadə: 1 çay qaşığı qurudulmuş toxum, 1 stəkan qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir.</li>
+        <li>Təbii qan təzyiqini tənzimləyir və ürək-damar sağlamlığını qoruyur</li>
+      </ul>
+
+      <h2>🌿 Hayıt toxumu – istifadə qaydaları</h2>
+      <ul>
+        <li>☕ Çay şəklində istifadə: 1 çay qaşığı qurudulmuş toxum, 1 stəkan qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir</li>
         <li>Gündə 1–2 dəfə, yeməkdən sonra tövsiyə olunur</li>
         <li>2–3 həftəlik kurs, sonra 7–10 gün fasilə</li>
+        <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir</li>
       </ul>
 
       <h2>⚠️ Diqqət</h2>
