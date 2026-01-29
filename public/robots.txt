@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Axtarış motorlarına sitemap-in harada olduğunu bildiririk
+Sitemap: https://herbal-bazar.vercel.app/sitemap.xml
