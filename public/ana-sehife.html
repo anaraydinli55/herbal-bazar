@@ -1418,5 +1418,38 @@
     }
   </script>
 
+  const container = document.querySelector('.slides-container');
+const slides = document.querySelectorAll('.slide');
+let currentIndex = 0;
+const intervalTime = 5000; // 5 saniye
+
+function autoPlay() {
+  currentIndex++;
+  
+  // Eğer son slayta gelindiyse başa dön
+  if (currentIndex >= slides.length) {
+    currentIndex = 0;
+  }
+  
+  // Kaydırma işlemini gerçekleştir
+  container.scrollTo({
+    left: slides[currentIndex].offsetLeft,
+    behavior: 'smooth'
+  });
+}
+
+// Belirlenen sürede bir fonksiyonu çalıştır
+let slideInterval = setInterval(autoPlay, intervalTime);
+
+// Kullanıcı slider üzerine gelirse durdur, ayrılırsa devam et (Opsiyonel)
+container.addEventListener('mouseenter', () => {
+  clearInterval(slideInterval);
+});
+
+container.addEventListener('mouseleave', () => {
+  slideInterval = setInterval(autoPlay, intervalTime);
+});
+
+
 </body>
 </html>
