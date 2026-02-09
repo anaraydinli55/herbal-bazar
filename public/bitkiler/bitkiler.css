@@ -152,3 +152,65 @@ footer {
   transform: scale(1.05);
 }
 
+/* Slider Ana Konteynırı */
+.hero-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory; /* Tek tek kaymayı sağlar */
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* Mobil akıcılık */
+}
+
+.slides-container::-webkit-scrollbar {
+  display: none; /* Kaydırma çubuğunu gizle */
+}
+
+/* Her Bir Slide */
+.slide {
+  min-width: 100%; /* Her slide ekranı kaplar */
+  scroll-snap-align: start;
+  position: relative;
+  height: 80vh; /* Mobil için ideal yükseklik */
+}
+
+.slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Videonun ekranı kaplamasını sağlar */
+}
+
+/* Yazı İçerikleri (Mobil Uyumlu) */
+.slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 90%; /* Mobilde kenarlardan boşluk bırakır */
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); /* Yazıların okunması için hafif gölge */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.slide-content h2 {
+  font-size: 1.8rem; /* Mobilde daha küçük başlık */
+  margin-bottom: 10px;
+}
+
+.slide-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Masaüstü İçin Yazı Boyutunu Büyüt */
+@media (min-width: 768px) {
+  .slide-content h2 { font-size: 3rem; }
+  .slide-content p { font-size: 1.5rem; }
+}
