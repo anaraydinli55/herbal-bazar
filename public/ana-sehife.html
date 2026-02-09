@@ -15,11 +15,11 @@
     zeytun sabunu, gül sabunu, aynısəfa kalendula sabunu, arqan sabunu, papatya sabunu, kil sabunu, damla saqqızı sabunu, yosun sabunu, kefir sabunu, jojoba sabunu, defne sabunu, eşşək südü sabunu, dəvə südü sabunu, salyanqoz sabunu, bal sabunu">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Herbal Bazar">
-  <link rel="canonical" href="https://www.herbal-bazar.vercel.app/ana-sehife.html/">
+  <link rel="canonical" href="https://www.herbal-bazar.vercel.app/ana-sehife.html">
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.herbal-bazar.vercel.app/ana-sehife.html/">
+  <meta property="og:url" content="https://www.herbal-bazar.vercel.app/ana-sehife.html">
   <meta property="og:title" content="Herbal Bazar - Təbii Bitki Məhsulları və Orqanik Çaylar">
   <meta property="og:description" content="Azərbaycanda 100% təbii bitki məhsulları, orqanik çaylar, saf yağlar və arı məhsulları. Sağlam yaşam üçün təbii həllər.">
   <meta property="og:image" content="https://www.herbal-bazar.vercel.app/images/bitki.jpg">
@@ -164,29 +164,139 @@
       color: #fff;
     }
     
-    /* Breadcrumb */
-    .breadcrumb {
-      max-width: 1200px;
-      margin: 20px auto;
-      padding: 0 20px;
-      font-size: 14px;
-      color: #888;
+    /* REKLAM BANNER - Header'dan sonra */
+    .ad-banner {
+      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      padding: 12px 20px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 2px solid #ffd700;
     }
     
-    .breadcrumb ol {
+    .ad-banner::before {
+      content: "REKLAM";
+      position: absolute;
+      top: 2px;
+      left: 5px;
+      font-size: 8px;
+      color: rgba(255,255,255,0.6);
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    
+    .ad-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .ad-content {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex: 1;
+    }
+    
+    .ad-icon {
+      font-size: 28px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+    
+    .ad-text h4 {
+      color: #ffd700;
+      font-size: 16px;
+      margin-bottom: 3px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+    }
+    
+    .ad-text p {
+      color: #fff;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+    
+    .ad-btn {
+      background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+      color: #1e3c72;
+      padding: 10px 25px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s;
+      white-space: nowrap;
+      box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .ad-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+      color: #1e3c72;
+    }
+    
+    .ad-btn::after {
+      content: "↗";
+      margin-left: 5px;
+      font-size: 12px;
+    }
+    
+    /* Mobil üçün reklam banner */
+    @media (max-width: 768px) {
+      .ad-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .ad-content {
+        flex-direction: column;
+        gap: 8px;
+      }
+      
+      .ad-text h4 {
+        font-size: 14px;
+      }
+      
+      .ad-text p {
+        font-size: 11px;
+      }
+      
+      .ad-btn {
+        padding: 8px 20px;
+        font-size: 12px;
+        width: 100%;
+      }
+    }
+    
+    /* Sadə breadcrumb */
+    .simple-breadcrumb {
+      max-width: 1200px;
+      margin: 15px auto;
+      padding: 0 20px;
+      font-size: 13px;
+      color: #666;
+    }
+    
+    .simple-breadcrumb ol {
       list-style: none;
       display: flex;
       gap: 10px;
+      align-items: center;
     }
     
-    .breadcrumb li:not(:last-child)::after {
-      content: "›";
-      margin-left: 10px;
+    .simple-breadcrumb .current {
       color: #8e44ad;
-    }
-    
-    .breadcrumb a:hover {
-      color: #8e44ad;
+      font-weight: 600;
     }
     
     /* Main Content */
@@ -569,7 +679,7 @@
       font-size: 14px;
     }
     
-    /* Schema.org Product Structured Data için gizli elementlər */
+    /* Schema.org Product Structured Data üçün gizli elementlər */
     .hidden-schema {
       display: none;
     }
@@ -666,341 +776,360 @@
   </div>
 </header>
 
-
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="/"><span itemprop="name">Ana Səhifə</span></a>
-        <meta itemprop="position" content="1" />
-      </li>
-    </ol>
-  </nav>
-
-  <main>
-    <!-- Hero Slider -->
-    <section class="hero-slider" aria-label="Təbii bitki məhsulları slayderi">
-      <div class="slides-container" id="slidesContainer">
-        
-        <!-- Slide 1: Bitki Çayları -->
-        <article class="slide" itemscope itemtype="https://schema.org/Product">
-          <video autoplay muted loop playsinline poster="images/tea-poster.jpg">
-            <source src="images/Tebii-Caylar-1.mp4" type="video/mp4">
-            <track kind="descriptions" src="videos/descriptions.vtt" srclang="az" label="Azərbaycan" default>
-            Brauzeriniz video teqini dəstəkləmir.
-          </video>
-          <div class="slide-content">
-            <h2 itemprop="name">Təbii Bitki Çayları</h2>
-            <p itemprop="description">Orqanik qarışıq çaylarla gününüzü canlandırın. İmmunitet gücləndirici və sağlamlıq dəstəyi.</p>
-            <a href="/bitkiler/bitkiler.html" class="btn-primary" title="Bitki Çayları Kataloqu">Kataloqu Gör</a>
-          </div>
-          <meta itemprop="brand" content="Herbal Bazar">
-          <meta itemprop="category" content="Təbii Bitki Çayları">
-          <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="priceCurrency" content="AZN">AZN</span>
-            <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
-          </div>
-        </article>
-
-        <!-- Slide 2: Sağlamlıq -->
-        <article class="slide" itemscope itemtype="https://schema.org/Product">
-          <video autoplay muted loop playsinline poster="images/health-poster.jpg">
-            <source src="images/Tebii-Caylar-2.mp4" type="video/mp4">
-            Brauzeriniz video teqini dəstəkləmir.
-          </video>
-          <div class="slide-content">
-            <h2 itemprop="name">Sağlamlıq Dəstəyi</h2>
-            <p itemprop="description">Bitki çaylarımız immunitetinizi gücləndirir. Təbii müalicəvi bitki qarışımları.</p>
-            <a href="/bitkiler/" class="btn-primary" title="Sağlamlıq Məhsulları">Məhsulları Kəşf Et</a>
-          </div>
-          <meta itemprop="category" content="Sağlamlıq Məhsulları">
-        </article>
-
-        <!-- Slide 3: Qarışımlar -->
-        <article class="slide" itemscope itemtype="https://schema.org/Product">
-          <video autoplay muted loop playsinline poster="images/mix-poster.jpg">
-            <source src="images/Tebii-Caylar-3.mp4" type="video/mp4">
-            Brauzeriniz video teqini dəstəkləmir.
-          </video>
-          <div class="slide-content">
-            <h2 itemprop="name">Bitki Qarışımları</h2>
-            <p itemprop="description">Sağlam yaşamaq üçün təbii qarışıqlar. Müalicəvi bitki formulaları.</p>
-            <a href="/bitkiler/kudretnari.html" class="btn-primary" title="Bitki Qarışımları">Qarışımları Gör</a>
-          </div>
-          <meta itemprop="category" content="Bitki Qarışımları">
-        </article>
+<!-- REKLAM BANNER - Header'dan sonra, Hero Slider'dan əvvəl -->
+<aside class="ad-banner" aria-label="Reklam banneri">
+  <div class="ad-container">
+    <div class="ad-content">
+      <span class="ad-icon">🛍️</span>
+      <div class="ad-text">
+        <h4>Viktoria Store - Premium Məhsullar</h4>
+        <p>Keyfiyyətli paltar boyaları, polis formalarına, qara paltar boyası, paltar boyası harda satılır,tünd göy paltar boyası, 60 çeşid fərqli rəng, azərpoçtla bütün Azərbaycana çatdırılma, ən yaxşı qiymətlər
+        bozarmış paltarları boyama, qızarmış paltarları boyama, rəngi axmış paltarları boyama, rəngi getmiş paltarları boyama, uniforma boyaları, ən keyfiyyətli toz boyalar paltar üçün</p>
       </div>
+    </div>
+    <a href="https://viktoria-az.store" 
+       target="_blank" 
+       rel="noopener noreferrer sponsored"
+       class="ad-btn"
+       aria-label="Viktoria Store saytına keçid - Yeni pəncərədə açılır">
+       Online Mağazaya Bax
+    </a>
+  </div>
+</aside>
 
-      <!-- Slider Navigation -->
-      <div class="slider-nav">
-        <button id="prevBtn" aria-label="Əvvəlki slayd">&#10094;</button>
-        <button id="nextBtn" aria-label="Növbəti slayd">&#10095;</button>
-      </div>
-    </section>
+<!-- Sadə Breadcrumb - Ana səhifə linki olmadan -->
+<nav class="simple-breadcrumb" aria-label="Mövqeyiniz">
+  <ol>
+    <li>
+      <span class="current">🏠 Ana Səhifə</span>
+    </li>
+  </ol>
+</nav>
 
-    <!-- Features -->
-    <section class="features" aria-label="Üstünlüklərimiz">
-      <div class="feature-item">
-        <div class="feature-icon">🌱</div>
-        <h3>100% Təbii</h3>
-        <p>Kimyəvi qatqısız, tamamilə təbii məhsullar</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🏔️</div>
-        <h3>Xalq Təbabəti Bitkiləri</h3>
-        <p>Toplanma və qurudulma üsuluna uyğun əməl olunmuş bitkilər</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🚚</div>
-        <h3>Bakı və Bütün Bölgələrə Azerpoçt Vasitəsilə Çatdırılma</h3>
-        <p>Sürətli və təhlükəsiz çatdırılma xidməti</p>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">✅</div>
-        <h3>Keyfiyyət Zəmanəti</h3>
-        <p>Orqanik və keyfiyyətli məhsullar</p>
-      </div>
-    </section>
+<main>
+  <!-- Hero Slider -->
+  <section class="hero-slider" aria-label="Təbii bitki məhsulları slayderi">
+    <div class="slides-container" id="slidesContainer">
+      
+      <!-- Slide 1: Bitki Çayları -->
+      <article class="slide" itemscope itemtype="https://schema.org/Product">
+        <video autoplay muted loop playsinline poster="images/tea-poster.jpg">
+          <source src="images/Tebii-Caylar-1.mp4" type="video/mp4">
+          <track kind="descriptions" src="videos/descriptions.vtt" srclang="az" label="Azərbaycan" default>
+          Brauzeriniz video teqini dəstəkləmir.
+        </video>
+        <div class="slide-content">
+          <h2 itemprop="name">Təbii Bitki Çayları</h2>
+          <p itemprop="description">Orqanik qarışıq çaylarla gününüzü canlandırın. İmmunitet gücləndirici və sağlamlıq dəstəyi.</p>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/bitkiler.html" class="btn-primary" title="Bitki Çayları Kataloqu">Kataloqu Gör</a>
+        </div>
+        <meta itemprop="brand" content="Herbal Bazar">
+        <meta itemprop="category" content="Təbii Bitki Çayları">
+        <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="priceCurrency" content="AZN">AZN</span>
+          <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
+        </div>
+      </article>
 
-    <!-- Məhsullar Bölməsi -->
-    <section aria-labelledby="products-heading">
-      <div class="section-header">
-        <h1 id="products-heading">🌿 Herbal Bazar Məhsul Kataloqu</h1>
-        <p>Azərbaycanda təbii bitki məhsulları, orqanik çaylar və sağlamlıq dəstəkləri</p>
-      </div>
+      <!-- Slide 2: Sağlamlıq -->
+      <article class="slide" itemscope itemtype="https://schema.org/Product">
+        <video autoplay muted loop playsinline poster="images/health-poster.jpg">
+          <source src="images/Tebii-Caylar-2.mp4" type="video/mp4">
+          Brauzeriniz video teqini dəstəkləmir.
+        </video>
+        <div class="slide-content">
+          <h2 itemprop="name">Sağlamlıq Dəstəyi</h2>
+          <p itemprop="description">Bitki çaylarımız immunitetinizi gücləndirir. Təbii müalicəvi bitki qarışımları.</p>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/" class="btn-primary" title="Sağlamlıq Məhsulları">Məhsulları Kəşf Et</a>
+        </div>
+        <meta itemprop="category" content="Sağlamlıq Məhsulları">
+      </article>
 
-      <div class="category-grid">
-        
-        <!-- Məhsul 1: Bitki Çayları -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/mehsul1.jpg" 
-                 alt="Orqanik bitki çayları - dəmləmə çayları, müalicəvi bitki qarışıqları" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-            <span class="product-badge">Ən Çox Satılan</span>
-          </div>
-          <div class="product-content">
-            <h3 itemprop="name">Bitki Çayları</h3>
-            <p itemprop="description"><strong>Orqanik və təbii bitkilər paketlərdə.</strong> Müalicəvi dəmsə çayları, immunitet gücləndiricilər.</p>
-            <div class="product-meta">
-              <span>🌿 Təbii</span>
-              <span>📦 Paket</span>
-            </div>
-            <a href="../bitkiler/bitkiler.html" class="btn-secondary" itemprop="url" title="Bitki Çayları Haqqında Ətraflı">Daha Ətraflı</a>
-          </div>
-          <meta itemprop="brand" content="Herbal Bazar">
-          <meta itemprop="category" content="Bitki Çayları">
-          <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
-            <span itemprop="priceCurrency" content="AZN">AZN</span>
-            <span itemprop="seller" itemscope itemtype="https://schema.org/Organization">
-              <meta itemprop="name" content="Herbal Bazar">
-            </span>
-          </div>
-        </article>
+      <!-- Slide 3: Qarışımlar -->
+      <article class="slide" itemscope itemtype="https://schema.org/Product">
+        <video autoplay muted loop playsinline poster="images/mix-poster.jpg">
+          <source src="images/Tebii-Caylar-3.mp4" type="video/mp4">
+          Brauzeriniz video teqini dəstəkləmir.
+        </video>
+        <div class="slide-content">
+          <h2 itemprop="name">Bitki Qarışımları</h2>
+          <p itemprop="description">Sağlam yaşamaq üçün təbii qarışıqlar. Müalicəvi bitki formulaları.</p>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/kudretnari.html" class="btn-primary" title="Bitki Qarışımları">Qarışımları Gör</a>
+        </div>
+        <meta itemprop="category" content="Bitki Qarışımları">
+      </article>
+    </div>
 
-        <!-- Məhsul 2: Toxum Yağları -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/yaglar.jpeg" 
-                 alt="Saf toxum yağları - qarazirə yağı, balqabaq yağı, küngüt yağı, kətan yağı, qoz yağı, badam yağı, fındıq yağı" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-          </div>
-          <div class="product-content">
-            <h3 itemprop="name">100% Saf Toxum Yağları</h3>
-            <p itemprop="description"><strong>Qarazirə - Balqabaq - Küngüt - Kətan - Qoz - Badam - Fındıq yağları.</strong> Soğuq preslənmiş, vitamin və mineral baxımından zəngin.</p>
-            <div class="product-meta">
-              <span>🥜 Saf</span>
-              <span>❄️ Soğuq Pres</span>
-            </div>
-            <a href="../bitkiler/yagsixma.html" class="btn-secondary" itemprop="url" title="Toxum Yağları Kataloqu">Daha Ətraflı</a>
-          </div>
-          <meta itemprop="brand" content="Herbal Bazar">
-          <meta itemprop="category" content="Təbii Toxum Yağları">
-          <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
-            <span itemprop="priceCurrency" content="AZN">AZN</span>
-          </div>
-        </article>
+    <!-- Slider Navigation -->
+    <div class="slider-nav">
+      <button id="prevBtn" aria-label="Əvvəlki slayd">&#10094;</button>
+      <button id="nextBtn" aria-label="Növbəti slayd">&#10095;</button>
+    </div>
+  </section>
 
-        <!-- Məhsul 3: Təbii Qarışımlar -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/banka.jpg" 
-                 alt="Təbii müalicəvi qarışımlar və məcunlar" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-            <span class="product-badge">Müalicəvi</span>
-          </div>
-          <div class="product-content">
-            <h3 itemprop="name">Təbii Qarışımlar</h3>
-            <p itemprop="description"><strong>Müalicəvi məcunlar və qarışımlar.</strong> Köhnə reseptlər əsasında hazırlanmış bitki formulaları.</p>
-            <div class="product-meta">
-              <span>🏺 Məcun</span>
-              <span>📜 Resept</span>
-            </div>
-            <a href="../bitkiler/kudretnari.html" class="btn-secondary" itemprop="url" title="Təbii Qarışımlar">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Təbii Qarışımlar">
-        </article>
+  <!-- Features -->
+  <section class="features" aria-label="Üstünlüklərimiz">
+    <div class="feature-item">
+      <div class="feature-icon">🌱</div>
+      <h3>100% Təbii</h3>
+      <p>Kimyəvi qatqısız, tamamilə təbii məhsullar</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🏔️</div>
+      <h3>Xalq Təbabəti Bitkiləri</h3>
+      <p>Toplanma və qurudulma üsuluna uyğun əməl olunmuş bitkilər</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🚚</div>
+      <h3>Bakı və Bütün Bölgələrə Azerpoçt Vasitəsilə Çatdırılma</h3>
+      <p>Sürətli və təhlükəsiz çatdırılma xidməti</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">✅</div>
+      <h3>Keyfiyyət Zəmanəti</h3>
+      <p>Orqanik və keyfiyyətli məhsullar</p>
+    </div>
+  </section>
 
-        <!-- Məhsul 4: Bitki Suları -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/sular.jpg" 
-                 alt="Damcılatma yolu ilə əldə edilmiş bitki suları və hidrolatlar" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-          </div>
-          <div class="product-content">
-            <h3 itemprop="name">Bitki Suları (Hidrolatlar)</h3>
-            <p itemprop="description"><strong>Damcılatma yolu ilə çəkilmiş bitki suları.</strong> Təbii üz və bədən suları, gül suyu, lavanda suyu.</p>
-            <div class="product-meta">
-              <span>💧 Damcılatma</span>
-              <span>🌸 Təbii</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Bitki Suları Kataloqu">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Bitki Suları">
-        </article>
+  <!-- Məhsullar Bölməsi -->
+  <section aria-labelledby="products-heading">
+    <div class="section-header">
+      <h1 id="products-heading">🌿 Herbal Bazar Məhsul Kataloqu</h1>
+      <p>Azərbaycanda təbii bitki məhsulları, orqanik çaylar və sağlamlıq dəstəkləri</p>
+    </div>
 
-        <!-- Məhsul 5: Təbii Sabunlar -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/sabun.jpg" 
-                 alt="Əl işi təbii bitki sabunları - zeytun yağlı, bal sabunu, dəri problemlərinə qarşı" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
+    <div class="category-grid">
+      
+      <!-- Məhsul 1: Bitki Çayları -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/mehsul1.jpg" 
+               alt="Orqanik bitki çayları - dəmləmə çayları, müalicəvi bitki qarışıqları" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+          <span class="product-badge">Ən Çox Satılan</span>
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Bitki Çayları</h3>
+          <p itemprop="description"><strong>Orqanik və təbii bitkilər paketlərdə.</strong> Müalicəvi dəmsə çayları, immunitet gücləndiricilər.</p>
+          <div class="product-meta">
+            <span>🌿 Təbii</span>
+            <span>📦 Paket</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Təbii Bitki Sabunları</h3>
-            <p itemprop="description"><strong>100% təbii əl işi sabunlar.</strong> Zeytun yağı, bal və bitki ekstraktlı dəri dostu sabunlar.</p>
-            <div class="product-meta">
-              <span>🧼 Əl İşi</span>
-              <span>🍯 Bal</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Təbii Sabunlar">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Təbii Sabunlar">
-        </article>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/bitkiler.html" class="btn-secondary" itemprop="url" title="Bitki Çayları Haqqında Ətraflı">Daha Ətraflı</a>
+        </div>
+        <meta itemprop="brand" content="Herbal Bazar">
+        <meta itemprop="category" content="Bitki Çayları">
+        <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
+          <span itemprop="priceCurrency" content="AZN">AZN</span>
+          <span itemprop="seller" itemscope itemtype="https://schema.org/Organization">
+            <meta itemprop="name" content="Herbal Bazar">
+          </span>
+        </div>
+      </article>
 
-        <!-- Məhsul 6: Təbii Şampunlar -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/sampun.jpg" 
-                 alt="Saç tökülməsinə qarşı təbii şampunlar, bitki tərkibli saç baxım məhsulları" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-            <span class="product-badge">Saç Baxımı</span>
+      <!-- Məhsul 2: Toxum Yağları -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/yaglar.jpeg" 
+               alt="Saf toxum yağları - qarazirə yağı, balqabaq yağı, küngüt yağı, kətan yağı, qoz yağı, badam yağı, fındıq yağı" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">100% Saf Toxum Yağları</h3>
+          <p itemprop="description"><strong>Qarazirə - Balqabaq - Küngüt - Kətan - Qoz - Badam - Fındıq yağları.</strong> Soğuq preslənmiş, vitamin və mineral baxımından zəngin.</p>
+          <div class="product-meta">
+            <span>🥜 Saf</span>
+            <span>❄️ Soğuq Pres</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Təbii Şampunlar</h3>
-            <p itemprop="description"><strong>Saç baxımı və tökülməsinə qarşı şampunlar.</strong> At kuyruğu, dəvə qozu və bitki ekstraktlı.</p>
-            <div class="product-meta">
-              <span>🌿 Bitki</span>
-              <span>💆 Saç</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Təbii Şampunlar">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Təbii Şampunlar">
-        </article>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/yagsixma.html" class="btn-secondary" itemprop="url" title="Toxum Yağları Kataloqu">Daha Ətraflı</a>
+        </div>
+        <meta itemprop="brand" content="Herbal Bazar">
+        <meta itemprop="category" content="Təbii Toxum Yağları">
+        <div class="hidden-schema" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <span itemprop="availability" content="https://schema.org/InStock">Stokda var</span>
+          <span itemprop="priceCurrency" content="AZN">AZN</span>
+        </div>
+      </article>
 
-        <!-- Məhsul 7: Ginseng Arı Südü -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/ginsengli1.jpg" 
-                 alt="Jenşenli arı südü propolis qarışığı - enerji və immunitet üçün" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
+      <!-- Məhsul 3: Təbii Qarışımlar -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/banka.jpg" 
+               alt="Təbii müalicəvi qarışımlar və məcunlar" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+          <span class="product-badge">Müalicəvi</span>
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Təbii Qarışımlar</h3>
+          <p itemprop="description"><strong>Müalicəvi məcunlar və qarışımlar.</strong> Köhnə reseptlər əsasında hazırlanmış bitki formulaları.</p>
+          <div class="product-meta">
+            <span>🏺 Məcun</span>
+            <span>📜 Resept</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Ginseng - Arı Südü - Propolis</h3>
-            <p itemprop="description"><strong>Enerji - İmmunitet - Ümumi Bərpa.</strong> Koreya jenşeni, təbii arı südü və propolis qarışığı.</p>
-            <div class="product-meta">
-              <span>⚡ Enerji</span>
-              <span>🛡️ İmmunitet</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Ginseng Arı Südü Qarışığı">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Arı Məhsulları">
-        </article>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/kudretnari.html" class="btn-secondary" itemprop="url" title="Təbii Qarışımlar">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Təbii Qarışımlar">
+      </article>
 
-        <!-- Məhsul 8: Arı Məhsulları -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/ginsengli.jpg" 
-                 alt="Təbii arı südü, polen, bal və jenşen qarışığı - yorğunluğa qarşı" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-            <span class="product-badge">Superfood</span>
+      <!-- Məhsul 4: Bitki Suları -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/sular.jpg" 
+               alt="Damcılatma yolu ilə əldə edilmiş bitki suları və hidrolatlar" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Bitki Suları (Hidrolatlar)</h3>
+          <p itemprop="description"><strong>Damcılatma yolu ilə çəkilmiş bitki suları.</strong> Təbii üz və bədən suları, gül suyu, lavanda suyu.</p>
+          <div class="product-meta">
+            <span>💧 Damcılatma</span>
+            <span>🌸 Təbii</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Arı Südü - Polen - Bal - Jenşen</h3>
-            <p itemprop="description"><strong>Fiziki və zehni yorğunluğa qarşı.</strong> Təbii enerji kompleksi, vitamin və minerallarla zəngin.</p>
-            <div class="product-meta">
-              <span>🐝 Arı</span>
-              <span>⚡ Enerji</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Arı Məhsulları Kompleksi">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Arı Məhsulları">
-        </article>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Bitki Suları Kataloqu">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Bitki Suları">
+      </article>
 
-        <!-- Məhsul 9: Bitki Kremləri -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/krem.jpg" 
-                 alt="Müalicəvi bitki kremləri - əl, üz və bədən üçün təbii kremlər" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
+      <!-- Məhsul 5: Təbii Sabunlar -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/sabun.jpg" 
+               alt="Əl işi təbii bitki sabunları - zeytun yağlı, bal sabunu, dəri problemlərinə qarşı" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Təbii Bitki Sabunları</h3>
+          <p itemprop="description"><strong>100% təbii əl işi sabunlar.</strong> Zeytun yağı, bal və bitki ekstraktlı dəri dostu sabunlar.</p>
+          <div class="product-meta">
+            <span>🧼 Əl İşi</span>
+            <span>🍯 Bal</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Bitki Tərkibli Kremlər</h3>
-            <p itemprop="description"><strong>Bitkisəl müalicəvi əl - üz - bədən kremləri.</strong> Egzema, psoriasis və dəri problemlərinə qarşı.</p>
-            <div class="product-meta">
-              <span🧴 Dəri</span>
-              <span🌿 Bitki</span>
-            </div>
-            <a href="../bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Bitki Kremləri">Məhsulu Gör</a>
-          </div>
-          <meta itemprop="category" content="Bitki Kremləri">
-        </article>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Təbii Sabunlar">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Təbii Sabunlar">
+      </article>
 
-        <!-- Məhsul 10: Enfoil -->
-        <article class="product-card" itemscope itemtype="https://schema.org/Product">
-          <div class="product-image">
-            <img src="images/enfoil.jpg" 
-                 alt="Enfoil qaymarit və sinuzit əleyhinə burun damcısı - təbii burun açıcı" 
-                 loading="lazy"
-                 width="400" 
-                 height="250"
-                 itemprop="image">
-            <span class="product-badge">Təbii</span>
+      <!-- Məhsul 6: Təbii Şampunlar -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/sampun.jpg" 
+               alt="Saç tökülməsinə qarşı təbii şampunlar, bitki tərkibli saç baxım məhsulları" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+          <span class="product-badge">Saç Baxımı</span>
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Təbii Şampunlar</h3>
+          <p itemprop="description"><strong>Saç baxımı və tökülməsinə qarşı şampunlar.</strong> At kuyruğu, dəvə qozu və bitki ekstraktlı.</p>
+          <div class="product-meta">
+            <span>🌿 Bitki</span>
+            <span>💆 Saç</span>
           </div>
-          <div class="product-content">
-            <h3 itemprop="name">Enfoil Qaymarit Əleyhinə - Sinuzit</h3>
-            <p itemprop="description"><strong>Burun açıcı iltihab əleyhinə damcı.</strong> Təbii tərkibli, asılılıq yaratmayan burun spreyi.</p>
-            <div class="product-meta">
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Təbii Şampunlar">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Təbii Şampunlar">
+      </article>
+
+      <!-- Məhsul 7: Ginseng Arı Südü -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/ginsengli1.jpg" 
+               alt="Jenşenli arı südü propolis qarışığı - enerji və immunitet üçün" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Ginseng - Arı Südü - Propolis</h3>
+          <p itemprop="description"><strong>Enerji - İmmunitet - Ümumi Bərpa.</strong> Koreya jenşeni, təbii arı südü və propolis qarışığı.</p>
+          <div class="product-meta">
+            <span>⚡ Enerji</span>
+            <span>🛡️ İmmunitet</span>
+          </div>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Ginseng Arı Südü Qarışığı">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Arı Məhsulları">
+      </article>
+
+      <!-- Məhsul 8: Arı Məhsulları -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/ginsengli.jpg" 
+               alt="Təbii arı südü, polen, bal və jenşen qarışığı - yorğunluğa qarşı" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+          <span class="product-badge">Superfood</span>
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Arı Südü - Polen - Bal - Jenşen</h3>
+          <p itemprop="description"><strong>Fiziki və zehni yorğunluğa qarşı.</strong> Təbii enerji kompleksi, vitamin və minerallarla zəngin.</p>
+          <div class="product-meta">
+            <span>🐝 Arı</span>
+            <span>⚡ Enerji</span>
+          </div>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Arı Məhsulları Kompleksi">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Arı Məhsulları">
+      </article>
+
+      <!-- Məhsul 9: Bitki Kremləri -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/krem.jpg" 
+               alt="Müalicəvi bitki kremləri - əl, üz və bədən üçün təbii kremlər" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Bitki Tərkibli Kremlər</h3>
+          <p itemprop="description"><strong>Bitkisəl müalicəvi əl - üz - bədən kremləri.</strong> Egzema, psoriasis və dəri problemlərinə qarşı.</p>
+          <div class="product-meta">
+            <span>🧴 Dəri</span>
+            <span>🌿 Bitki</span>
+          </div>
+          <a href="https://herbal-bazar.vercel.app/bitkiler/ayarlar.html" class="btn-secondary" itemprop="url" title="Bitki Kremləri">Məhsulu Gör</a>
+        </div>
+        <meta itemprop="category" content="Bitki Kremləri">
+      </article>
+
+      <!-- Məhsul 10: Enfoil -->
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="product-image">
+          <img src="images/enfoil.jpg" 
+               alt="Enfoil qaymarit və sinuzit əleyhinə burun damcısı - təbii burun açıcı" 
+               loading="lazy"
+               width="400" 
+               height="250"
+               itemprop="image">
+          <span class="product-badge">Təbii</span>
+        </div>
+        <div class="product-content">
+          <h3 itemprop="name">Enfoil Qaymarit Əleyhinə - Sinuzit</h3>
+          <p itemprop="description"><strong>Burun açıcı iltihab əleyhinə damcı.</strong> Təbii tərkibli, asılılıq yaratmayan burun spreyi.</p>
+          <div class="product-meta">
               <span>👃 Burun</span>
               <span>🌿 Təbii</span>
             </div>
