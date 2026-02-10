@@ -214,3 +214,40 @@ footer {
   .slide-content h2 { font-size: 3rem; }
   .slide-content p { font-size: 1.5rem; }
 }
+
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 15px 10px;
+      background-color: transparent;
+      border: 2px solid #fff9c4; /* Sarı çərçivə */
+      color: #fff9c4; /* Sarı mətn */
+      text-decoration: none;
+      border-radius: 12px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 18px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 249, 196, 0.1);
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 249, 196, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      .nav-buttons { 
+        flex-direction: column; 
+        gap: 10px;
+      }
+    }
