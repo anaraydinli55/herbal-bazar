@@ -3,109 +3,98 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Limon Melissa – Herbal Bazar</title>
+  <title>Limon Melissa (Melissa officinalis) | Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg-color: #000;
-      --card-bg: #0a0a0a;
-      --accent-yellow: #fff9c4; 
-      --text-main: #fff;
-      --text-dim: #ccc;
-      --border-color: #1a1a1a;
-    }
-
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.7;
+      padding: 0;
+      background-color: #000;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
     }
 
     .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 20px 20px 60px;
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
     }
 
-    header h2 {
+    h1, h2, .main-title {
       font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
       text-align: center;
-      margin: 40px 0;
-      font-size: 32px;
-      color: var(--text-main);
+    }
+
+    .main-title {
+      font-size: 28px;
+      margin: 30px 0;
+      color: #fff;
     }
 
     .product-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
+      background-color: #0a0a0a;
       border-radius: 20px;
-      padding: 30px;
+      padding: 25px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
     }
 
-    img.main-img {
+    .product-image {
       width: 100%;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      border: 1px solid #222;
+      border-radius: 15px;
+      margin-bottom: 20px;
     }
 
-    h3 {
-      font-family: 'Architects Daughter', cursive;
-      color: var(--accent-yellow);
-      font-size: 28px;
-      margin: 10px 0;
-    }
-
-    .price {
+    .price-tag {
       display: inline-block;
-      border: 2px dashed var(--accent-yellow);
-      color: var(--accent-yellow);
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 24px;
-      color: #fff;
-      margin: 25px 0;
-      line-height: 1.4;
-      border-left: 4px solid var(--accent-yellow);
-      padding-left: 15px;
-      font-family: 'Architects Daughter', cursive;
-    }
-
-    h2 {
-      font-family: 'Architects Daughter', cursive;
-      color: var(--accent-yellow);
+      margin: 10px 0 25px;
+      padding: 10px 20px;
+      border: 2px dashed #fff9c4;
+      border-radius: 12px;
       font-size: 22px;
-      margin-top: 35px;
+      color: #fff9c4;
+      font-family: 'Architects Daughter', cursive;
     }
 
-    p, ul {
-      color: var(--text-dim);
-      font-size: 17px;
+    .content {
+      text-align: left;
     }
 
-    ul {
-      list-style: none;
+    .content h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 19px;
+      text-align: left;
+      margin-top: 30px;
+      color: #fff9c4;
+      border-left: 3px solid #fff9c4;
+      padding-left: 12px;
+    }
+
+    .content ul {
       padding-left: 0;
+      list-style: none;
     }
 
-    ul li {
+    .content li {
       margin-bottom: 12px;
       padding-left: 25px;
       position: relative;
     }
 
-    ul li::before {
+    .content li::before {
       content: "🌿";
       position: absolute;
       left: 0;
@@ -113,48 +102,48 @@
 
     .nav-buttons {
       display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-top: 40px;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 35px 0;
     }
 
     .btn {
       flex: 1;
-      padding: 12px 25px;
-      background-color: #111;
-      border: 1px solid #333;
-      border-radius: 10px;
-      color: var(--accent-yellow);
-      text-decoration: none;
-      font-weight: 600;
-      font-family: 'Architects Daughter', cursive;
-      transition: 0.3s;
       text-align: center;
+      padding: 12px 5px;
+      background-color: #000;
+      border: 1px solid #fff9c4;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      white-space: nowrap;
     }
 
     .btn:hover {
-      background-color: var(--accent-yellow);
+      background-color: #fff9c4;
       color: #000;
     }
 
     .instagram-footer {
-      text-align: center;
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #1a1a1a;
+      margin-top: 20px;
     }
 
     .instagram-footer a {
       color: #fff;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       font-family: 'Architects Daughter', cursive;
-      font-size: 18px;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
       border-radius: 5px;
     }
 
@@ -162,89 +151,87 @@
       text-align: center;
       padding: 30px;
       color: #555;
-      font-size: 14px;
+      font-size: 13px;
     }
   </style>
 </head>
-
 <body>
 
 <div class="container">
-  <header>
-    <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
-  </header>
+  <h2 class="main-title">🌿 Təbiətin sakitləşdirici gücü</h2>
 
   <div class="product-card">
-    <img src="images/limonmelissa.jpg" alt="Limon Melissa" class="main-img">
-
-    <h3>Limon Melissa</h3>
-    <div class="price">40 qr - 10 AZN</div>
+    <img src="images/melissa.jpg" alt="Limon Melissa (Melissa officinalis)" class="product-image">
+    
+    <div class="price-tag">50 qr - 8 AZN</div>
 
     <div class="content">
-      <h1>🌿 Stress, əsəbilik, narahatlıq, qorxu hissi və psixoloji gərginlik zamanı rahatladıcı</h1>
-      <p><strong>Müntəzəm istifadə edildikdə yuxusuzluğun azalmasına, yuxuya getmənin asanlaşmasına və yuxu keyfiyyətinin yaxşılaşmasına kömək edir. Xüsusilə sinir mənşəli baş ağrıları və gərginlik hallarında faydalı hesab olunur.</strong></p>
+      <h1>🌿 Limon Melissa (Melissa officinalis)</h1>
+      <p>Limon Melissa, nanə fəsiləsinə aid olan və xoş limon ətri ilə seçilən çoxillik bitkidir. Əsrlər boyu həm tibbdə, həm də aromaterapiyada sakitləşdirici və müalicəvi xüsusiyyətlərinə görə istifadə edilmişdir.</p>
 
-      <h2>🌸 İmmun sistemini gücləndirici</h2>
+      <h2>🧠 Sinir Sistemi və Psixi Sağlamlıq</h2>
       <ul>
-        <li>Tərkibindəki antioksidant maddələr sayəsində orqanizmi sərbəst radikallardan qorumağa, xəstəliklərə qarşı müqaviməti artırmağa kömək edə bilər.</li>
-        <li>Soyuqdəymə və qrip zamanı çay şəklində istifadəsi bədəni rahatladır və sağalma prosesini dəstəkləyir.</li>
+        <li>Güclü sakitləşdirici təsirə malikdir; stress, həyəcan və gərginliyi azaldır.</li>
+        <li>Yuxusuzluq (insomniya) problemini aradan qaldırır, yuxuya keçidi asanlaşdırır və yuxu keyfiyyətini artırır.</li>
+        <li>Yaddaşı gücləndirir, diqqət və konsentrasiyanı artırır.</li>
+        <li>Depressiya və panik atak simptomlarının yüngülləşdirilməsində köməkçi vasitə kimi istifadə olunur.</li>
       </ul>
 
-      <h2>🩺 Qadın sağlamlığı baxımından da limon melissa faydalıdır</h2>
+      <h2>🍽️ Həzm Sistemi Faydaları</h2>
       <ul>
-        <li>Aybaşı dövründə yaranan əsəbilik, ağrı və narahatlıqların azalmasına kömək edə bilər.</li>
-        <li>Hormonal dəyişikliklər zamanı sakitləşdirici və balanslaşdırıcı təsir göstərə bilər.</li>
+        <li>Mədə və bağırsaqlardakı qaz sancılarını, şişkinliyi aradan qaldırır.</li>
+        <li>Həzm prosesini sürətləndirir və iştahasızlığı müalicə edir.</li>
+        <li>Sinir mənşəli mədə ağrılarını (mədə nevrozu) sakitləşdirir.</li>
       </ul>
 
-      <h2>❤️️ Ürək-damar sistemi üçün</h2>
+      <h2>🛡️ İmmunitet və Viruslarla Mübarizə</h2>
       <ul>
-        <li>Bu bitki ürək sağlamlığı üçün də mühüm əhəmiyyət daşıyır.</li>
-        <li>Ürək döyüntüsünün sürətlənməsi, həyəcan və stresə bağlı çarpıntı zamanı sakitləşdirici təsir göstərə bilər.</li>
-        <li>Qan təzyiqinin yüngül şəkildə tənzimlənməsinə və ürəyin daha rahat işləməsinə dəstək olur.</li>
+        <li>Antiviral xüsusiyyətləri sayəsində xüsusilə herpes (uçuq) virusuna qarşı effektivdir.</li>
+        <li>Soyuqdəymə və qrip zamanı bədən müqavimətini artırır, tərlədici təsiri ilə qızdırmanı salmağa kömək edir.</li>
+        <li>Antioksidantlarla zəngindir, hüceyrələri sərbəst radikallardan qoruyur.</li>
       </ul>
 
-      <h2>🛡️ Həzm sistemi üçün faydalıdır.</h2>
+      <h2>🩸 Ürək və Qan Təzyiqi</h2>
       <ul>
-        <li>Mədə spazmları, köp, qaz, həzmsizlik və mədə ağrıları zamanı sakitləşdirici təsir göstərə bilər.</li>
-        <li>Bağırsaq fəaliyyətini tənzimləməyə və mədə rahatlığı yaratmağa kömək edir.</li>
-        <li>Xüsusilə stressə bağlı mədə problemlərində daha təsirli hesab olunur.</li>
+        <li>Ürək döyüntüsünü (taxikardiya) tənzimləyir və ürəyi sakitləşdirir.</li>
+        <li>Yüksək qan təzyiqini (hipertoniya) aşağı salmağa kömək edir.</li>
       </ul>
 
-      <h2>🌿 Limon melissa – istifadə qaydaları:</h2>
+      <h2>☕ İstifadə Qaydaları</h2>
       <ul>
-        <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-        <li>1 xörək qaşığı qurudulmuş limon melissa otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-        <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-        <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-        <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
+        <li><strong>Dəmləmə:</strong> 1 çay qaşığı qurudulmuş melissa yarpağını 1 stəkan (200 ml) qaynar suya əlavə edin.</li>
+        <li>Qapağını bağlayaraq 5-7 dəqiqə dəmləyin. <strong>Vacib:</strong> Acılaşmaması üçün 7 dəqiqədən çox saxlamayın.</li>
+        <li>Gündə 2-3 dəfə, xüsusilə axşam yatmazdan 1 saat əvvəl içilməsi tövsiyə olunur.</li>
+        <li>Təzə limon dilimi və ya bir az bal ilə dadlandırıla bilər.</li>
       </ul>
 
-      <h2>⚠️ Diqqət</h2>
+      <h2 style="color: #ff5252; border-left-color: #ff5252;">⚠️ Diqqət</h2>
       <ul>
-        <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
-        <li>Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
-        <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
+        <li>Həddindən artıq istifadəsi yuxululuq və diqqət dağınıqlığına səbəb ola bilər.</li>
+        <li>Qalxanabənzər vəzi (zob) dərmanları qəbul edənlər həkimlə məsləhətləşməlidir, çünki melissa tiroid hormonlarına təsir edə bilər.</li>
+        <li>Hamiləlik və südvermə dövründə həkim rəyi olmadan istifadə edilməməlidir.</li>
+        <li>Qan təzyiqi çox aşağı olan şəxslər ehtiyatlı olmalıdır.</li>
       </ul>
     </div>
 
     <div class="nav-buttons">
-      <a href="karabas.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="cobancokerten.html" class="btn">İrəli ⇨</a>
+      <a href="enginar.html" class="btn">İrəli ⇨</a>
     </div>
 
     <div class="instagram-footer">
       <a href="https://instagram.com/derman_bitkileri" target="_blank">
-        <img src="images/instaqram1.jpg" alt="Instagram">
+        <img src="images/instaqram1.jpg" alt="IG">
         Instagram: @derman_bitkileri
       </a>
     </div>
   </div>
-</div>
 
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
+</div>
 
 </body>
 </html>
