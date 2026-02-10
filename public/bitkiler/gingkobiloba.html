@@ -3,191 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
-
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
-
+  <title>Gingko Biloba Faydaları | Herbal Bazar</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Architects Daughter', cursive;
+      padding: 0;
       background-color: #000;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1, h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
+      text-align: center;
+    }
+
+    .main-title {
+      font-size: 30px;
+      margin: 40px 0;
       color: #fff;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 15px;
     }
 
     h2 {
+      font-size: 22px;
+      text-align: left;
+      margin-top: 35px;
+      border-left: 3px solid #fff9c4;
+      padding-left: 15px;
+    }
+
+    .price-container {
+      border: 2px dashed #fff9c4;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 300px;
       text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
+      background-color: rgba(255, 249, 196, 0.05);
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
+    .price-text {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 24px;
+      color: #fff9c4;
+      font-weight: bold;
+      display: block;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #1a1a1a;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .product-image {
       width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 15px;
+    }
+
+    .content p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background-color: rgba(255, 249, 196, 0.08);
       border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
+      border-left: 4px solid #fff9c4;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
+    ul {
+      padding-left: 5px;
+      list-style: none;
     }
 
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #333;
-    }
-
-    /* Instagram */
-    .instagram-footer {
-      text-align: center;
-      padding: 30px 0 10px;
-    }
-
-    .instagram-footer a {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-
-    .instagram-footer img {
-      width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px 10px;
+    ul li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
       font-size: 14px;
+    }
+
+    /* LİMON MELİSSA İLƏ EYNİ DÜYMƏ STİLLƏRİ */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px 5px;
+      background-color: #111;
+      border: 1px solid #333;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+      border-color: #fff9c4;
+    }
+
+    .instagram-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px 0;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .instagram-link img {
+      width: 30px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-buttons { flex-direction: column; }
     }
   </style>
 </head>
-
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
-<div class="products">
+  <article class="product-card">
+    <img src="images/gingkobiloba.jpg" alt="Gingko Biloba" class="product-image">
+    
+    <div class="price-container">
+      <span class="price-text">60 qr - 10 AZN</span>
+    </div>
 
-  <div class="card">
-    <img src="images/gingkobiloba.jpg" alt="1 Gingko biloba xüsusilə beyin fəaliyyəti, yaddaş, qan dövranı və sinir sistemi üzərində müsbət təsirləri ilə tanınır">
-    <h3>Gingko Biloba</h3>
-    <h3>60 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Bu ağacın yarpaqlarından hazırlanan ekstrakt və çaylar müasir dövrdə də geniş yayılmışdır</h1>
-  <p><strong>Ginkgo biloba ən çox beyin və yaddaş funksiyalarını dəstəkləməsi ilə məşhurdur.</strong></p>
+    <h1>🌿 Gingko Biloba (Yaddaş Bitkisi)</h1>
 
-  <h2>🌸 Beyinə gedən qan dövranını yaxşılaşdırır</h2>
-  <ul>
-    <li>Oksigen və qida maddələrinin beyin hüceyrələrinə daha rahat çatmasına kömək edə bilər.</li>
-    <li>Bu təsir yaddaş zəifliyi, diqqət dağınıqlığı, unutqanlıq və zehni yorğunluq hallarında faydalı hesab olunur.</li>
-    <li>Xüsusilə yaşa bağlı yaddaş zəifləməsinin yavaşladılmasında dəstəkçi bitki kimi tanınır.</li>
-  </ul>
+    <div class="content">
+      <p><strong>Ginkgo biloba</strong> beyin fəaliyyəti, yaddaş və qan dövranı üzərindəki müsbət təsirləri ilə tanınan dünyanın ən qədim ağac növlərindən biridir.</p>
 
-  <h2>🩺 Sinir sistemi üçün qoruyucu təsiri</h2>
-  <ul>
-    <li>Stress, əsəbilik, gərginlik və narahatlıq zamanı sinir sistemini sakitləşdirə bilər.</li>
-    <li>Zehni performansı artıraraq düşünmə qabiliyyətinin daha aydın olmasına kömək edir.</li>
-    <li>Bəzi hallarda başgicəllənmə və qulaqda küy (tinnitus) problemlərinin azalmasına dəstək verdiyi qeyd olunur.</li>
-    <li>Bitkinin tərkibində olan güclü antioksidant maddələr orqanizmi sərbəst radikallardan qoruyur.</li>
-  </ul>
+      <div class="highlight-box">
+        <p style="margin:0; color:#fff9c4;"><strong>Zehni Performans:</strong> Bu bitki beyin hüceyrələrini oksigenlə təmin edərək diqqət dağınıqlığını və unutqanlığı aradan qaldırmağa kömək edir.</p>
+      </div>
 
-  <h2>❤️️ Ürək-damar sistemi üçün</h2>
-  <ul>
-    <li>Damarların elastikliyini qorumağa, qan axınını yaxşılaşdırmağa və toxumaların daha yaxşı qidalanmasına kömək edə bilər.</li>
-    <li>Bu xüsusiyyəti sayəsində əl və ayaqlarda soyuqluq, keyimə və zəif qan dövranı ilə bağlı narahatlıqlarda faydalı hesab olunur.</li>
-    <li>Eyni zamanda ürək-damar sağlamlığının qorunmasına dəstək verir.</li>
-  </ul>
+      <h2>🌸 Faydaları</h2>
+      <ul>
+        <li>Yaddaşı gücləndirir və zehni yorğunluğu azaldır.</li>
+        <li>Beyin və ətraflarda (əl-ayaq) qan dövranını yaxşılaşdırır.</li>
+        <li>Stress və gərginlik zamanı sinir sistemini sakitləşdirir.</li>
+        <li>Güclü antioksidant təsiri ilə hüceyrələri qoruyur.</li>
+      </ul>
 
-  <h2>👁️ Göz sağlamlığı üçün də faydalı</h2>
-  <ul>
-    <li>Göz damarlarında qan dövranını yaxşılaşdıraraq görmə funksiyasının qorunmasına və göz yorğunluğunun azalmasına dəstək verə bilər.</li>
-    <li>Xüsusilə uzun müddət ekran qarşısında çalışan şəxslər üçün faydalı bitki kimi tanınır.</li>
-    <li>Eyni zamanda ginkgo biloba göz sağlamlığı üçün də faydalı hesab olunur.</li>
-  </ul>
+      <h2>🌿 İstifadə Qaydası</h2>
+      <p>1 xörək qaşığı yarpağı 200 ml qaynar suda 10-15 dəqiqə dəmləyib, gündə 1-2 dəfə yeməkdən sonra içmək tövsiyə olunur.</p>
 
-  <h2>🌿 Gingko biloba – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 xörək qaşığı qurudulmuş gingko biloba yarpağı. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+      <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
+      <p>Hamiləlik dövründə və qan durulducu dərmanlar istifadə edənlər həkimlə məsləhətləşməlidir.</p>
+    </div>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
-    <li>Çoban çökərtən güclü təsirə malik bitkidir. Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
-    <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
-  </ul>
+    <!-- LİMON MELİSSA İLƏ EYNİ DÜYMƏ BLOKU -->
+    <div class="nav-buttons">
+      <a href="cobancokerten.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="altinbasak.html" class="btn">İrəli ⇨</a>
+    </div>
+
+    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
+      <img src="images/instaqram1.jpg" alt="Instagram">
+      <span>Instagram: @derman_bitkileri</span>
+    </a>
+  </article>
+
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
 </div>
-
-
-  <div class="nav-buttons">
-  <a href="cobancokerten.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="altinbasak.html" class="btn">⇨ İrəli</a>
-</div>
-
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
