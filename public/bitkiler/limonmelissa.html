@@ -3,108 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Limon Melissa – Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-color: #000;
+      --card-bg: #0a0a0a;
+      --accent-yellow: #fff9c4; 
+      --text-main: #fff;
+      --text-dim: #ccc;
+      --border-color: #1a1a1a;
+    }
+
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 20px 20px 60px;
+    }
+
+    header h2 {
       font-family: 'Architects Daughter', cursive;
-      background-color: #000;
+      text-align: center;
+      margin: 40px 0;
+      font-size: 32px;
+      color: var(--text-main);
+    }
+
+    .product-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 30px;
+    }
+
+    img.main-img {
+      width: 100%;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      border: 1px solid #222;
+    }
+
+    h3 {
+      font-family: 'Architects Daughter', cursive;
+      color: var(--accent-yellow);
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .price {
+      display: inline-block;
+      border: 2px dashed var(--accent-yellow);
+      color: var(--accent-yellow);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 24px;
       color: #fff;
+      margin: 25px 0;
+      line-height: 1.4;
+      border-left: 4px solid var(--accent-yellow);
+      padding-left: 15px;
+      font-family: 'Architects Daughter', cursive;
     }
 
     h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
+      font-family: 'Architects Daughter', cursive;
+      color: var(--accent-yellow);
+      font-size: 22px;
+      margin-top: 35px;
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
+    p, ul {
+      color: var(--text-dim);
+      font-size: 17px;
     }
 
-    .card {
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 12px 25px;
       background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-    }
-
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: var(--accent-yellow);
+      text-decoration: none;
       font-weight: 600;
-      cursor: pointer;
+      font-family: 'Architects Daughter', cursive;
+      transition: 0.3s;
+      text-align: center;
     }
 
-    .card button:hover {
-      background-color: #333;
+    .btn:hover {
+      background-color: var(--accent-yellow);
+      color: #000;
     }
 
-    /* Instagram */
     .instagram-footer {
       text-align: center;
-      padding: 30px 0 10px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #1a1a1a;
     }
 
     .instagram-footer a {
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 18px;
     }
 
     .instagram-footer img {
       width: 28px;
       vertical-align: middle;
       margin-right: 8px;
+      border-radius: 5px;
     }
 
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
+      padding: 30px;
+      color: #555;
       font-size: 14px;
     }
   </style>
@@ -112,74 +169,77 @@
 
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <header>
+    <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+  </header>
 
-<div class="products">
+  <div class="product-card">
+    <img src="images/limonmelissa.jpg" alt="Limon Melissa" class="main-img">
 
-  <div class="card">
-    <img src="images/limonmelissa.jpg" alt="1 Xoş limon ətirinə malik olan bu bitki əsasən sinir sistemi, ürək-damar sağlamlığı və həzm sistemi üçün faydaları ilə tanınır.">
     <h3>Limon Melissa</h3>
-    <h3>40 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Stress, əsəbilik, narahatlıq, qorxu hissi və psixoloji gərginlik zamanı rahatladıc</h1>
-  <p><strong>Müntəzəm istifadə edildikdə yuxusuzluğun azalmasına, yuxuya getmənin asanlaşmasına və yuxu keyfiyyətinin yaxşılaşmasına kömək edir. Xüsusilə sinir mənşəli baş ağrıları və gərginlik hallarında faydalı hesab olunur.</strong></p>
+    <div class="price">40 qr - 10 AZN</div>
 
-  <h2>🌸 İmmun sistemini gücləndirici</h2>
-  <ul>
-    <li>Tərkibindəki antioksidant maddələr sayəsində orqanizmi sərbəst radikallardan qorumağa, xəstəliklərə qarşı müqaviməti artırmağa kömək edə bilər.</li>
-    <li>Soyuqdəymə və qrip zamanı çay şəklində istifadəsi bədəni rahatladır və sağalma prosesini dəstəkləyir.</li>
-</ul>
+    <div class="content">
+      <h1>🌿 Stress, əsəbilik, narahatlıq, qorxu hissi və psixoloji gərginlik zamanı rahatladıcı</h1>
+      <p><strong>Müntəzəm istifadə edildikdə yuxusuzluğun azalmasına, yuxuya getmənin asanlaşmasına və yuxu keyfiyyətinin yaxşılaşmasına kömək edir. Xüsusilə sinir mənşəli baş ağrıları və gərginlik hallarında faydalı hesab olunur.</strong></p>
 
-  <h2>🩺 Qadın sağlamlığı baxımından da limon melissa faydalıdır</h2>
-  <ul>
-    <li>Aybaşı dövründə yaranan əsəbilik, ağrı və narahatlıqların azalmasına kömək edə bilər.</li>
-    <li>Hormonal dəyişikliklər zamanı sakitləşdirici və balanslaşdırıcı təsir göstərə bilər.</li>
-  </ul>
+      <h2>🌸 İmmun sistemini gücləndirici</h2>
+      <ul>
+        <li>Tərkibindəki antioksidant maddələr sayəsində orqanizmi sərbəst radikallardan qorumağa, xəstəliklərə qarşı müqaviməti artırmağa kömək edə bilər.</li>
+        <li>Soyuqdəymə və qrip zamanı çay şəklində istifadəsi bədəni rahatladır və sağalma prosesini dəstəkləyir.</li>
+      </ul>
 
-  <h2>❤️️ Ürək-damar sistemi üçün</h2>
-  <ul>
-    <li>Bu bitki ürək sağlamlığı üçün də mühüm əhəmiyyət daşıyır.</li>
-    <li>Ürək döyüntüsünün sürətlənməsi, həyəcan və stresə bağlı çarpıntı zamanı sakitləşdirici təsir göstərə bilər.</li>
-    <li>Qan təzyiqinin yüngül şəkildə tənzimlənməsinə və ürəyin daha rahat işləməsinə dəstək olur.</li>
-  </ul>
+      <h2>🩺 Qadın sağlamlığı baxımından da limon melissa faydalıdır</h2>
+      <ul>
+        <li>Aybaşı dövründə yaranan əsəbilik, ağrı və narahatlıqların azalmasına kömək edə bilər.</li>
+        <li>Hormonal dəyişikliklər zamanı sakitləşdirici və balanslaşdırıcı təsir göstərə bilər.</li>
+      </ul>
 
-  <h2>🛡️ Həzm sistemi üçün faydalıdır.</h2>
-  <ul>
-    <li>Mədə spazmları, köp, qaz, həzmsizlik və mədə ağrıları zamanı sakitləşdirici təsir göstərə bilər.</li>
-    <li>Bağırsaq fəaliyyətini tənzimləməyə və mədə rahatlığı yaratmağa kömək edir.</li>
-    <li>Xüsusilə stressə bağlı mədə problemlərində daha təsirli hesab olunur.</li>
-  </ul>
+      <h2>❤️️ Ürək-damar sistemi üçün</h2>
+      <ul>
+        <li>Bu bitki ürək sağlamlığı üçün də mühüm əhəmiyyət daşıyır.</li>
+        <li>Ürək döyüntüsünün sürətlənməsi, həyəcan və stresə bağlı çarpıntı zamanı sakitləşdirici təsir göstərə bilər.</li>
+        <li>Qan təzyiqinin yüngül şəkildə tənzimlənməsinə və ürəyin daha rahat işləməsinə dəstək olur.</li>
+      </ul>
 
-  <h2>🌿 Limon melissa – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 xörək qaşığı qurudulmuş limon melissa otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+      <h2>🛡️ Həzm sistemi üçün faydalıdır.</h2>
+      <ul>
+        <li>Mədə spazmları, köp, qaz, həzmsizlik və mədə ağrıları zamanı sakitləşdirici təsir göstərə bilər.</li>
+        <li>Bağırsaq fəaliyyətini tənzimləməyə və mədə rahatlığı yaratmağa kömək edir.</li>
+        <li>Xüsusilə stressə bağlı mədə problemlərində daha təsirli hesab olunur.</li>
+      </ul>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
-    <li>Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
-    <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
-  </ul>
-</div>
+      <h2>🌿 Limon melissa – istifadə qaydaları:</h2>
+      <ul>
+        <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
+        <li>1 xörək qaşığı qurudulmuş limon melissa otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
+        <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
+        <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
+        <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
+      </ul>
 
+      <h2>⚠️ Diqqət</h2>
+      <ul>
+        <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
+        <li>Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
+        <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
+      </ul>
+    </div>
 
-  <div class="nav-buttons">
-  <a href="karabas.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="cobancokerten.html" class="btn">⇨ İrəli</a>
-</div>
+    <div class="nav-buttons">
+      <a href="karabas.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="cobancokerten.html" class="btn">İrəli ⇨</a>
+    </div>
 
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        Instagram: @derman_bitkileri
+      </a>
+    </div>
+  </div>
 </div>
 
 <footer>
