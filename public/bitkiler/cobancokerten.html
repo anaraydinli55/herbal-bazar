@@ -1,72 +1,225 @@
-<!-- Font hissəsini bu şəkildə yeniləyin -->
-<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çoban Çökərtən Faydaları | Herbal Bazar</title>
+  
+  <!-- Şriftlər: Başlıqlar üçün dekorativ, mətn üçün təmiz sans-serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-  body {
-    margin: 0;
-    /* Əsas mətn üçün Inter şrifti, başlıqlar üçün Architects Daughter */
-    font-family: 'Inter', sans-serif; 
-    background-color: #000;
-    color: #e0e0e0; /* Tam ağ deyil, bir az boz-ağ gözü yormur */
-    line-height: 1.7; /* Sətir arası məsafəni artırdıq */
-    letter-spacing: 0.3px;
-  }
+  <style>
+    /* Ümumi Stil */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #cfcfcf; /* Gözü yormayan açıq boz mətn */
+      font-family: 'Inter', sans-serif; /* Aslan pəncəsindəki kimi təmiz stil */
+      line-height: 1.8;
+    }
 
-  /* Dekorativ başlıqlar üçün köhnə şrifti saxlayırıq */
-  h1, h2, .main-title, .price-info, .btn {
-    font-family: 'Architects Daughter', cursive;
-    color: #fff;
-  }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
 
-  h1 {
-    font-size: 28px;
-    line-height: 1.3;
-    margin-bottom: 25px;
-    color: #2ecc71; /* Bitki mövzusuna uyğun yaşıl tonu */
-  }
+    /* Başlıqlar - Açıq Sarı (Lemon Chiffon) */
+    h1, h2, h3, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; /* Açıq Sarı tonu */
+      text-align: center;
+      line-height: 1.3;
+    }
 
-  .content p {
-    font-size: 17px;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
+    .main-title {
+      font-size: 32px;
+      margin: 40px 0;
+      color: #fff; /* Əsas şüar ağ qalsın */
+    }
 
-  .content h2 {
-    font-size: 22px;
-    margin-top: 35px;
-    margin-bottom: 15px;
-    border-left: 4px solid #2ecc71; /* Başlıqları vurğulamaq üçün sol xətt */
-    padding-left: 15px;
-  }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 15px;
+    }
 
-  ul {
-    padding-left: 20px;
-  }
+    h2 {
+      font-size: 22px;
+      text-align: left;
+      margin-top: 35px;
+      border-left: 4px solid #fff9c4; /* Sarı vurğu xətti */
+      padding-left: 15px;
+    }
 
-  ul li {
-    margin-bottom: 12px;
-    position: relative;
-    list-style-type: none;
-  }
+    /* Məhsul Kartı */
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #1a1a1a;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+    }
 
-  /* Siyahı işarələrini daha qəşəng edək */
-  ul li::before {
-    content: "•";
-    color: #2ecc71;
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
-  }
+    .product-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 15px;
+      filter: grayscale(20%); /* Bir az təbiilik qatır */
+    }
 
-  .product-detail {
-    background-color: #0a0a0a; /* Bir az daha tünd və təmiz fon */
-    border: 1px solid #1a1a1a;
-    padding: 40px; /* Daxili məsafəni artırdıq ki, mətn "nəfəs alsın" */
-  }
+    .price-tag {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 24px;
+      color: #fff9c4;
+      text-align: center;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
 
-  strong {
-    color: #fff;
-    font-weight: 600;
-  }
-</style>
+    /* Mətn və Siyahılar */
+    .content p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 5px;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "🌿"; /* Bitki ikonlu siyahı */
+      position: absolute;
+      left: 0;
+      font-size: 14px;
+    }
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* Düymələr */
+    .nav-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 40px;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      background-color: #111;
+      border: 1px solid #333;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    /* Instagram və Footer */
+    .instagram-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px 0;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .instagram-link img {
+      width: 30px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      .nav-buttons { flex-direction: column; }
+      .product-card { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
+
+  <article class="product-card">
+    <img src="images/cobancokerten.jpg" alt="Çoban Çökərtən" class="product-image">
+    
+    <div class="price-tag">50 qr - 10 AZN</div>
+
+    <h1>🌿 Çoban Çökərtən (Tribulus)</h1>
+
+    <div class="content">
+      <p><strong>Çoban çökərtən</strong> xalq təbabətində xüsusilə sidik-cinsiyyət sistemi, hormonal balans və ümumi bədən gücləndirici təsiri ilə tanınan qiymətli bitkidir.</p>
+
+      <h2>🌸 Sidikqovucu Xüsusiyyətləri</h2>
+      <ul>
+        <li>Böyrəklərin fəaliyyətini dəstəkləyərək artıq mayeni xaric edir.</li>
+        <li>Ödemlərin azalmasında və böyrək yollarının təmizlənməsində faydalıdır.</li>
+        <li>Sidik yollarında iltihab riskini minimuma endirir.</li>
+      </ul>
+
+      <h2>🩺 Fiziki Güc və Enerji</h2>
+      <ul>
+        <li>Testosteron səviyyəsini təbii yolla dəstəkləyir.</li>
+        <li>Halsızlıq və enerji çatışmazlığı zamanı bədəni canlandırır.</li>
+        <li>İdman edənlər üçün əzələ bərpasını sürətləndirir.</li>
+      </ul>
+
+      <h2>🌿 İstifadə Qaydası</h2>
+      <p>1 çay qaşığı bitkini 200 ml qaynar suda 10-15 dəqiqə dəmləyin. Gündə 1-2 dəfə yeməkdən sonra ilıq halda içilməsi tövsiyə olunur.</p>
+
+      <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
+      <ul>
+        <li>Hamilə və süd verən qadınlara tövsiyə edilmir.</li>
+        <li>Mədə xorası olanlar həkimlə məsləhətləşməlidir.</li>
+      </ul>
+    </div>
+
+    <div class="nav-buttons">
+      <a href="limonmelissa.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="gingkobiloba.html" class="btn">⇨ İrəli</a>
+    </div>
+
+    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
+      <img src="images/instaqram1.jpg" alt="Instagram">
+      <span>Instagram: @derman_bitkileri</span>
+    </a>
+  </article>
+
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
+</div>
+
+</body>
+</html>
