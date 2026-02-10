@@ -1,151 +1,229 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enginar (Artishok) | Qaraciyər Dostu | Herbal Bazar</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9fbf9; /* Yüngül yaşılımtıl təbii fon */
-        }
-        .product-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            border: 1px solid #e0eee0;
-        }
-        h1 {
-            color: #2d5a27;
-            text-align: center;
-            border-bottom: 2px solid #2d5a27;
-            padding-bottom: 10px;
-        }
-        .product-image {
-            width: 100%;
-            max-height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .price {
-            font-size: 24px;
-            color: #e67e22;
-            font-weight: bold;
-            text-align: center;
-            margin: 20px 0;
-            padding: 10px;
-            background: #fff5eb;
-            border-radius: 8px;
-        }
-        h2 {
-            color: #2d5a27;
-            border-left: 5px solid #2d5a27;
-            padding-left: 10px;
-            margin-top: 30px;
-            font-size: 1.3em;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .usage, .warning {
-            background: #f0f7f0;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-        .warning {
-            background: #fff0f0;
-            border-left: 5px solid #e74c3c;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 30px;
-        }
-        .btn {
-            text-decoration: none;
-            padding: 10px 20px;
-            background: #2d5a27;
-            color: white;
-            border-radius: 5px;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #1e3d1a;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enginar (Artishok) | Herbal Bazar</title>
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    h1, h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
+      text-align: center;
+    }
+
+    .main-title {
+      font-size: 28px;
+      margin: 30px 0;
+      color: #fff;
+    }
+
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      margin: 10px 0 25px;
+      padding: 10px 20px;
+      border: 2px dashed #fff9c4;
+      border-radius: 12px;
+      font-size: 22px;
+      color: #fff9c4;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .content h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 19px;
+      text-align: left;
+      margin-top: 30px;
+      color: #fff9c4;
+      border-left: 3px solid #fff9c4;
+      padding-left: 12px;
+    }
+
+    .content ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .content li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 35px 0;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px 5px;
+      background-color: #000;
+      border: 1px solid #fff9c4;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    .instagram-footer {
+      margin-top: 20px;
+    }
+
+    .instagram-footer a {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .instagram-footer img {
+      width: 28px;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #555;
+      font-size: 13px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="product-card">
-    <h1>Enginar (Artishok)</h1>
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
+
+  <div class="product-card">
+    <img src="images/enginar.jpg" alt="Enginar (Artishok)" class="product-image">
     
-    <img src="images/enginar.jpg" alt="Enginar bitkisi - Qaraciyər təmizləyici" class="product-image">
+    <div class="price-tag">50 qr - 10 AZN</div>
 
-    <div class="price">50 QR — 10 AZN</div>
+    <div class="content">
+      <h1>🌿 Enginar (Cynara scolymus)</h1>
+      <p>Enginar, xüsusilə qaraciyər və öd kisəsi sağlamlığı üçün əvəzolunmaz hesab edilən müalicəvi bitkidir. Tərkibindəki "Sinarin" maddəsi sayəsində bədənin daxili təmizlənmə prosesində mühüm rol oynayır.</p>
 
-    <p>Enginar (Cynara scolymus), Arıçiçəklilər fəsiləsinə aid olan, xüsusilə qaraciyər və öd kisəsi sağlamlığı üçün əvəzolunmaz hesab edilən müalicəvi bitkidir. Tərkibindəki "Sinarin" maddəsi sayəsində bədənin daxili təmizlənmə prosesində mühüm rol oynayır.</p>
-
-    <h2>Qaraciyər və Öd Sağlamlığı</h2>
-    <ul>
+      <h2>🧪 Qaraciyər və Öd Sağlamlığı</h2>
+      <ul>
         <li><strong>Qaraciyər regenerasiyası:</strong> Qaraciyər hüceyrələrinin yenilənməsinə kömək edir və onu toksinlərdən təmizləyir.</li>
         <li><strong>Öd qovucu:</strong> Öd ifrazını artıraraq həzmi asanlaşdırır və öd yollarının tıxanmasının qarşısını alır.</li>
         <li>Yağlı qaraciyər (hepatoz) xəstəliyinin müalicəsində dəstəkçi vasitədir.</li>
-    </ul>
+      </ul>
 
-    <h2>Xolesterol və Ürək-Damar Sistemi</h2>
-    <ul>
+      <h2>❤️ Xolesterol və Ürək-Damar</h2>
+      <ul>
         <li>Pis xolesterolu (LDL) aşağı salır, yaxşı xolesterolu (HDL) balanslaşdırır.</li>
         <li>Damar sərtliyinin (ateroskleroz) qarşısını almağa kömək edir.</li>
         <li>Qanı təmizləyir və qan dövranını yaxşılaşdırır.</li>
-    </ul>
+      </ul>
 
-    <h2>Həzm və Maddələr Mübadiləsi</h2>
-    <ul>
+      <h2>🌀 Həzm və Maddələr Mübadiləsi</h2>
+      <ul>
         <li>Yüksək lif tərkibi sayəsində qəbizliyi aradan qaldırır və bağırsaq fəaliyyətini tənzimləyir.</li>
         <li>Sidikqovucu xüsusiyyəti ilə bədəndəki şişkinliyi (ödemi) azaldır.</li>
         <li>Qanda şəkərin miqdarını tənzimləməyə kömək edir.</li>
-    </ul>
+      </ul>
 
-    <div class="usage">
-        <h2>İstifadə Qaydası (Çay kimi)</h2>
-        <p>1 xörək qaşığı qurudulmuş enginar yarpağını 1 stəkan qaynar suya əlavə edin. 10 dəqiqə dəmlədikdən sonra süzün. Gündə 2 dəfə, yeməkdən 20-30 dəqiqə əvvəl içilməsi tövsiyə olunur. Dadı acı olduğu üçün bal və ya limon əlavə edə bilərsiniz.</p>
-    </div>
+      <h2>☕ İstifadə Qaydaları</h2>
+      <ul>
+        <li>1 xörək qaşığı qurudulmuş enginar yarpağını 1 stəkan qaynar suya əlavə edin.</li>
+        <li>10 dəqiqə dəmlədikdən sonra süzün.</li>
+        <li>Gündə 2 dəfə, yeməkdən 20-30 dəqiqə əvvəl içilməsi tövsiyə olunur.</li>
+        <li>Dadı acı olduğu üçün bal və ya limon əlavə edə bilərsiniz.</li>
+      </ul>
 
-    <div class="warning">
-        <h2>Diqqət!</h2>
-        <ul>
-            <li>Öd daşı olan şəxslər həkim məsləhəti olmadan istifadə etməməlidir (daşın hərəkətinə səbəb ola bilər).</li>
-            <li>Hamilə və süd verən qadınlara tövsiyə olunmur.</li>
-            <li>İshal problemi olanlar ehtiyatlı olmalıdır, çünki bağırsaqları sürətləndirir.</li>
-        </ul>
+      <h2 style="color: #ff5252; border-left-color: #ff5252;">⚠️ Diqqət</h2>
+      <ul>
+        <li>Öd daşı olan şəxslər həkim məsləhəti olmadan istifadə etməməlidir (daşın hərəkətinə səbəb ola bilər).</li>
+        <li>Hamilə və süd verən qadınlara tövsiyə olunmur.</li>
+        <li>İshal problemi olanlar ehtiyatlı olmalıdır, çünki bağırsaqları sürətləndirir.</li>
+      </ul>
     </div>
 
     <div class="nav-buttons">
-        <a href="index.html" class="btn">Ana Səhifə</a>
-        <a href="limonmelissa.html" class="btn">Geri</a>
+      <a href="limonmelissa.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="serbetciotu.html" class="btn">İrəli ⇨</a>
     </div>
-</div>
 
-<footer>
-    &copy; 2026 HERBAL BAZAR - Təbiətdən Gələn Sağlamlıq
-</footer>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="IG">
+        Instagram: @derman_bitkileri
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
+</div>
 
 </body>
 </html>
