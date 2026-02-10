@@ -3,69 +3,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gingko Biloba | Herbal Bazar</title>
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <title>Gingko Biloba Faydaları | Herbal Bazar</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
   <style>
-    body { background-color: #000; color: #fff; font-family: 'Architects Daughter', cursive; margin: 0; padding: 20px; }
-    .container { max-width: 600px; margin: 0 auto; text-align: center; }
-    .product-card { background: #111; padding: 20px; border-radius: 20px; border: 1px solid #222; }
-    img { width: 100%; border-radius: 15px; margin-bottom: 15px; }
-    h1 { color: #fff9c4; font-size: 24px; }
-    .price { font-size: 22px; color: #fff9c4; margin: 15px 0; border: 1px dashed #fff9c4; padding: 10px; display: inline-block; border-radius: 10px; }
-    .content { text-align: left; line-height: 1.6; color: #ccc; }
-    
-    /* LİMON MELİSSA STİLİ DÜYMƏLƏR */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    h1, h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
+      text-align: center;
+    }
+
+    .main-title {
+      font-size: 30px;
+      margin: 40px 0;
+      color: #fff;
+    }
+
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 30px;
+      border: 1px solid #1a1a1a;
+    }
+
+    .product-image {
+      width: 100%;
+      max-width: 500px;
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 15px;
+    }
+
+    .price-container {
+      border: 2px dashed #fff9c4;
+      border-radius: 15px;
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 300px;
+      text-align: center;
+      background-color: rgba(255, 249, 196, 0.05);
+    }
+
+    .price-text {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 24px;
+      color: #fff9c4;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 15px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 22px;
+      text-align: left;
+      margin-top: 35px;
+      border-left: 3px solid #fff9c4;
+      padding-left: 15px;
+    }
+
+    .content p {
+      font-size: 17px;
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background-color: rgba(255, 249, 196, 0.08);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 25px 0;
+      border-left: 4px solid #fff9c4;
+    }
+
+    ul {
+      padding-left: 5px;
+      list-style: none;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+      font-size: 14px;
+    }
+
+    /* LİMON MELİSSA İLƏ TAM EYNİ YAN-YANA DÜYMƏLƏR */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
-      gap: 8px;
-      margin: 30px 0;
+      gap: 10px;
+      margin-top: 40px;
     }
+
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 2px;
+      padding: 12px 5px;
       background-color: #111;
-      border: 1px solid #fff9c4;
+      border: 1px solid #fff9c4; /* Limon Melissa rəngi */
       color: #fff9c4;
       text-decoration: none;
       border-radius: 10px;
-      font-size: 14px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 16px;
       font-weight: bold;
       transition: 0.3s;
       white-space: nowrap;
     }
-    .btn:hover { background-color: #fff9c4; color: #000; }
 
-    .instagram { margin-top: 20px; text-decoration: none; color: #fff; display: flex; align-items: center; justify-content: center; gap: 10px; }
-    .instagram img { width: 25px; margin: 0; }
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    .instagram-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 40px 0;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .instagram-link img {
+      width: 30px;
+      border-radius: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
-  <div class="product-card">
-    <img src="images/gingkobiloba.jpg" alt="Gingko Biloba">
-    <h1>🌿 Gingko Biloba</h1>
-    <div class="price">60 qr - 10 AZN</div>
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
+
+  <article class="product-card">
+    <img src="images/gingkobiloba.jpg" alt="Gingko Biloba" class="product-image">
     
+    <div class="price-container">
+      <span class="price-text">60 qr - 10 AZN</span>
+    </div>
+
+    <h1>🌿 Gingko Biloba (Yaddaş Bitkisi)</h1>
+
     <div class="content">
-      <p>🧠 <strong>Yaddaş və Beyin:</strong> Diqqəti artırır, unutqanlığı azaldır.</p>
-      <p>🩸 <strong>Qan Dövranı:</strong> Beyinə və ətraflara qan axınını yaxşılaşdırır.</p>
-      <p>🛡️ <strong>Antioksidant:</strong> Hüceyrələri qoruyur və enerji verir.</p>
+      <p><strong>Ginkgo biloba</strong> beyin fəaliyyəti, yaddaş və qan dövranı üzərindəki müsbət təsirləri ilə tanınan dünyanın ən qədim ağac növlərindən biridir.</p>
+
+      <div class="highlight-box">
+        <p style="margin:0; color:#fff9c4;"><strong>Zehni Performans:</strong> Bu bitki beyin hüceyrələrini oksigenlə təmin edərək diqqət dağınıqlığını və unutqanlığı aradan qaldırmağa kömək edir.</p>
+      </div>
+
+      <h2>🌸 Faydaları</h2>
+      <ul>
+        <li>Yaddaşı gücləndirir və zehni yorğunluğu azaldır.</li>
+        <li>Beyin və ətraflarda (əl-ayaq) qan dövranını yaxşılaşdırır.</li>
+        <li>Stress və gərginlik zamanı sinir sistemini sakitləşdirir.</li>
+        <li>Güclü antioksidant təsiri ilə hüceyrələri qoruyur.</li>
+      </ul>
+
+      <h2>🌿 İstifadə Qaydası</h2>
+      <p>1 xörək qaşığı yarpağı 200 ml qaynar suda 10-15 dəqiqə dəmləyib, gündə 1-2 dəfə yeməkdən sonra içmək tövsiyə olunur.</p>
+
+      <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
+      <p>Hamiləlik dövründə və qan durulducu dərmanlar istifadə edənlər həkimlə məsləhətləşməlidir.</p>
     </div>
 
     <!-- YAN-YANA DÜYMƏLƏR -->
     <div class="nav-buttons">
       <a href="cobancokerten.html" class="btn">⇦ Geri</a>
-      <a href="bitkiler.html" class="btn">🏠 Ana Səhifə</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="altinbasak.html" class="btn">İrəli ⇨</a>
     </div>
 
-    <a href="https://instagram.com/derman_bitkileri" class="instagram">
-      <img src="images/instaqram1.jpg" alt="IG"> @derman_bitkileri
+    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
+      <img src="images/instaqram1.jpg" alt="Instagram">
+      <span>Instagram: @derman_bitkileri</span>
     </a>
-  </div>
+  </article>
+
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
 </div>
 
 </body>
