@@ -6,127 +6,162 @@
   <title>Karabaş Otu – Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --bg-color: #000;
+      --card-bg: #0a0a0a;
+      --accent-yellow: #fff9c4; 
+      --text-main: #fff;
+      --text-dim: #ccc;
+      --border-color: #1a1a1a;
+    }
+
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+      padding: 20px 20px 60px;
+    }
+
+    header h2 {
       font-family: 'Architects Daughter', cursive;
-      background-color: #000;
-      color: #fff;
-    }
-
-    h2 {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
+      margin: 40px 0;
       font-size: 32px;
-      font-weight: 700;
+      color: var(--text-main);
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 0 20px 60px;
+    .product-card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 30px;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    img.main-img {
       width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      border: 1px solid #222;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
+    h3 {
+      font-family: 'Architects Daughter', cursive;
+      color: var(--accent-yellow);
+      font-size: 28px;
+      margin: 10px 0;
+    }
+
+    .price {
+      display: inline-block;
+      border: 2px dashed var(--accent-yellow);
+      color: var(--accent-yellow);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: bold;
       font-size: 20px;
-      color: #ffa5d8;
-      font-weight: 700;
-    }
-
-    .card p, .card ul {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.5;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    h1, h2 {
-      color: #fff;
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 24px;
+      color: #fff;
+      margin: 25px 0;
+      line-height: 1.4;
+      border-left: 4px solid var(--accent-yellow);
+      padding-left: 15px;
+      font-family: 'Architects Daughter', cursive;
     }
 
     h2 {
-      margin-top: 28px;
-      font-size: 24px;
+      font-family: 'Architects Daughter', cursive;
+      color: var(--accent-yellow);
+      font-size: 22px;
+      margin-top: 35px;
+    }
+
+    p, ul {
+      color: var(--text-dim);
+      font-size: 17px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
     }
 
     .nav-buttons {
       display: flex;
-      gap: 10px;
-      margin-top: 30px;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
     }
 
     .btn {
       flex: 1;
-      text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-      background-color: #222;
-      border: 1px solid #444;
-      color: #fff;
+      padding: 12px 25px;
+      background-color: #111;
+      border: 1px solid #333;
+      border-radius: 10px;
+      color: var(--accent-yellow);
       text-decoration: none;
       font-weight: 600;
+      font-family: 'Architects Daughter', cursive;
       transition: 0.3s;
+      text-align: center;
     }
 
     .btn:hover {
-      background-color: #333;
+      background-color: var(--accent-yellow);
+      color: #000;
     }
 
     .instagram-footer {
       text-align: center;
-      padding: 30px 0 10px;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #1a1a1a;
     }
 
     .instagram-footer a {
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 18px;
     }
 
     .instagram-footer img {
       width: 28px;
       vertical-align: middle;
       margin-right: 8px;
+      border-radius: 5px;
     }
 
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
+      padding: 30px;
+      color: #555;
       font-size: 14px;
     }
   </style>
@@ -134,13 +169,16 @@
 
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <header>
+    <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+  </header>
 
-<div class="products">
-  <div class="card">
-    <img src="images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)">
+  <div class="product-card">
+    <img src="images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)" class="main-img">
+
     <h3>Karabaş Otu</h3>
-    <h3>50 qr - 10 AZN</h3>
+    <div class="price">50 qr - 10 AZN</div>
 
     <div class="content">
       <h1>🌿 Sinir sistemi, baş ağrıları və tənəffüs yolları</h1>
@@ -173,7 +211,7 @@
 
       <h2>🌿 Karabaş otu – istifadə qaydaları:</h2>
       <ul>
-        <li>☕ Çay şəklində istifadə: 1 xörək qaşığı qurudulmuş karabaş otu. 1 stəkan (200 ml) qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir.</li>
+        <li>☕ <strong>Çay şəklində istifadə:</strong> 1 xörək qaşığı qurudulmuş karabaş otu. 1 stəkan (200 ml) qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir.</li>
         <li>Gündə 1–2 dəfə, yeməkdən sonra tövsiyə olunur.</li>
         <li>2–3 həftəlik kurs, sonra 7–10 gün fasilə</li>
       </ul>
@@ -189,16 +227,15 @@
     <div class="nav-buttons">
       <a href="yakiotu.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="limonmelissa.html" class="btn">⇨ İrəli</a>
+      <a href="limonmelissa.html" class="btn">İrəli ⇨</a>
     </div>
 
     <div class="instagram-footer">
       <a href="https://instagram.com/derman_bitkileri" target="_blank">
-        <img src="images/instaqram1.jpg" alt="">
-        Instagram
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        Instagram: @derman_bitkileri
       </a>
     </div>
-
   </div>
 </div>
 
