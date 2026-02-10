@@ -4,256 +4,237 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Aslan Pəncəsi – Qadın sağlamlığı üçün faydaları | Herbal Bazar</title>
-
-  <!-- SEO META -->
-  <meta name="description" content="Aslan pəncəsi nədir? Qadın sağlamlığı üçün istifadə olunan Aslan pəncəsinin faydaları, menstruasiya dövründə təsiri və çay kimi istifadə qaydası.">
+  <!-- SEO Başlıq və Təsvir -->
+  <title>Aslan Pəncəsi Faydaları və İstifadə Qaydası | Herbal Bazar</title>
+  <meta name="description" content="Aslan pəncəsi nədir? Qadın sağlamlığı, hormonal balans və aybaşı sancıları üçün aslan pəncəsinin faydaları və çayının hazırlanma qaydası.">
+  <meta name="keywords" content="aslan pəncəsi, qadın sağlamlığı, hormonal balans, bitki çayları, təbii müalicə">
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- ARTICLE SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Aslan Pəncəsi nədir? Qadın sağlamlığı üçün faydaları",
-    "description": "Aslan pəncəsi xalq təbabətində qadın sağlamlığını dəstəkləmək üçün istifadə olunur.",
-    "author": { "@type": "Organization", "name": "Herbal Bazar" },
-    "publisher": { "@type": "Organization", "name": "Herbal Bazar" }
-  }
-  </script>
-
-  <!-- PRODUCT SCHEMA -->
+  <!-- Google üçün Məhsul və FAQ Sxemləri (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Aslan Pəncəsi",
-    "image": "https://example.com/images/aslan-pencesi.jpg",
-    "description": "Aslan pəncəsi – qadın sağlamlığını dəstəkləyən təbii bitki. Xalq təbabətində istifadə olunur.",
+    "image": "images/aslan-pencesi.jpg",
+    "description": "Qadın sağlamlığı üçün hormonal balansı tənzimləyən təbii aslan pəncəsi otu.",
     "brand": { "@type": "Brand", "name": "Herbal Bazar" },
     "offers": {
       "@type": "Offer",
+      "price": "10.00",
       "priceCurrency": "AZN",
-      "price": "10",
       "availability": "https://schema.org/InStock"
     }
   }
   </script>
 
-  <!-- FAQ – People Also Ask -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Aslan pəncəsi nə üçün istifadə olunur?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Aslan pəncəsi xalq təbabətində əsasən qadın sağlamlığını dəstəkləmək məqsədilə istifadə olunur."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Aslan pəncəsi çayı necə hazırlanır?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "1 çay qaşığı qurudulmuş Aslan pəncəsi üzərinə 1 stəkan qaynar su əlavə olunur və 10–15 dəqiqə dəmlənir."
-        }
-      }
-    ]
-  }
-  </script>
-
   <style>
+    :root {
+      --bg-color: #000;
+      --card-bg: #0a0a0a;
+      --accent-color: #ffa5d8;
+      --text-main: #fff;
+      --text-dim: #ccc;
+      --border-color: #1a1a1a;
+    }
+
     body {
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header h2 {
       font-family: 'Architects Daughter', cursive;
-      background-color: #000;
-      color: #fff;
-    }
-
-    h2 {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
+      color: var(--text-main);
+      font-size: 28px;
+      margin-bottom: 30px;
     }
 
-    .products {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 0 20px 60px;
+    article.product-detail {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 25px;
+      overflow: hidden;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .product-image {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 15px;
       margin-bottom: 20px;
+      border: 1px solid #222;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #ffa5d8; /* vurğulu rəng */
-      font-weight: 700;
-    }
-
-    .card p, .card ul {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.5;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    h1, h2 {
-      color: #fff;
+    .price-tag {
+      display: inline-block;
+      background: var(--accent-color);
+      color: #000;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-weight: bold;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 26px;
+      color: var(--accent-color);
+      margin-top: 0;
     }
 
-    h2 {
-      margin-top: 28px;
-      font-size: 24px;
+    .content h2 {
+      font-size: 20px;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 10px;
+      margin-top: 25px;
+      color: #fff;
     }
 
+    .content p, .content ul {
+      color: var(--text-dim);
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    /* Naviqasiya Düymələri */
     .nav-buttons {
       display: flex;
       gap: 10px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px;
-      border-radius: 8px;
-      background-color: #222;
-      border: 1px solid #444;
+      padding: 14px;
+      border-radius: 10px;
+      background-color: #111;
+      border: 1px solid #333;
       color: #fff;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s;
+      font-size: 14px;
     }
 
     .btn:hover {
-      background-color: #333;
+      background-color: #fff;
+      color: #000;
     }
 
-    .instagram-footer {
+    .btn-home {
+      background-color: var(--accent-color);
+      color: #000;
+      border: none;
+    }
+
+    /* Instagram Footer */
+    .social-link {
       text-align: center;
-      padding: 30px 0 10px;
+      margin-top: 30px;
+      padding: 20px;
+      border-top: 1px solid var(--border-color);
     }
 
-    .instagram-footer a {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
+    .social-link a {
+      color: var(--text-main);
       text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .instagram-footer img {
-      width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+    .social-link img {
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
     }
 
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 40px 20px;
+      color: #666;
+      font-size: 13px;
     }
   </style>
 </head>
-
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <header>
+    <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+  </header>
 
-<div class="products">
-  <div class="card">
-    <img src="images/aslan-pencesi.jpg" alt="Aslan pəncəsi otu">
-    <h3>Aslan Pəncəsi – qadın sağlamlığı üçün</h3>
-    <h3>50 qr - 10 AZN</h3>
-
+  <article class="product-detail">
+    <img src="images/aslan-pencesi.jpg" alt="Aslan Pəncəsi Otu - Herbal Bazar" class="product-image">
+    
+    <div class="price-tag">50 qr - 10 AZN</div>
+    
+    <h1>🌿 Aslan Pəncəsi və Qadın Sağlamlığı</h1>
+    
     <div class="content">
-      <h1>🌿 Aslan Pəncəsi və Qadın Sağlamlığı</h1>
-      <p><strong>Aslan pəncəsi xalq təbabətində menstruasiya dövründə rahatlıq və hormonal balans üçün istifadə olunur.</strong></p>
+      <p><strong>Aslan pəncəsi</strong> xalq təbabətində əsrlərdir qadın sağlamlığını qorumaq, hormonal balansı tənzimləmək və menstrual dövrü rahat keçirmək üçün istifadə edilən ən effektiv bitkilərdən biridir.</p>
 
       <h2>🩺 Aybaşı dövründə faydaları</h2>
       <ul>
-        <li>Ağrı və krampların azalmasına kömək edir</li>
-        <li>Rahatlıq və sakitlik hissi verir</li>
+        <li>Güclü sancıları və krampları təbii yolla azaldır.</li>
+        <li>Həddindən artıq qanaxmanın qarşısını almağa kömək edir.</li>
+        <li>Dövrü tənzimləyir və gərginliyi aradan qaldırır.</li>
       </ul>
 
-      <h2>❤️ Hormonal balans</h2>
+      <h2>❤️ Hormonal Balans və Reproduktiv Sağlamlıq</h2>
       <ul>
-        <li>Hormonal tarazlığın dəstəklənməsinə kömək edir</li>
-        <li>Yumurtalıqların funksiyasını dəstəkləyir</li>
+        <li>FSH və LH hormonlarının balanslaşdırılmasına dəstək olur.</li>
+        <li>Yumurtalıq kistaları və polikistik over sindromu zamanı köməkçi vasitədir.</li>
+        <li>Uşaqlıq əzələlərini möhkəmləndirir.</li>
       </ul>
 
-      <h2>🩹 Reproduktiv sağlamlıq</h2>
-      <ul>
-        <li>Qadın reproduktiv orqanlarını qoruyur</li>
-        <li>Yumurtalıq və uşaqlıq funksiyasını dəstəkləyir</li>
-      </ul>
+      <h2>☕ İstifadə Qaydası (Dəmləmə)</h2>
+      <p>1 çay qaşığı qurudulmuş aslan pəncəsi üzərinə 200ml qaynar su əlavə edin. 10 dəqiqə ağzı bağlı şəkildə dəmləyin. Gündə 1 və ya 2 dəfə yeməkdən sonra ilıq şəkildə için.</p>
 
-      <h2>🌿 Aslan Pəncəsi – istifadə qaydaları</h2>
-      <ul>
-        <li>☕ Çay şəklində: 1 çay qaşığı qurudulmuş bitki, 1 stəkan qaynar su, 10–15 dəqiqə dəmlənir</li>
-        <li>Gündə 1–2 dəfə içilməsi tövsiyə olunur</li>
-        <li>2–3 həftəlik kurs, sonra 7–10 gün fasilə</li>
-      </ul>
-
-      <h2>⚠️ Diqqət</h2>
-      <ul>
-        <li>Hamiləlik və südvermə dövründə mütəxəssis məsləhəti vacibdir</li>
-        <li>Uzun müddət fasiləsiz istifadə tövsiyə edilmir</li>
-      </ul>
+      <h2>⚠️ Vacib Qeyd</h2>
+      <p>Hamiləlik dövründə istifadəsi tövsiyə edilmir. Hər hansı xroniki xəstəliyiniz varsa, həkimlə məsləhətləşin.</p>
     </div>
 
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
       <a href="mahlep.html" class="btn">⇦ Geri</a>
-      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="hayit.html" class="btn">⇨ İrəli</a>
-    </div>
+      <a href="index.html" class="btn btn-home">🏠 Ana Səhifə</a>
+      <a href="hayit.html" class="btn">İrəli ⇨</a>
+    </nav>
 
-    <div class="instagram-footer">
+    <div class="social-link">
       <a href="https://instagram.com/derman_bitkileri" target="_blank">
-        <img src="images/instaqram1.jpg" alt=""> Instagram
+        <img src="images/instaqram1.jpg" alt="Instagram"> Instagram: @derman_bitkileri
       </a>
     </div>
+  </article>
 
-  </div>
+  <footer>
+    &copy; 2025 Herbal Bazar – Şəfalı Bitkilər Dünyası. <br>
+    Bütün hüquqlar qorunur.
+  </footer>
 </div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
