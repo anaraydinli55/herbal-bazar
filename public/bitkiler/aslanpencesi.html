@@ -1,217 +1,254 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Məhsul Adı | Herbal Bazar</title>
-  
-  <!-- Şriftlər -->
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #cfcfcf; 
-      font-family: 'Inter', sans-serif; 
-      line-height: 1.8;
-    }
+<!-- SEO Başlıq və Təsvir (Qorundu) -->
+<title>Aslan Pəncəsi Faydaları və İstifadə Qaydası | Herbal Bazar</title>
+<meta name="description" content="Aslan pəncəsi nədir? Qadın sağlamlığı, hormonal balans və aybaşı sancıları üçün aslan pəncəsinin faydaları və çayının hazırlanma qaydası.">
+<meta name="keywords" content="aslan pəncəsi, qadın sağlamlığı, hormonal balans, bitki çayları, təbii müalicə">
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-    /* Başlıqlar - Açıq Sarı */
-    h1, h2, .main-title {
-      font-family: 'Architects Daughter', cursive;
-      color: #fff9c4; 
-      text-align: center;
-    }
+<!-- Google Sxem Kodları (Qorundu) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Product",
+"name": "Aslan Pəncəsi",
+"image": "images/aslan-pencesi.jpg",
+"description": "Qadın sağlamlığı üçün hormonal balansı tənzimləyən təbii aslan pəncəsi otu.",
+"brand": { "@type": "Brand", "name": "Herbal Bazar" },
+"offers": {
+"@type": "Offer",
+"price": "10.00",
+"priceCurrency": "AZN",
+"availability": "https://schema.org/InStock"
+}
+}
+</script>
 
-    .main-title {
-      font-size: 30px;
-      margin: 40px 0;
-      color: #fff;
-    }
+<style>
+:root {
+--bg-color: #000;
+--card-bg: #0a0a0a;
+--accent-yellow: #fff9c4; /* Çoban Çökərtən sarısı */
+--text-main: #fff;
+--text-dim: #ccc;
+--border-color: #1a1a1a;
+}
 
-    h1 {
-      font-size: 26px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #222;
-      padding-bottom: 15px;
-    }
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-main);
+line-height: 1.8;
+}
 
-    h2 {
-      font-size: 22px;
-      text-align: left;
-      margin-top: 35px;
-      border-left: 3px solid #fff9c4;
-      padding-left: 15px;
-    }
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
 
-    /* Qiymət Bölməsi - Aslan Pəncəsi/Çoban Çökərtən Stili */
-    .price-container {
-      border: 2px dashed #fff9c4;
-      border-radius: 15px;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 300px;
-      text-align: center;
-      background-color: rgba(255, 249, 196, 0.05);
-    }
+header h2 {
+font-family: 'Architects Daughter', cursive;
+text-align: center;
+color: var(--text-main);
+font-size: 28px;
+margin-bottom: 30px;
+}
 
-    .price-text {
-      font-family: 'Architects Daughter', cursive;
-      font-size: 24px;
-      color: #fff9c4;
-      font-weight: bold;
-      display: block;
-    }
+article.product-detail {
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 20px;
+padding: 25px;
+}
 
-    /* Məhsul Kartı */
-    .product-card {
-      background-color: #0a0a0a;
-      border-radius: 20px;
-      padding: 30px;
-      border: 1px solid #1a1a1a;
-    }
+/* Şəkil kodu sizin orijinal kodunuzdakı kimidir */
+.product-image {
+width: 100%;
+border-radius: 15px;
+margin-bottom: 20px;
+border: 1px solid #222;
+display: block;
+}
 
-    .product-image {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto 25px;
-      border-radius: 15px;
-    }
+/* Qiymət Etiketi - Çoban Çökərtən Stili */
+.price-tag {
+display: inline-block;
+border: 2px dashed var(--accent-yellow);
+color: var(--accent-yellow);
+padding: 8px 20px;
+border-radius: 50px;
+font-family: 'Architects Daughter', cursive;
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 20px;
+background: rgba(255, 249, 196, 0.05);
+}
 
-    .content p {
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
+h1 {
+font-family: 'Architects Daughter', cursive;
+font-size: 26px;
+color: var(--accent-yellow);
+margin-top: 0;
+}
 
-    ul {
-      padding-left: 5px;
-      list-style: none;
-    }
+.content h2 {
+font-family: 'Architects Daughter', cursive;
+font-size: 22px;
+border-left: 4px solid var(--accent-yellow);
+padding-left: 15px;
+margin-top: 30px;
+color: var(--accent-yellow);
+}
 
-    ul li {
-      margin-bottom: 12px;
-      padding-left: 25px;
-      position: relative;
-    }
+.content p, .content ul {
+color: var(--text-dim);
+font-size: 17px;
+}
 
-    ul li::before {
-      content: "🌿";
-      position: absolute;
-      left: 0;
-      font-size: 14px;
-    }
+ul {
+padding-left: 5px;
+list-style: none;
+}
 
-    /* Naviqasiya Düymələri - Çoban Çökərtən Stili */
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-      margin-top: 40px;
-    }
+ul li {
+margin-bottom: 12px;
+padding-left: 30px;
+position: relative;
+}
 
-    .btn {
-      flex: 1;
-      text-align: center;
-      padding: 12px;
-      background-color: #111;
-      border: 1px solid #333;
-      color: #fff9c4; /* Sarı mətn */
-      text-decoration: none;
-      border-radius: 10px;
-      font-family: 'Architects Daughter', cursive;
-      transition: 0.3s;
-      font-size: 16px;
-    }
+ul li::before {
+content: "🌿";
+position: absolute;
+left: 0;
+font-size: 16px;
+}
 
-    .btn:hover {
-      background-color: #fff9c4;
-      color: #000;
-    }
+/* Naviqasiya Düymələri - Çoban Çökərtən Stili */
+.nav-buttons {
+display: flex;
+gap: 10px;
+margin-top: 40px;
+}
 
-    /* Instagram Link */
-    .instagram-link {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 40px 0;
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Architects Daughter', cursive;
-    }
+.btn {
+flex: 1;
+text-align: center;
+padding: 14px;
+border-radius: 10px;
+background-color: #111;
+border: 1px solid #333;
+color: var(--accent-yellow); 
+text-decoration: none;
+font-family: 'Architects Daughter', cursive;
+transition: 0.3s;
+font-size: 16px;
+}
 
-    .instagram-link img {
-      width: 30px;
-      border-radius: 8px;
-    }
+.btn:hover {
+background-color: var(--accent-yellow);
+color: #000;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #555;
-      font-size: 13px;
-    }
+/* Instagram Footer */
+.social-link {
+text-align: center;
+margin-top: 30px;
+padding: 20px;
+border-top: 1px solid var(--border-color);
+}
 
-    @media (max-width: 600px) {
-      .nav-buttons { flex-direction: column; }
-    }
-  </style>
+.social-link a {
+color: var(--text-main);
+text-decoration: none;
+font-family: 'Architects Daughter', cursive;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.social-link img {
+width: 28px;
+height: 28px;
+border-radius: 8px;
+}
+
+footer {
+text-align: center;
+padding: 40px 20px;
+color: #666;
+font-size: 13px;
+}
+
+@media (max-width: 600px) {
+.nav-buttons { flex-direction: column; }
+}
+</style>
 </head>
 <body>
 
 <div class="container">
-  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
+<header>
+<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+</header>
 
-  <article class="product-card">
-    <img src="images/mehsul.jpg" alt="Məhsul Adı" class="product-image">
-    
-    <div class="price-container">
-      <span class="price-text">50 qr - 10 AZN</span>
-    </div>
+<article class="product-detail">
+<!-- Şəkil yolu sizin kodunuzdakı kimi qaldı -->
+<img src="images/aslan-pencesi.jpg" alt="Aslan Pəncəsi Otu - Herbal Bazar" class="product-image">
 
-    <h1>🌿 Məhsulun Adı</h1>
+<div class="price-tag">50 qr - 10 AZN</div>
 
-    <div class="content">
-      <p><strong>Məhsul haqqında</strong> qısa giriş mətni bura gələcək.</p>
+<h1>🌿 Aslan Pəncəsi və Qadın Sağlamlığı</h1>
 
-      <h2>🌸 Faydaları</h2>
-      <ul>
-        <li>Fayda 1</li>
-        <li>Fayda 2</li>
-        <li>Fayda 3</li>
-      </ul>
+<div class="content">
+<p><strong>Aslan pəncəsi</strong> xalq təbabətində əsrlərdir qadın sağlamlığını qorumaq, hormonal balansı tənzimləmək və menstrual dövrü rahat keçirmək üçün istifadə edilən ən effektiv bitkilərdən biridir.</p>
 
-      <h2>🌿 İstifadə Qaydası</h2>
-      <p>İstifadə qaydası mətni bura yazılacaq.</p>
+<h2>🩺 Aybaşı dövründə faydaları</h2>
+<ul>
+<li>Güclü sancıları və krampları təbii yolla azaldır.</li>
+<li>Həddindən artıq qanaxmanın qarşısını almağa kömək edir.</li>
+<li>Dövrü tənzimləyir və gərginliyi aradan qaldırır.</li>
+</ul>
 
-      <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
-      <p>Xəbərdarlıq mətni.</p>
-    </div>
+<h2>❤️ Hormonal Balans və Reproduktiv Sağlamlıq</h2>
+<ul>
+<li>FSH və LH hormonlarının balanslaşdırılmasına dəstək olur.</li>
+<li>Yumurtalıq kistaları və polikistik over sindromu zamanı köməkçi vasitədir.</li>
+<li>Uşaqlıq əzələlərini möhkəmləndirir.</li>
+</ul>
 
-    <!-- Düymələr: Tam olaraq Çoban Çökərtən stilində -->
-    <div class="nav-buttons">
-      <a href="geri.html" class="btn">⇦ Geri</a>
-      <a href="index.html" class="btn">🏠 Ana səhifə</a>
-      <a href="ireli.html" class="btn">⇨ İrəli</a>
-    </div>
+<h2>☕ İstifadə Qaydası (Dəmləmə)</h2>
+<p>1 çay qaşığı qurudulmuş aslan pəncəsi üzərinə 200ml qaynar su əlavə edin. 10 dəqiqə ağzı bağlı şəkildə dəmləyin. Gündə 1 və ya 2 dəfə yeməkdən sonra ilıq şəkildə için.</p>
 
-    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
-      <img src="images/instaqram1.jpg" alt="Instagram">
-      <span>Instagram: @derman_bitkileri</span>
-    </a>
-  </article>
+<h2>⚠️ Vacib Qeyd</h2>
+<p>Hamiləlik dövründə istifadəsi tövsiyə edilmir. Hər hansı xroniki xəstəliyiniz varsa, həkimlə məsləhətləşin.</p>
+</div>
 
-  <footer>
-    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
-  </footer>
+<nav class="nav-buttons">
+<a href="mahlep.html" class="btn">⇦ Geri</a>
+<a href="index.html" class="btn">🏠 Ana Səhifə</a>
+<a href="hayit.html" class="btn">İrəli ⇨</a>
+</nav>
+
+<div class="social-link">
+<a href="https://instagram.com/derman_bitkileri" target="_blank">
+<img src="images/instaqram1.jpg" alt="Instagram"> Instagram: @derman_bitkileri
+</a>
+</div>
+</article>
+
+<footer>
+&copy; 2025 Herbal Bazar – Şəfalı Bitkilər Dünyası. <br>
+Bütün hüquqlar qorunur.
+</footer>
 </div>
 
 </body>
