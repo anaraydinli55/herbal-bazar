@@ -3,193 +3,206 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Altınbaşak Bitkisi | Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Architects Daughter', cursive;
+      padding: 0;
       background-color: #000;
-      color: #fff;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
     }
 
-    h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
-    }
-
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .container {
+      max-width: 600px;
       width: 100%;
-      border-radius: 12px;
+      padding: 20px;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #333;
-    }
-
-    /* Instagram */
-    .instagram-footer {
+    h1, h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
       text-align: center;
-      padding: 30px 0 10px;
+    }
+
+    .main-title {
+      font-size: 28px;
+      margin: 30px 0;
+      color: #fff;
+    }
+
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      margin: 10px 0 25px;
+      padding: 10px 20px;
+      border: 2px dashed #fff9c4;
+      border-radius: 12px;
+      font-size: 22px;
+      color: #fff9c4;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .content h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 19px;
+      text-align: left;
+      margin-top: 30px;
+      color: #fff9c4;
+    }
+
+    .content ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .content li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+    }
+
+    /* LİMON MELİSSA STİLİ YAN-YANA DÜYMƏLƏR */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 35px 0;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px 5px;
+      background-color: #000;
+      border: 1px solid #fff9c4;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    .instagram-footer {
+      margin-top: 20px;
     }
 
     .instagram-footer a {
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Architects Daughter', cursive;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      border-radius: 5px;
     }
 
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 30px;
+      color: #555;
+      font-size: 13px;
     }
   </style>
 </head>
-
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
-<div class="products">
+  <div class="product-card">
+    <img src="images/altinbasak.jpg" alt="Altınbaşak" class="product-image">
+    
+    <div class="price-tag">50 qr - 10 AZN</div>
 
-  <div class="card">
-    <img src="images/altinbasak.jpg" alt="1 Altınbaşak bitkisi (Solidago virgaurea) xalq təbabətində  geniş istifadə olunan, xüsusilə böyrək, sidik yolları, iltihab və immun sistemi üzərində müsbət təsirləri ilə tanınan şəfalı bitkidir.">
-    <h3>Altınbaşak bitkisi</h3>
-    <h3>50 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Altınbaşak ən çox sidik sistemi sağlamlığı ilə əlaqələndirilir.</h1>
-  <p><strong>Azərbaycanda “altınbaşak”, “qızılbaşak” adı ilə tanınır və əsasən bitkinin yerüstü hissələrindən (yarpaq və çiçəklərindən) istifadə olunur.</strong></p>
+    <div class="content">
+      <h1>🌿 Altınbaşak (Qızılbaşak)</h1>
+      <p>Altınbaşak bitkisi xüsusilə böyrək və sidik yolları sağlamlığı üçün xalq təbabətində ən çox istifadə olunan şəfalı bitkilərdən biridir.</p>
 
-  <h2>🌸 Xalq arasında böyrək qumu və daşlarının əmələ gəlməsinin qarşısını almaq məqsədilə də istifadə olunur.</h2>
-  <ul>
-    <li>Altınbaşak ən çox sidik sistemi sağlamlığı ilə əlaqələndirilir. Güclü sidikqovucu təsirə malik olduğu üçün böyrəklərin fəaliyyətini dəstəkləyir, sidik yollarında yığılan zərərli maddələrin və toksinlərin orqanizmdən atılmasına kömək edir.</li>
-    <li>Sidik ifrazını artıraraq sidik yollarının təmizlənməsinə şərait yaradır.</li>
-    <li>Sidik yolları iltihablarında, sistit və yüngül infeksiyalarda dəstəkçi təsir göstərə bilər.</li>
-    <li>Tərkibindəki flavonoidlər və təbii aktiv maddələr iltihabın azalmasına, ağrı və yanma hissinin yüngülləşməsinə kömək edir.</li>
-    <li>Buna görə də altınbaşak çayı sidik yolları ilə bağlı narahatlıqlarda tez-tez istifadə olunur.</li>
-  </ul>
+      <h2>🌸 Əsas Faydaları</h2>
+      <ul>
+        <li>Böyrək qumu və daşlarının tökülməsinə kömək edir.</li>
+        <li>Güclü sidikqovucu təsiri ilə bədəndəki toksinləri təmizləyir.</li>
+        <li>Sistit və sidik yolu iltihablarında ağrını azaldır.</li>
+        <li>Ödem və şişkinliyin aradan qaldırılmasına dəstək verir.</li>
+        <li>İmmun sistemini gücləndirir və antioksidant təsir göstərir.</li>
+      </ul>
 
-  <h2>🩺 Digər mühüm faydası immun sistemini gücləndirməsidir.</h2>
-  <ul>
-    <li>Antioksidantlarla zəngin olması orqanizmi sərbəst radikallardan qoruyur, hüceyrələrin zədələnməsinin qarşısını almağa kömək edir.</li>
-    <li>Bu təsir bədənin xəstəliklərə qarşı müqavimətini artırır və ümumi sağlamlığın qorunmasına töhfə verir.</li>
-    <li>Bədəndə yığılan artıq mayenin xaric olunmasını sürətləndirərək xüsusilə ayaqlarda və bədəndə yaranan şişkinliyin azalmasına kömək edir.</li>
-    <li>Bu xüsusiyyəti ilə detoks məqsədli bitki çaylarının tərkibində tez-tez yer alır.</li>
-  </ul>
+      <h2>☕ İstifadə Qaydası</h2>
+      <p>1 çay qaşığı qurudulmuş bitkini 1 stəkan (200 ml) qaynar suda 10-15 dəqiqə dəmləyin. Gündə 1-2 dəfə yeməkdən sonra içilməsi tövsiyə olunur.</p>
 
-  <h2>🦵 Revmatik ağrılar və oynaq narahatlıqları</h2>
-  <ul>
-    <li>İltihab əleyhinə və sakitləşdirici təsiri sayəsində ağrıların yüngülləşməsinə kömək etdiyi düşünülür.</li>
-    <li>Xarici istifadə zamanı (kompres və ya dəmləmə ilə) dəri üzərində yüngül yaraların sağalmasına dəstək verə bilər.</li>
-    <li>Bitki həmçinin ödem və şişkinliyin azalmasına yardımçı ola bilər.</li>
-  </ul>
+      <h2 style="color: #ff5252;">⚠️ Diqqət</h2>
+      <p>Böyrək və ürək çatışmazlığı olanlar, hamilə və süd verən qadınlar həkim məsləhəti olmadan istifadə etməməlidir.</p>
+    </div>
 
-  <h2>həzm sisteminə də müsbət təsir</h2>
-  <ul>
-    <li>Mədə-bağırsaq fəaliyyətini yüngül şəkildə tənzimləyir.</li>
-    <li>Maddələr mübadiləsinin daha rahat işləməsinə kömək edir.</li>
-    <li>Bəzi hallarda qaz və yüngül həzmsizlik problemlərinin azalmasına da dəstək verə bilər.</li>
-  </ul>
+    <!-- YAN-YANA DÜYMƏLƏR -->
+    <div class="nav-buttons">
+      <a href="gingkobiloba.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="enginar.html" class="btn">İrəli ⇨</a>
+    </div>
 
-  <h2>🌿 Altınbaşak bitkisi – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 çay qaşığı qurudulmuş altınbaşak otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="IG">
+        Instagram: @derman_bitkileri
+      </a>
+    </div>
+  </div>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Altınbaşak böyrək və ürək çatışmazlığı olan şəxslərdə, hamilə və süd verən qadınlarda həkim məsləhəti olmadan istifadə edilməməlidir.</li>
-    <li>Tövsiyə olunan dozadan artıq və uzun müddət fasiləsiz istifadə edilməməlidir.</li>
-    <li>Hər hansı xroniki xəstəlik və ya dərman qəbulu zamanı mütləq mütəxəssis məsləhəti alınmalıdır.</li>
-  </ul>
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
 </div>
-
-
-  <div class="nav-buttons">
-  <a href="gingkobiloba.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="enginar.html" class="btn">⇨ İrəli</a>
-</div>
-
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
