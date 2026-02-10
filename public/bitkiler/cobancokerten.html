@@ -3,13 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
 
+  <!-- SEO Meta Teqləri -->
+  <title>Çoban Çökərtən Faydaları və İstifadə Qaydası | Herbal Bazar</title>
+  <meta name="description" content="Çoban çökərtən (Tribulus terrestris) nədir? Kişi sağlamlığı, testosteron artımı, böyrək təmizlənməsi və fiziki güc üçün faydaları və çayının hazırlanması.">
+  <meta name="keywords" content="çoban çökərtən, tribulus terrestris, testosteron artırıcı bitkilər, böyrək təmizləyən çaylar, herbal bazar">
+  
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
 
+  <!-- Google üçün Strukturlaşdırılmış Məlumat (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Çoban Çökərtən (Tribulus)",
+    "image": "images/cobancokerten.jpg",
+    "description": "Kişi sağlamlığı və hormonal balans üçün təbii çoban çökərtən otu.",
+    "brand": { "@type": "Brand", "name": "Herbal Bazar" },
+    "offers": {
+      "@type": "Offer",
+      "price": "10.00",
+      "priceCurrency": "AZN",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
 
   <style>
     body {
@@ -17,177 +36,201 @@
       font-family: 'Architects Daughter', cursive;
       background-color: #000;
       color: #fff;
+      line-height: 1.6;
     }
 
-    h2 {
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h2.main-title {
       text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
+      margin: 40px 0;
       font-size: 32px;
       font-weight: 700;
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
-    }
-
-    .card {
+    /* Kart Strukturu */
+    .product-detail {
       background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #222;
     }
 
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .product-image {
       width: 100%;
-      border-radius: 12px;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
+    .price-info {
+      text-align: center;
+      font-size: 24px;
+      color: #ffa5d8; /* Vurğulu rəng */
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 28px;
       color: #fff;
-      font-weight: 700;
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 15px;
     }
 
-    .card p {
-      font-size: 15px;
+    .content h2 {
+      font-size: 22px;
+      color: #ffa5d8;
+      margin-top: 30px;
+    }
+
+    .content p, .content ul {
+      font-size: 17px;
       color: #ccc;
-      line-height: 1.4;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
+    ul li {
+      margin-bottom: 12px;
+    }
+
+    /* Naviqasiya Düymələri */
+    .nav-buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 40px;
+      justify-content: center;
+    }
+
+    .btn {
+      flex: 1;
+      max-width: 200px;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
       background-color: #222;
-      color: #fff;
       border: 1px solid #444;
-      border-radius: 8px;
+      color: #fff;
+      text-decoration: none;
       font-weight: 600;
-      cursor: pointer;
+      transition: 0.3s;
     }
 
-    .card button:hover {
+    .btn:hover {
       background-color: #333;
+      border-color: #666;
     }
 
     /* Instagram */
     .instagram-footer {
       text-align: center;
-      padding: 30px 0 10px;
+      padding: 40px 0 20px;
     }
 
     .instagram-footer a {
       color: #fff;
       font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      border-radius: 8px;
     }
 
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
+      padding: 30px;
+      color: #666;
       font-size: 14px;
+      border-top: 1px solid #111;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 22px; }
+      .nav-buttons { flex-direction: column; align-items: center; }
+      .btn { width: 100%; max-width: none; }
     }
   </style>
 </head>
 
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <header>
+    <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
+  </header>
 
-<div class="products">
+  <article class="product-detail">
+    <img src="images/cobancokerten.jpg" alt="Çoban Çökərtən Otu - Herbal Bazar" class="product-image">
+    
+    <div class="price-info">50 qr - 10 AZN</div>
 
-  <div class="card">
-    <img src="images/cobancokerten.jpg" alt="1 Çoban çökərtən (Tribulus terrestris) xalq təbabətində çox qədimdən istifadə olunan, xüsusilə sidik-cinsiyyət sistemi, hormonal balans və ümumi gücləndirici təsiri ilə tanınan qiymətli bitkidir.">
-    <h3>Çoban çökərtən</h3>
-    <h3>50 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Çoban çökərtən ən çox kişi sağlamlığına müsbət təsiri ilə tanınır</h1>
-  <p><strong>Xalq təbabətində testosteron hormonunun təbii şəkildə dəstəklənməsinə yardımçı olduğu bildirilir. Bu təsir sayəsində cinsi istək azalması, halsızlıq və ümumi zəiflik hallarında dəstəkçi vasitə kimi istifadə olunur.</strong></p>
+    <h1>🌿 Çoban Çökərtən: Təbii Enerji və Hormonal Dəstək</h1>
 
-  <h2>🌸 Sidikqovucu xüsusiyyətə malikdir</h2>
-  <ul>
-    <li>Böyrəklərin fəaliyyətini dəstəkləyərək orqanizmdə yığılan artıq maye və duzların xaric olunmasına kömək edə bilər.</li>
-    <li>Bu xüsusiyyəti sayəsində ödemlərin azalmasında, böyrək və sidik yollarının təmizlənməsində faydalı hesab olunur..</li>
-    <li>Eyni zamanda sidik yollarında iltihab riskinin azalmasına dəstək göstərə bilər.</li>
-  </ul>
+    <div class="content">
+      <p><strong>Çoban çökərtən (Tribulus terrestris)</strong> xalq təbabətində testosteron hormonunun təbii şəkildə dəstəklənməsi və bədənin ümumi tonusunun artırılması üçün istifadə olunan ən güclü bitkilərdən biridir.</p>
 
-  <h2>🩺 Fiziki güc və dözümlülüyü artıran təsiri</h2>
-  <ul>
-    <li>Yorğunluq, halsızlıq və enerji çatışmazlığı zamanı bədəni gücləndirə bilər.</li>
-    <li>Əzələlərin daha yaxşı qidalanmasına və bərpa prosesinin sürətlənməsinə dəstək verə bilər.</li>
-    <li>Bu səbəbdən idman edən şəxslər arasında da maraq görür.</li>
-    <li>Bu bitki əsasən çay, dəmləmə və ya toz halında istifadə olunur və həm kişi, həm də qadın sağlamlığı üçün faydalı hesab edilir.</li>
-  </ul>
+      <h2>🌸 Sidikqovucu və Böyrək Dəstəyi</h2>
+      <ul>
+        <li>Böyrəklərin fəaliyyətini dəstəkləyərək artıq maye və duzları xaric edir.</li>
+        <li>Ödemlərin azalmasında və sidik yollarının təmizlənməsində effektivdir.</li>
+        <li>İltihab riskini azaltmağa kömək edir.</li>
+      </ul>
 
-  <h2>❤️️ Ürək-damar sistemi üçün</h2>
-  <ul>
-    <li>Qan dövranını yaxşılaşdırmağa, damarların elastikliyini qorumağa kömək edə bilər.</li>
-    <li>Xalq arasında qan təzyiqinin tənzimlənməsində dəstəkçi təsir göstərdiyi bildirilir.</li>
-    <li>Antioksidant təsiri sayəsində damarları zədələyən sərbəst radikallarla mübarizədə rol oynaya bilər.</li>
-  </ul>
+      <h2>🩺 Fiziki Güc və Dözümlülük</h2>
+      <ul>
+        <li>Yorğunluq və enerji çatışmazlığı zamanı bədəni gücləndirir.</li>
+        <li>Əzələ bərpasını sürətləndirdiyi üçün idmançılar tərəfindən üstünlük verilir.</li>
+        <li>Libido və cinsi istəyi təbii yolla artırır.</li>
+      </ul>
 
-  <h2>🛡️ Qadın sağlamlığı baxımından</h2>
-  <ul>
-    <li>Çoban çökərtən hormonal balansın qorunmasına yardımçı ola bilər.</li>
-    <li>Aybaşı dövründə yaranan bəzi narahatlıqların azalmasına, ümumi hormon balansının dəstəklənməsinə kömək etdiyi qeyd olunur.</li>
-    <li>Eyni zamanda libido azalması və ümumi halsızlıq hallarında da istifadə edilir.</li>
-  </ul>
+      <h2>❤️️ Ürək-Damar Sistemi</h2>
+      <ul>
+        <li>Qan dövranını yaxşılaşdırır və damar elastikliyini qoruyur.</li>
+        <li>Təzyiqin tənzimlənməsində köməkçi vasitə kimi istifadə olunur.</li>
+      </ul>
 
-  <h2>🌿 Çoban çökərtən – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 çay qaşığı qurudulmuş çoban çökərtən otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+      <h2>🌿 İstifadə Qaydası</h2>
+      <ul>
+        <li>☕ <strong>Çay:</strong> 1 çay qaşığı qurudulmuş otu 1 stəkan (200 ml) qaynar suda 10-15 dəqiqə dəmləyin.</li>
+        <li>Gündə 1-2 dəfə, yeməkdən sonra içilməsi tövsiyə olunur.</li>
+        <li>2-3 həftəlik kursdan sonra 10 gün fasilə verilməlidir.</li>
+      </ul>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Hamilə qadınlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir</li>
-    <li>Çoban çökərtən güclü təsirə malik bitkidir. Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
-    <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
-  </ul>
+      <h2>⚠️ Diqqət</h2>
+      <p>Hamilə və süd verən qadınlar, ciddi sinir sistemi xəstəliyi olanlar istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir. Yüksək dozadan qaçın.</p>
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="limonmelissa.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="gingkobiloba.html" class="btn">⇨ İrəli</a>
+    </nav>
+
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="Instagram"> Instagram: @derman_bitkileri
+      </a>
+    </div>
+  </article>
+
+  <footer>
+    &copy; 2025 Herbal Bazar – Şəfalı Bitki Məhsulları. <br>
+    Bütün hüquqlar qorunur.
+  </footer>
 </div>
-
-
-  <div class="nav-buttons">
-  <a href="limonmelissa.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="gingkobiloba.html" class="btn">⇨ İrəli</a>
-</div>
-
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
