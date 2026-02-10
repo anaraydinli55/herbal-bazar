@@ -18,12 +18,11 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       padding: 20px;
     }
 
-    /* Başlıqlar - Açıq Sarı */
     h1, h2, .main-title {
       font-family: 'Architects Daughter', cursive;
       color: #fff9c4; 
@@ -37,7 +36,7 @@
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       margin-bottom: 25px;
       border-bottom: 1px solid #222;
       padding-bottom: 15px;
@@ -49,17 +48,17 @@
       margin-top: 35px;
       border-left: 3px solid #fff9c4;
       padding-left: 15px;
+      color: #fff9c4;
     }
 
-    /* Aslan Pəncəsi Stilində Qiymət Bölməsi */
     .price-container {
-      border: 2px dashed #fff9c4; /* Qırıq-qırıq sarı xətlər */
+      border: 2px dashed #fff9c4;
       border-radius: 15px;
       padding: 15px;
       margin: 20px auto;
       max-width: 300px;
       text-align: center;
-      background-color: rgba(255, 249, 196, 0.05); /* Çox şəffaf sarı fon */
+      background-color: rgba(255, 249, 196, 0.05);
     }
 
     .price-text {
@@ -70,7 +69,6 @@
       display: block;
     }
 
-    /* Məhsul Kartı */
     .product-card {
       background-color: #0a0a0a;
       border-radius: 20px;
@@ -80,15 +78,25 @@
 
     .product-image {
       width: 100%;
-      max-width: 500px;
+      max-width: 550px;
       display: block;
       margin: 0 auto 25px;
       border-radius: 15px;
+      border: 1px solid #222;
     }
 
     .content p {
       font-size: 17px;
       margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background-color: rgba(255, 249, 196, 0.1);
+      border: 1px solid #fff9c4;
+      padding: 15px;
+      border-radius: 10px;
+      margin: 20px 0;
+      color: #fff;
     }
 
     ul {
@@ -109,7 +117,6 @@
       font-size: 14px;
     }
 
-    /* Düymələr */
     .nav-buttons {
       display: flex;
       gap: 10px;
@@ -170,35 +177,39 @@
   <article class="product-card">
     <img src="images/cobancokerten.jpg" alt="Çoban Çökərtən" class="product-image">
     
-    <!-- Aslan Pəncəsi Stilində Qiymət -->
     <div class="price-container">
       <span class="price-text">50 qr - 10 AZN</span>
     </div>
 
-    <h1>🌿 Çoban Çökərtən (Tribulus)</h1>
+    <h1>🌿 Çoban Çökərtən (Tribulus Terrestris)</h1>
 
     <div class="content">
-      <p><strong>Çoban çökərtən</strong> bədənin ümumi tonusunu artıran, hormonal balansı tənzimləyən və enerji verən ən effektiv təbii vasitələrdən biridir.</p>
+      <p><strong>Çoban çökərtən</strong>, əsrlər boyu həm Şərq, həm də Qərb təbabətində güc, dözümlülük və kişi sağlamlığı üçün istifadə edilən ən qüdrətli bitkilərdən biridir. Elmi adı <em>Tribulus Terrestris</em> olan bu bitki, xüsusilə aktiv həyat tərzi sürən kişilər üçün əvəzolunmazdır.</p>
 
-      <h2>🌸 Faydaları</h2>
+      <div class="highlight-box">
+        <strong>Kişi Sağlamlığı Üçün:</strong> Bu bitki bədəndə testosteron hormonunun təbii yolla artırılmasını dəstəkləyir, bu da fiziki gücün, əzələ kütləsinin və cinsi potensialın yüksəlməsinə birbaşa təsir göstərir.
+      </div>
+
+      <h2>🌸 Əsas Faydaları</h2>
       <ul>
-        <li>Böyrək və sidik yollarını təmizləyir.</li>
-        <li>Testosteron səviyyəsini təbii şəkildə dəstəkləyir.</li>
-        <li>Fiziki dözümlülüyü və enerjini artırır.</li>
-        <li>Qan dövranını yaxşılaşdırır.</li>
+        <li><strong>Hormonal Balans:</strong> Kişilərdə testosteron səviyyəsini optimallaşdırır, enerji və motivasiyanı artırır.</li>
+        <li><strong>İdman və Əzələ:</strong> Fiziki dözümlülüyü artırır, məşqdən sonra əzələlərin bərpasını sürətləndirir.</li>
+        <li><strong>Ürək və Damar:</strong> Qan dövranını yaxşılaşdırır, damarların elastikliyini qoruyur və yüksək qan təzyiqini tənzimləməyə kömək edir.</li>
+        <li><strong>Böyrək Sağlamlığı:</strong> Sidikqovucu xüsusiyyəti ilə böyrək daşlarının tökülməsinə və sidik yollarının iltihabdan təmizlənməsinə dəstək olur.</li>
+        <li><strong>Stresslə Mübarizə:</strong> Sinir sistemini sakitləşdirir, xroniki yorğunluğu aradan qaldırır.</li>
       </ul>
 
       <h2>🌿 İstifadə Qaydası</h2>
-      <p>1 çay qaşığı bitkini 200 ml qaynar suda 10-15 dəqiqə dəmləyib, yeməkdən sonra içmək tövsiyə olunur.</p>
+      <p>1 xörək qaşığı qurudulmuş bitkini 200-250 ml qaynar suya əlavə edin. 10-15 dəqiqə dəmlədikdən sonra süzün. Gündə 2 dəfə, yeməkdən 30 dəqiqə sonra ilıq şəkildə içilməsi tövsiyə olunur. Kurs müddəti adətən 21 gündür.</p>
 
       <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
-      <p>Hamiləlik dövründə və ciddi xroniki xəstəliklər zamanı həkimlə məsləhətləşmək vacibdir.</p>
+      <p>Mədə xorası olanlar və aşağı qan təzyiqindən əziyyət çəkənlər ehtiyatlı olmalıdır. Hamilə qadınlara və uşaqlara tövsiyə edilmir. Ciddi xroniki xəstəlik zamanı həkimlə məsləhətləşin.</p>
     </div>
 
     <div class="nav-buttons">
       <a href="limonmelissa.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="gingkobiloba.html" class="btn">⇨ İrəli</a>
+      <a href="gingkobiloba.html" class="btn">İrəli ⇨</a>
     </div>
 
     <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
