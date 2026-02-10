@@ -1,242 +1,260 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hayıt Toxumu (ƏRKUDƏ)– Qadın sağlamlığı üçün faydaları | Herbal Bazar</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+<!-- SEO Optimallaşdırma -->
+<title>Hayıt Toxumu (Ərkudə) Faydaları və İstifadəsi | Herbal Bazar</title>
+<meta name="description" content="Hayıt toxumu (ərkudə) nədir? Qadınlarda hormonal balans, aybaşı düzənsizliyi və sonsuzluq üçün hayıt toxumunun faydaları və çayının hazırlanma qaydası.">
+<meta name="keywords" content="hayıt toxumu, ərkudə, hormonal balans, qadın sağlamlığı, təbii müalicə, bitki çayları">
 
-  <!-- ARTICLE SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Hayıt Toxumu (ərkudə) nədir? Faydaları və istifadə qaydası",
-    "description": "Hayıt toxumu qadın sağlamlığını dəstəkləmək üçün istifadə olunur.",
-    "author": { "@type": "Organization", "name": "Herbal Bazar" },
-    "publisher": { "@type": "Organization", "name": "Herbal Bazar" }
-  }
-  </script>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- PRODUCT SCHEMA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Hayıt Toxumu (ərkudə)",
-    "image": "images/hayit.jpg",
-    "description": "Hayıt toxumu (ərkudə) – qadın sağlamlığını dəstəkləyən təbii bitki.",
-    "brand": { "@type": "Brand", "name": "Herbal Bazar" },
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "AZN",
-      "price": "10",
-      "availability": "https://schema.org/InStock"
-    }
-  }
-  </script>
+<!-- Google Sxem Kodları (Yeniləndi) -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Product",
+"name": "Hayıt Toxumu (Ərkudə)",
+"image": "images/hayit.jpg",
+"description": "Qadın sağlamlığı və hormonal balans üçün təbii hayıt toxumu (ərkudə).",
+"brand": { "@type": "Brand", "name": "Herbal Bazar" },
+"offers": {
+"@type": "Offer",
+"price": "10.00",
+"priceCurrency": "AZN",
+"availability": "https://schema.org/InStock"
+}
+}
+</script>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Architects Daughter', cursive;
-      background-color: #000;
-      color: #fff;
-    }
+<style>
+:root {
+--bg-color: #000;
+--card-bg: #0a0a0a;
+--accent-yellow: #fff9c4; /* Çoban Çökərtən sarısı */
+--text-main: #fff;
+--text-dim: #ccc;
+--border-color: #1a1a1a;
+}
 
-    h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
-    }
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background-color: var(--bg-color);
+color: var(--text-main);
+line-height: 1.8;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 0 20px 60px;
-    }
+.container {
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+}
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
+header h2 {
+font-family: 'Architects Daughter', cursive;
+text-align: center;
+color: var(--text-main);
+font-size: 28px;
+margin-bottom: 30px;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+article.product-detail {
+background-color: var(--card-bg);
+border: 1px solid var(--border-color);
+border-radius: 20px;
+padding: 25px;
+}
 
-    .card img {
-      width: 100%;
-      border-radius: 12px;
-      margin-bottom: 20px;
-    }
+.product-image {
+width: 100%;
+border-radius: 15px;
+margin-bottom: 20px;
+border: 1px solid #222;
+display: block;
+}
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #ffa5d8; /* məhsul adı və qiymət rəngi */
-      font-weight: 700;
-    }
+/* Qiymət Etiketi - Çoban Çökərtən Stili */
+.price-tag {
+display: inline-block;
+border: 2px dashed var(--accent-yellow);
+color: var(--accent-yellow);
+padding: 8px 20px;
+border-radius: 50px;
+font-family: 'Architects Daughter', cursive;
+font-weight: bold;
+font-size: 20px;
+margin-bottom: 20px;
+background: rgba(255, 249, 196, 0.05);
+}
 
-    .card p, .card ul {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.5;
-    }
+h1 {
+font-family: 'Architects Daughter', cursive;
+font-size: 26px;
+color: var(--accent-yellow);
+margin-top: 0;
+}
 
-    ul li {
-      margin-bottom: 8px;
-    }
+.content h2 {
+font-family: 'Architects Daughter', cursive;
+font-size: 22px;
+border-left: 4px solid var(--accent-yellow);
+padding-left: 15px;
+margin-top: 30px;
+color: var(--accent-yellow);
+}
 
-    h1 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #fff;
-    }
+.content p, .content ul {
+color: var(--text-dim);
+font-size: 17px;
+}
 
-    h2 {
-      margin-top: 28px;
-      font-size: 24px;
-      color: #fff;
-    }
+ul {
+padding-left: 5px;
+list-style: none;
+}
 
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
+ul li {
+margin-bottom: 12px;
+padding-left: 30px;
+position: relative;
+}
 
-    .btn {
-      flex: 1;
-      max-width: 150px;
-      text-align: center;
-      padding: 12px 0;
-      border-radius: 8px;
-      background-color: #222;  /* əsas button rəngi */
-      border: 1px solid #444;  /* sərhəd */
-      color: #fff;             /* yazı rəngi */
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
+ul li::before {
+content: "🌿";
+position: absolute;
+left: 0;
+font-size: 16px;
+}
 
-    .btn:hover {
-      background-color: #333;  /* hover effekti */
-    }
+/* Naviqasiya Düymələri - Çoban Çökərtən Stili */
+.nav-buttons {
+display: flex;
+gap: 10px;
+margin-top: 40px;
+}
 
-    .instagram-footer {
-      text-align: center;
-      padding: 30px 0 10px;
-    }
+.btn {
+flex: 1;
+text-align: center;
+padding: 14px;
+border-radius: 10px;
+background-color: #111;
+border: 1px solid #333;
+color: var(--accent-yellow); 
+text-decoration: none;
+font-family: 'Architects Daughter', cursive;
+transition: 0.3s;
+font-size: 16px;
+}
 
-    .instagram-footer a {
-      color: #fff;
-      font-size: 18px;
-      font-weight: 600;
-      text-decoration: none;
-    }
+.btn:hover {
+background-color: var(--accent-yellow);
+color: #000;
+}
 
-    .instagram-footer img {
-      width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
-    }
+/* Instagram Footer */
+.social-link {
+text-align: center;
+margin-top: 30px;
+padding: 20px;
+border-top: 1px solid var(--border-color);
+}
 
-    footer {
-      background-color: #000;
-      color: #aaa;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-    }
-  </style>
+.social-link a {
+color: var(--text-main);
+text-decoration: none;
+font-family: 'Architects Daughter', cursive;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 10px;
+}
+
+.social-link img {
+width: 28px;
+height: 28px;
+border-radius: 8px;
+}
+
+footer {
+text-align: center;
+padding: 40px 20px;
+color: #666;
+font-size: 13px;
+}
+
+@media (max-width: 600px) {
+.nav-buttons { flex-direction: column; }
+}
+</style>
 </head>
-
 <body>
 
+<div class="container">
+<header>
 <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+</header>
 
-<div class="products">
-  <div class="card">
-    <img src="images/hayit.jpg" alt="Hayıt toxumu - ərkudə">
-    <h3>Hayıt Toxumu (Ərkudə) - Vitex agnus-castus</h3>
-    <h3>100 qr - 10 AZN</h3>
+<article class="product-detail">
+<img src="images/hayit.jpg" alt="Hayıt Toxumu (Ərkudə) - Herbal Bazar" class="product-image">
 
-    <div class="content">
-      <h1>🌿 Hayıt Toxumu və Qadın Sağlamlığı</h1>
-      <p><strong>Hayıt toxumu menstruasiya dövründə rahatlıq və hormonal balans üçün istifadə olunur.</strong></p>
+<div class="price-tag">100 qr - 10 AZN</div>
 
-      <h2>🩺 Hormon balansı</h2>
-      <ul>
-        <li>Xüsusilə qadınlarda hormonal balansı tənzimləməyə kömək edir</li>
-        <li>Menstruasiya dövründə rahatlıq və sakitlik verir</li>
-      </ul>
+<h1>🌿 Hayıt Toxumu (Ərkudə) və Qadın Sağlamlığı</h1>
 
-      <h2>❤️ Ürək və qan dövranı</h2>
-      <ul>
-        <li>Ürək fəaliyyətini dəstəkləyir, qan dövranını yaxşılaşdırır</li>
-      </ul>
+<div class="content">
+<p><strong>Hayıt toxumu (ərkudə)</strong> qadın sağlamlığı üçün təbiətin bəxş etdiyi ən güclü bitkilərdən biridir. Əsrlərdir hormonal balansı tənzimləmək və reproduktiv sistemi dəstəkləmək üçün istifadə olunur.</p>
 
-      <h2>🩹 Ümumi gücləndirici təsir</h2>
-      <ul>
-        <li>Orqanizmin immun sistemini gücləndirir</li>
-        <li>Enerji səviyyəsini artırır, yorğunluğu azaldır</li>
-      </ul>
+<h2>🩺 Hormonal Balans və Menstruasiya</h2>
+<ul>
+<li>Qadınlarda hormonal balansı (progesteron səviyyəsini) təbii yolla tənzimləyir.</li>
+<li>Aybaşı düzənsizliyini aradan qaldırmağa kömək edir.</li>
+<li>Menstruasiya dövründə yaranan ağrıları və gərginliyi azaldır.</li>
+</ul>
 
-      <h2>👁️ Göz sağlamlığı</h2>
-      <ul>
-        <li>Göz yorğunluğu və görmə zəifliyi üçün faydalıdır</li>
-      </ul>
+<h2>❤️ Ürək-Damar və İmmunitet</h2>
+<ul>
+<li>Qan dövranını yaxşılaşdırır və ürək fəaliyyətini dəstəkləyir.</li>
+<li>Orqanizmin immun sistemini gücləndirərək xəstəliklərə qarşı müqaviməti artırır.</li>
+<li>Yorğunluğu azaldır və enerji səviyyəsini yüksəldir.</li>
+</ul>
 
-      <h2>👩‍🦳 Dəri və saç sağlamlığı</h2>
-      <ul>
-        <li>Dəri problemlərini azaltmağa kömək edir</li>
-        <li>Saç tökülməsinin qarşısını almağa dəstək olur</li>
-      </ul>
+<h2>👩‍🦳 Dəri, Saç və Göz Sağlamlığı</h2>
+<ul>
+<li>Hormonal səbəblərdən yaranan dəri problemlərini (akne və s.) azaldır.</li>
+<li>Saç tökülməsinin qarşısını almağa dəstək olur.</li>
+<li>Göz yorğunluğu və görmə zəifliyi üçün faydalıdır.</li>
+</ul>
 
-      <h2>🌿 İstifadə qaydaları</h2>
-      <ul>
-        <li>☕ Çay şəklində istifadə: 1 çay qaşığı qurudulmuş toxum, 1 stəkan qaynar su. 10–15 dəqiqə dəmlənir, süzülərək içilir.</li>
-        <li>Gündə 1–2 dəfə, yeməkdən sonra tövsiyə olunur</li>
-        <li>2–3 həftəlik kurs, sonra 7–10 gün fasilə</li>
-      </ul>
+<h2>☕ İstifadə Qaydası (Dəmləmə)</h2>
+<p>1 çay qaşığı hayıt toxumunu bir az əzdikdən sonra üzərinə 200ml qaynar su əlavə edin. 10-15 dəqiqə dəmləyin və süzərək için. Gündə 1-2 dəfə yeməkdən sonra qəbul edilməsi tövsiyə olunur. (2-3 həftəlik kursdan sonra 1 həftə fasilə verilməlidir).</p>
 
-      <h2>⚠️ Diqqət</h2>
-      <ul>
-        <li>Hamiləlik və südvermə dövründə istifadədən əvvəl həkimlə məsləhətləşmək lazımdır</li>
-        <li>Həddindən artıq dozada istifadə edilməməlidir</li>
-      </ul>
-    </div>
-
-    <div class="nav-buttons">
-      <a href="aslanpencesi.html" class="btn">⇦ Geri</a>
-      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="yakiotu.html" class="btn">⇨ İrəli</a>
-    </div>
-
-    <div class="instagram-footer">
-      <a href="https://instagram.com/derman_bitkileri" target="_blank">
-        <img src="images/instaqram1.jpg" alt="">
-        Instagram
-      </a>
-    </div>
-  </div>
+<h2>⚠️ Vacib Qeyd</h2>
+<p>Hamiləlik və südvermə dövründə istifadə etməzdən əvvəl mütləq həkimlə məsləhətləşin. Həddindən artıq dozada istifadə etməyin.</p>
 </div>
 
+<nav class="nav-buttons">
+<a href="aslanpencesi.html" class="btn">⇦ Geri</a>
+<a href="index.html" class="btn">🏠 Ana Səhifə</a>
+<a href="yakiotu.html" class="btn">İrəli ⇨</a>
+</nav>
+
+<div class="social-link">
+<a href="https://instagram.com/derman_bitkileri" target="_blank">
+<img src="images/instaqram1.jpg" alt="Instagram"> Instagram: @derman_bitkileri
+</a>
+</div>
+</article>
+
 <footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+&copy; 2025 Herbal Bazar – Şəfalı Bitkilər Dünyası. <br>
+Bütün hüquqlar qorunur.
 </footer>
+</div>
 
 </body>
 </html>
