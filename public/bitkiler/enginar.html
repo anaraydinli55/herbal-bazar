@@ -3,191 +3,208 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Ənginar Yarpağı | Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Architects Daughter', cursive;
+      padding: 0;
       background-color: #000;
-      color: #fff;
+      color: #cfcfcf; 
+      font-family: 'Inter', sans-serif; 
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
     }
 
-    h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
-    }
-
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .container {
+      max-width: 600px;
       width: 100%;
-      border-radius: 12px;
+      padding: 20px;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
-      color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #333;
-    }
-
-    /* Instagram */
-    .instagram-footer {
+    h1, h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
+      color: #fff9c4; 
       text-align: center;
-      padding: 30px 0 10px;
+    }
+
+    .main-title {
+      font-size: 28px;
+      margin: 30px 0;
+      color: #fff;
+    }
+
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      margin: 10px 0 25px;
+      padding: 10px 20px;
+      border: 2px dashed #fff9c4;
+      border-radius: 12px;
+      font-size: 22px;
+      color: #fff9c4;
+      font-family: 'Architects Daughter', cursive;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .content h1 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+    }
+
+    .content h2 {
+      font-size: 19px;
+      text-align: left;
+      margin-top: 30px;
+      color: #fff9c4;
+      border-left: 3px solid #fff9c4;
+      padding-left: 12px;
+    }
+
+    .content ul {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+    }
+
+    .content li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+    }
+
+    /* YAN-YANA DÜYMƏLƏR */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 35px 0;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 12px 5px;
+      background-color: #000;
+      border: 1px solid #fff9c4;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    .instagram-footer {
+      margin-top: 20px;
     }
 
     .instagram-footer a {
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Architects Daughter', cursive;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      border-radius: 5px;
     }
 
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 30px;
+      color: #555;
+      font-size: 13px;
     }
   </style>
 </head>
-
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
-<div class="products">
+  <div class="product-card">
+    <img src="images/enginar.jpg" alt="Ənginar Yarpağı" class="product-image">
+    
+    <div class="price-tag">60 qr - 10 AZN</div>
 
-  <div class="card">
-    <img src="images/enginar.jpg" alt="1 Ənginar yarpağı (Cynara scolymus) əsrlərdir xalq təbabətində və müasir fitoterapiyada istifadə olunan qiymətli bitki hissəsidir.">
-    <h3>Ənginar yarpağı</h3>
-    <h3>60 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Tərkibindəki sinarin, flavonoidlər, antioksidantlar və acı maddələr sayəsində sağlamlığı dəstəkləyir.</h1>
-  <p><strong>Xüsusilə qaraciyər, öd sistemi, həzm, xolesterin və maddələr mübadiləsi üzərində müsbət təsirləri ilə tanınır.</strong></p>
+    <div class="content">
+      <h1>🌿 Ənginar Yarpağı (Cynara scolymus)</h1>
+      <p>Ənginar yarpağı qaraciyər dostu kimi tanınan, tərkibindəki sinarin və antioksidantlar sayəsində orqanizmi toksinlərdən təmizləyən qiymətli bitkidir.</p>
 
-  <h2>🌸 Ənginar yarpağının ən mühüm faydalarından biri qaraciyəri qoruyucu və təmizləyici təsiridir.</h2>
-  <ul>
-    <li>Qaraciyər hüceyrələrinin yenilənməsinə dəstək ola bilər, toksinlərin orqanizmdən atılmasını sürətləndirir və qaraciyərin yükünü azaldır.</li>
-    <li>Yağlı qaraciyər, qaraciyər yorğunluğu və qeyri-sağlam qidalanma nəticəsində yaranan problemlərdə dəstəkçi bitki kimi istifadə olunur.</li>
-    <li>Eyni zamanda öd ifrazını artıraraq öd kisəsinin sağlam fəaliyyətinə kömək edir.</li>
-  </ul>
+      <h2>🌸 Əsas Faydaları</h2>
+      <ul>
+        <li><strong>Qaraciyər Təmizliyi:</strong> Qaraciyər hüceyrələrinin yenilənməsinə və yağlanmanın azalmasına kömək edir.</li>
+        <li><strong>Öd Sistemi:</strong> Öd ifrazını tənzimləyərək həzm prosesini asanlaşdırır.</li>
+        <li><strong>Xolesterin:</strong> Qanda pis xolesterin səviyyəsinin aşağı salınmasına dəstək verir.</li>
+        <li><strong>Həzm:</strong> Şişkinlik, qaz və mədə ağırlığı kimi problemləri yüngülləşdirir.</li>
+        <li><strong>Detoks:</strong> Sidikqovucu təsiri ilə bədəndəki artıq mayeni (ödemi) xaric edir.</li>
+      </ul>
 
-  <h2>🩺 Həzm sisteminin yaxşılaşdırılmasına təsiri</h2>
-  <ul>
-    <li>Mədə turşusunun balanslanmasına kömək edə, şişkinlik, qaz, həzmsizlik və mədə ağırlığı kimi şikayətləri yüngülləşdirə bilər.</li>
-    <li>Yeməkdən sonra yaranan narahatlıqların azalmasına və qidanın daha rahat həzm olunmasına şərait yaradır.</li>
-    <li>Xüsusilə yağlı yeməklərdən sonra ənginar yarpağı çayı və ya ekstraktı faydalı hesab olunur.</li>
-    <li>Ənginar yarpağı xolesterin səviyyəsinin tənzimlənməsinə dəstək verə bilər.</li>
-  </ul>
+      <h2>☕ İstifadə Qaydası</h2>
+      <p>1 xörək qaşığı qurudulmuş yarpağı 1 stəkan (200 ml) qaynar suda 10-15 dəqiqə dəmləyin. Gündə 1-2 dəfə yeməkdən sonra içilməsi tövsiyə olunur.</p>
 
-  <h2>❤️️ Orqanizmi sərbəst radikallardan qoruyur</h2>
-  <ul>
-    <li>Bu təsir hüceyrələrin zədələnməsinin qarşısını almağa, yaşlanma prosesini yavaşlatmağa və immun sistemini gücləndirməyə kömək edir.</li>
-    <li>Antioksidant xüsusiyyəti sayəsində iltihabi proseslərin azalmasına da müsbət təsir göstərə bilər.</li>
-    <li>Ənginar yarpağı qan şəkərinin balanslanmasına dəstək verən bitkilər sırasındadır.</li>
-  </ul>
+      <h2 style="color: #ff5252; border-left-color: #ff5252;">⚠️ Diqqət</h2>
+      <p>Öd yollarında daş olanlar, ciddi böyrək problemi olanlar və hamilə qadınlar həkimlə məsləhətləşməlidir.</p>
+    </div>
 
-  <h2>Sidikqovucu təsirə malikdir.</h2>
-  <ul>
-    <li>Orqanizmdə yığılan artıq mayenin atılmasına kömək edərək ödem və şişkinliyin azalmasına dəstək verir.</li>
-    <li>Böyrəklərin işləməsini stimullaşdırsa da, böyrək problemi olan şəxslər həkim məsləhəti olmadan istifadə etməməlidir.</li>
-    <li>Antioksidant xüsusiyyəti sayəsində iltihabi proseslərin azalmasına da müsbət təsir göstərə bilər.</li>
-  </ul>
+    <!-- YAN-YANA DÜYMƏLƏR -->
+    <div class="nav-buttons">
+      <a href="altinbasak.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="serbetci.html" class="btn">İrəli ⇨</a>
+    </div>
 
-  <h2>🌿 Ənginar yarpağı – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 xörək qaşığı qurudulmuş ənginar yarpağı. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+        <img src="images/instaqram1.jpg" alt="IG">
+        Instagram: @derman_bitkileri
+      </a>
+    </div>
+  </div>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Öd yollarında daş olanlar, ciddi qaraciyər və böyrək problemi olan şəxslər, hamilə və süd verən qadınlar ənginar yarpağını istifadə etməzdən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
-    <li>Tövsiyə olunan dozadan artıq və uzun müddət fasiləsiz istifadə edilməməlidir.</li>
-    <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
-  </ul>
+  <footer>
+    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+  </footer>
 </div>
-
-
-  <div class="nav-buttons">
-  <a href="altinbasak.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="serbetci.html" class="btn">⇨ İrəli</a>
-</div>
-
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
