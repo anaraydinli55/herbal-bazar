@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source": "/karabas.html", "destination": "/bitkiler/karabas.html" },
+    { "source": "/aslanpencesi.html", "destination": "/bitkiler/aslanpencesi.html" },
+    { "source": "/lavanta.html", "destination": "/bitkiler/lavanta.html" }
+  ]
+}
