@@ -18,6 +18,10 @@
       --border-color: #1a1a1a;
     }
 
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
@@ -114,13 +118,14 @@
     .nav-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       margin-top: 40px;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
-      padding: 12px 25px;
+      padding: 10px 20px;
       background-color: #111;
       border: 1px solid #333;
       border-radius: 10px;
@@ -130,6 +135,9 @@
       font-family: 'Architects Daughter', cursive;
       transition: 0.3s;
       text-align: center;
+      white-space: nowrap;
+      font-size: 16px;
+      max-width: 140px;
     }
 
     .btn:hover {
@@ -149,12 +157,14 @@
       text-decoration: none;
       font-family: 'Architects Daughter', cursive;
       font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      height: 28px;
       border-radius: 5px;
     }
 
@@ -163,6 +173,30 @@
       padding: 30px;
       color: #555;
       font-size: 14px;
+    }
+
+    @media (max-width: 480px) {
+      .product-card {
+        padding: 20px;
+      }
+      
+      header h2 {
+        font-size: 24px;
+      }
+      
+      h3 {
+        font-size: 22px;
+      }
+      
+      h1 {
+        font-size: 20px;
+      }
+      
+      .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        max-width: 120px;
+      }
     }
   </style>
 </head>
@@ -175,14 +209,14 @@
   </header>
 
   <div class="product-card">
-    <img src="images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)" class="main-img">
+    <img src="/bitkiler/images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)" class="main-img">
 
     <h3>Karabaş Otu</h3>
     <div class="price">50 qr - 10 AZN</div>
 
     <div class="content">
       <h1>🌿 Sinir sistemi, baş ağrıları və tənəffüs yolları</h1>
-      <p><strong>Karabaş otu ən çox sinir sisteminə sakitləşdirici təsiri ilə məşhurdur. Stress, əsəbilik, narahatlıq, qorxu hissi və yuxusuzluq zamanı rahatladıcı təsir göstərə bilər. Müntəzəm istifadə edildikdə zehni gərginliyi azaldır, diqqət və yaddaşın güclənməsinə kömək edə bilər. Xalq arasında “beyin otu” kimi tanınmasının səbəbi də məhz bu təsiridir.</strong></p>
+      <p><strong>Karabaş otu ən çox sinir sisteminə sakitləşdirici təsiri ilə məşhurdur. Stress, əsəbilik, narahatlıq, qorxu hissi və yuxusuzluq zamanı rahatladıcı təsir göstərə bilər. Müntəzəm istifadə edildikdə zehni gərginliyi azaldır, diqqət və yaddaşın güclənməsinə kömək edə bilər. Xalq arasında "beyin otu" kimi tanınmasının səbəbi də məhz bu təsiridir.</strong></p>
 
       <h2>🌸 İltihab əleyhinə və antiseptik xüsusiyyətləri</h2>
       <ul>
@@ -224,23 +258,23 @@
       </ul>
     </div>
 
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
       <a href="yakiotu.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="limonmelissa.html" class="btn">İrəli ⇨</a>
-    </div>
+    </nav>
 
     <div class="instagram-footer">
-      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
         <img src="images/instaqram1.jpg" alt="Instagram">
-        Instagram: @derman_bitkileri
+        <span>Instagram: @derman_bitkileri</span>
       </a>
     </div>
   </div>
 </div>
 
 <footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+  <p>&copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.</p>
 </footer>
 
 </body>
