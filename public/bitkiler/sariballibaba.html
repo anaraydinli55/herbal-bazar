@@ -3,199 +3,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Sarı Ballı Baba (Lamium album) | Herbal Bazar</title>
 
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
-
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Architects Daughter', cursive;
+      font-family: 'Inter', sans-serif;
       background-color: #000;
-      color: #fff;
+      color: #cfcfcf;
+      line-height: 1.8;
+      display: flex;
+      justify-content: center;
     }
 
-    h2 {
-      text-align: center;
-      margin: 40px 0 20px;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
-    }
-
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
-    }
-
-    .card {
-      background-color: #111;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
+    .container {
+      max-width: 600px;
       width: 100%;
-      border-radius: 12px;
+      padding: 20px;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
+    h2, .main-title {
+      font-family: 'Architects Daughter', cursive;
       color: #fff;
-      font-weight: 700;
-    }
-
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    .card button:hover {
-      background-color: #333;
-    }
-
-    /* Instagram */
-    .instagram-footer {
       text-align: center;
-      padding: 30px 0 10px;
+      font-size: 28px;
+      margin: 30px 0;
+    }
+
+    .product-card {
+      background-color: #0a0a0a;
+      border-radius: 20px;
+      padding: 25px;
+      border: 1px solid #1a1a1a;
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
+
+    .price-tag {
+      display: inline-block;
+      margin: 10px 0 25px;
+      padding: 10px 20px;
+      border: 2px dashed #fff9c4;
+      border-radius: 12px;
+      font-size: 22px;
+      color: #fff9c4;
+      font-family: 'Architects Daughter', cursive;
+      font-weight: bold;
+    }
+
+    .content {
+      text-align: left;
+    }
+
+    .content h1 {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 22px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #222;
+      padding-bottom: 10px;
+      color: #fff9c4;
+      text-align: left;
+    }
+
+    .content h2 {
+      font-family: 'Architects Daughter', cursive;
+      font-size: 19px;
+      text-align: left;
+      margin-top: 30px;
+      color: #fff9c4;
+      border-left: 3px solid #fff9c4;
+      padding-left: 12px;
+      margin-bottom: 15px;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      color: #cfcfcf;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .content ul {
+      padding-left: 0;
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      color: #cfcfcf;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    .content li::before {
+      content: "🌿";
+      position: absolute;
+      left: 0;
+      top: 2px;
+    }
+
+    .content h2.warning {
+      color: #ff5252;
+      border-left-color: #ff5252;
+    }
+
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin: 35px 0;
+      flex-wrap: nowrap;
+    }
+
+    .btn {
+      flex: 1;
+      text-align: center;
+      padding: 10px 15px;
+      background-color: #000;
+      border: 1px solid #fff9c4;
+      color: #fff9c4;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 15px;
+      font-weight: bold;
+      transition: 0.3s;
+      white-space: nowrap;
+      max-width: 140px;
+    }
+
+    .btn:hover {
+      background-color: #fff9c4;
+      color: #000;
+    }
+
+    .instagram-footer {
+      margin-top: 20px;
+      padding: 15px 0;
+      border-top: 1px solid #1a1a1a;
+      text-align: center;
     }
 
     .instagram-footer a {
       color: #fff;
-      font-size: 18px;
-      font-weight: 600;
       text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: 'Architects Daughter', cursive;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .instagram-footer a:hover {
+      color: #fff9c4;
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      height: 28px;
+      border-radius: 5px;
     }
 
-    /* Footer */
     footer {
-      background-color: #000;
-      color: #aaa;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
+      padding: 30px;
+      color: #555;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 24px;
+      }
+
+      .content h1 {
+        font-size: 20px;
+      }
+
+      .content h2 {
+        font-size: 17px;
+      }
+
+      .btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        max-width: 120px;
+      }
+
+      .price-tag {
+        font-size: 18px;
+        padding: 8px 15px;
+      }
     }
   </style>
 </head>
-
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<div class="container">
+  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
-<div class="products">
+  <article class="product-card">
+    <img src="/bitkiler/images/sariballibaba.jpg" alt="Sarı Ballı Baba (Lamium album)" class="product-image">
+    
+    <div class="price-tag">50 qr - 10 AZN</div>
 
-  <div class="card">
-    <img src="images/sariballibaba.jpg" alt="1 Sarı ballı baba (Lamium album) xalq təbabətində geniş istifadə olunan, xüsusilə böyrəklər, sidik yolları, qadın sağlamlığı və iltihabların azaldılması sahəsində tanınan şəfalı bitkidir.">
-    <h3>Sarı Ballı Baba</h3>
-    <h3>50 qr - 10 AZN</h3>
-    <p><div class="content">
-  <h1>🌿 Bitki iltihabəleyhinə və sakitləşdirici təsiri ilə də seçilir.</h1>
-  <p><strong>Azərbaycanda “ballı baba” adı ilə tanınan bu bitki tərkibində flavonoidlər, iridoidlər, efir yağları, saponinlər, taninlər və antioksidant maddələr saxlayır</strong></p>
+    <div class="content">
+      <h1>🌿 Bitki iltihabəleyhinə və sakitləşdirici təsiri ilə də seçilir.</h1>
+      <p><strong>Azərbaycanda "ballı baba" adı ilə tanınan bu bitki tərkibində flavonoidlər, iridoidlər, efir yağları, saponinlər, taninlər və antioksidant maddələr saxlayır</strong></p>
 
-  <h2>🌸 Ən mühüm faydalarından biri sidikqovucu təsirə malik olmasıdır.</h2>
-  <ul>
-    <li>Böyrəklərin və sidik yollarının fəaliyyətini stimullaşdıraraq orqanizmdən artıq mayenin, duzların və toksinlərin xaric olunmasına kömək edir.</li>
-    <li>Bu xüsusiyyəti sayəsində böyrəklərdə yüngül qum və duz yığılmalarının qarşısının alınmasında, sidik yollarında durğunluğun azalmasında faydalı hesab olunur.</li>
-    <li>Sidik ifrazını artırmaqla yanaşı, sidik yollarında yaranan yanma və narahatlıq hissini də yüngülləşdirə bilər.</li>
-    <li>Sidik kisəsi iltihabı, böyrək soyuqlaması və yüngül infeksiyalarda dəstək məqsədilə istifadə edilir.</li>
-    <li>Tərkibindəki bioloji aktiv maddələr iltihabın azalmasına, toxumaların bərpasına və ağrı hissinin yüngülləşməsinə kömək edir.</li>
-  </ul>
+      <h2>🌸 Ən mühüm faydalarından biri sidikqovucu təsirə malik olmasıdır.</h2>
+      <ul>
+        <li>Böyrəklərin və sidik yollarının fəaliyyətini stimullaşdıraraq orqanizmdən artıq mayenin, duzların və toksinlərin xaric olunmasına kömək edir.</li>
+        <li>Bu xüsusiyyəti sayəsində böyrəklərdə yüngül qum və duz yığılmalarının qarşısının alınmasında, sidik yollarında durğunluğun azalmasında faydalı hesab olunur.</li>
+        <li>Sidik ifrazını artırmaqla yanaşı, sidik yollarında yaranan yanma və narahatlıq hissini də yüngülləşdirə bilər.</li>
+        <li>Sidik kisəsi iltihabı, böyrək soyuqlaması və yüngül infeksiyalarda dəstək məqsədilə istifadə edilir.</li>
+        <li>Tərkibindəki bioloji aktiv maddələr iltihabın azalmasına, toxumaların bərpasına və ağrı hissinin yüngülləşməsinə kömək edir.</li>
+      </ul>
 
-  <h2>🩺 İltihabəleyhinə və antiseptik xüsusiyyətlərə malikdir</h2>
-  <ul>
-    <li>Sidik yolları iltihablarında, yüngül böyrək və sidik kisəsi narahatlıqlarında çay şəklində istifadə edilə bilər.</li>
-    <li>Bu təsiri sayəsində sidik yollarında iltihabın azalmasına və infeksiyalara qarşı müqavimətin artmasına kömək edir.</li>
-    <li>Bu bitki qan təmizləyici xüsusiyyətləri ilə də tanınır.</li>
-    <li>Qanın tərkibindəki zərərli maddələrin azalmasına kömək edərək maddələr mübadiləsini yaxşılaşdırır.</li>
-  </ul>
+      <h2>🩺 İltihabəleyhinə və antiseptik xüsusiyyətlərə malikdir</h2>
+      <ul>
+        <li>Sidik yolları iltihablarında, yüngül böyrək və sidik kisəsi narahatlıqlarında çay şəklində istifadə edilə bilər.</li>
+        <li>Bu təsiri sayəsində sidik yollarında iltihabın azalmasına və infeksiyalara qarşı müqavimətin artmasına kömək edir.</li>
+        <li>Bu bitki qan təmizləyici xüsusiyyətləri ilə də tanınır.</li>
+        <li>Qanın tərkibindəki zərərli maddələrin azalmasına kömək edərək maddələr mübadiləsini yaxşılaşdırır.</li>
+      </ul>
 
-  <h2>Sızanaq, səpkilər və dəri solğunluğu hallarında</h2>
-  <ul>
-    <li>Orqanizmin ümumi müqavimətini artıraraq immun sisteminin güclənməsinə dəstək verir.</li>
-    <li>Bu təsiri sayəsində dəri problemlərində – sızanaq, səpkilər və dəri solğunluğu hallarında dolayı yolla müsbət təsir göstərə bilər..</li>
-  </ul>
+      <h2>Sızanaq, səpkilər və dəri solğunluğu hallarında</h2>
+      <ul>
+        <li>Orqanizmin ümumi müqavimətini artıraraq immun sisteminin güclənməsinə dəstək verir.</li>
+        <li>Bu təsiri sayəsində dəri problemlərində – sızanaq, səpkilər və dəri solğunluğu hallarında dolayı yolla müsbət təsir göstərə bilər.</li>
+      </ul>
 
-  <h2>Həzm sisteminə də müsbət təsir</h2>
-  <ul>
-    <li>Sarı ballı babanın həzm sistemi üçün faydaları da mövcuddur.</li>
-    <li>Mədə və bağırsaqlarda yüngül spazmları azaltmağa, şişkinliyi yüngülləşdirməyə kömək edə bilər.</li>
-    <li>Sakitləşdirici təsiri sinir gərginliyini azaldaraq stressə bağlı həzm problemlərinin qarşısını almaqda faydalı ola bilər.</li>
-  </ul>
+      <h2>Həzm sisteminə də müsbət təsir</h2>
+      <ul>
+        <li>Sarı ballı babanın həzm sistemi üçün faydaları da mövcuddur.</li>
+        <li>Mədə və bağırsaqlarda yüngül spazmları azaltmağa, şişkinliyi yüngülləşdirməyə kömək edə bilər.</li>
+        <li>Sakitləşdirici təsiri sinir gərginliyini azaldaraq stressə bağlı həzm problemlərinin qarşısını almaqda faydalı ola bilər.</li>
+      </ul>
 
-  <h2>🌿 Sarı Ballı Baba bitkisi – istifadə qaydaları:</h2>
-  <ul>
-    <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
-    <li>1 çay qaşığı qurudulmuş sarı ballı baba otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
-    <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
-    <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
-    <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
-  </ul>
+      <h2>🌿 Sarı Ballı Baba bitkisi – istifadə qaydaları:</h2>
+      <ul>
+        <li>☕ Çay şəklində istifadə: Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
+        <li>1 çay qaşığı qurudulmuş sarı ballı baba otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
+        <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər.</li>
+        <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
+        <li>Qastrit və mədə yanması zamanı ilıq halda içilməsi məsləhətdir.</li>
+      </ul>
 
-  <h2>Yarasağaldıcı və dəriyə qulluqedici təsiri</h2>
-  <ul>
-    <li>Xaricdən istifadə edildikdə sarı ballı baba yarasağaldıcı və dəriyə qulluqedici təsir göstərir.</li>
-    <li>Kompres və ya yuyuntu şəklində tətbiq edildikdə kiçik yaraların, dəri qıcıqlanmalarının və iltihabların sağalmasını sürətləndirə bilər</li>
-    <li>Antiseptik xüsusiyyəti infeksiya riskini azaltmağa kömək edir.</li>
-  </ul>
+      <h2>Yarasağaldıcı və dəriyə qulluqedici təsiri</h2>
+      <ul>
+        <li>Xaricdən istifadə edildikdə sarı ballı baba yarasağaldıcı və dəriyə qulluqedici təsir göstərir.</li>
+        <li>Kompres və ya yuyuntu şəklində tətbiq edildikdə kiçik yaraların, dəri qıcıqlanmalarının və iltihabların sağalmasını sürətləndirə bilər.</li>
+        <li>Antiseptik xüsusiyyəti infeksiya riskini azaltmağa kömək edir.</li>
+      </ul>
 
-  <h2>⚠️ Diqqət</h2>
-  <ul>
-    <li>Sarı ballı baba təbii bitki olsa da, uzun müddət və yüksək dozada istifadə tövsiyə edilmir.</li>
-    <li>Xroniki böyrək xəstəlikləri, hamiləlik və ciddi sağlamlıq problemləri zamanı istifadədən əvvəl mütləq həkimlə məsləhətləşmək vacibdir.</li>
-    <li>Düzgün dozada və məqsədyönlü istifadə edildikdə isə sarı ballı baba orqanizm üçün faydalı və təhlükəsiz bitkilərdən biri hesab olunur.</li>
-  </ul>
+      <h2 class="warning">⚠️ Diqqət</h2>
+      <ul>
+        <li>Sarı ballı baba təbii bitki olsa da, uzun müddət və yüksək dozada istifadə tövsiyə edilmir.</li>
+        <li>Xroniki böyrək xəstəlikləri, hamiləlik və ciddi sağlamlıq problemləri zamanı istifadədən əvvəl mütləq həkimlə məsləhətləşmək vacibdir.</li>
+        <li>Düzgün dozada və məqsədyönlü istifadə edildikdə isə sarı ballı baba orqanizm üçün faydalı və təhlükəsiz bitkilərdən biri hesab olunur.</li>
+      </ul>
+    </div>
+
+    <nav class="nav-buttons">
+      <a href="cobancantasi.html" class="btn">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="solmazciceyi.html" class="btn">İrəli ⇨</a>
+    </nav>
+
+    <div class="instagram-footer">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        <span>Instagram: @derman_bitkileri</span>
+      </a>
+    </div>
+  </article>
+
+  <footer>
+    <p>&copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.</p>
+  </footer>
 </div>
-
-
-  <div class="nav-buttons">
-  <a href="cobancantasi.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-  <a href="solmazciceyi.html" class="btn">⇨ İrəli</a>
-</div>
-
-
-<div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="">
-    Instagram
-  </a>
-</div>
-
-<footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
-</footer>
 
 </body>
 </html>
