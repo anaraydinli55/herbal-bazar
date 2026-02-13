@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -114,18 +118,18 @@
       font-size: 14px;
     }
 
-    /* LİMON MELİSSA İLƏ EYNİ DÜYMƏ STİLLƏRİ */
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
       margin-top: 40px;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 5px;
+      padding: 10px 15px;
       background-color: #111;
       border: 1px solid #333;
       color: #fff9c4;
@@ -134,6 +138,8 @@
       font-family: 'Architects Daughter', cursive;
       font-size: 16px;
       transition: 0.3s;
+      white-space: nowrap;
+      max-width: 140px;
     }
 
     .btn:hover {
@@ -143,7 +149,7 @@
     }
 
     .instagram-link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
@@ -155,6 +161,7 @@
 
     .instagram-link img {
       width: 30px;
+      height: 30px;
       border-radius: 8px;
     }
 
@@ -165,8 +172,28 @@
       font-size: 13px;
     }
 
-    @media (max-width: 600px) {
-      .nav-buttons { flex-direction: column; }
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 24px;
+      }
+      
+      h1 {
+        font-size: 22px;
+      }
+      
+      h2 {
+        font-size: 18px;
+      }
+      
+      .btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        max-width: 120px;
+      }
+      
+      .price-text {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -176,7 +203,7 @@
   <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
   <article class="product-card">
-    <img src="images/cobancokerten.jpg" alt="Çoban Çökərtən" class="product-image">
+    <img src="/bitkiler/images/cobancokerten.jpg" alt="Çoban Çökərtən" class="product-image">
     
     <div class="price-container">
       <span class="price-text">50 qr - 10 AZN</span>
@@ -206,21 +233,22 @@
       <p>Hamiləlik dövründə və ciddi xroniki xəstəliklər zamanı həkimlə məsləhətləşmək vacibdir.</p>
     </div>
 
-    <!-- LİMON MELİSSA İLƏ EYNİ DÜYMƏ BLOKU -->
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
       <a href="limonmelissa.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="gingkobiloba.html" class="btn">İrəli ⇨</a>
-    </div>
+    </nav>
 
-    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
-      <img src="images/instaqram1.jpg" alt="Instagram">
-      <span>Instagram: @derman_bitkileri</span>
-    </a>
+    <div style="text-align: center;">
+      <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank" rel="noopener noreferrer">
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        <span>Instagram: @derman_bitkileri</span>
+      </a>
+    </div>
   </article>
 
   <footer>
-    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+    <p>&copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.</p>
   </footer>
 </div>
 
