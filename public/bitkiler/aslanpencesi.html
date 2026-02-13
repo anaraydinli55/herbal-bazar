@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<!-- Favicon - Bütün Platformalar -->
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
@@ -22,29 +23,70 @@
 <meta name="msapplication-TileColor" content="#000000">
 <meta name="theme-color" content="#000000">
 
-<!-- SEO Başlıq və Təsvir (Qorundu) -->
+<!-- SEO Meta -->
 <title>Aslan Pəncəsi Faydaları və İstifadə Qaydası | Herbal Bazar</title>
 <meta name="description" content="Aslan pəncəsi nədir? Qadın sağlamlığı, hormonal balans və aybaşı sancıları üçün aslan pəncəsinin faydaları və çayının hazırlanma qaydası.">
 <meta name="keywords" content="aslan pəncəsi, qadın sağlamlığı, hormonal balans, bitki çayları, təbii müalicə">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Herbal Bazar">
+<link rel="canonical" href="https://www.herbal-az.store/aslanpencesi.html">
 
-<link rel="icon" type="image/png" href="images/favicon.png">
+<!-- Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Google Sxem Kodları (Qorundu) -->
+<!-- Schema.org -->
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
 "@type": "Product",
 "name": "Aslan Pəncəsi",
-"image": "images/aslan-pencesi.jpg",
+"image": "https://www.herbal-az.store/images/aslan-pencesi.jpg",
 "description": "Qadın sağlamlığı üçün hormonal balansı tənzimləyən təbii aslan pəncəsi otu.",
 "brand": { "@type": "Brand", "name": "Herbal Bazar" },
 "offers": {
 "@type": "Offer",
+"url": "https://www.herbal-az.store/aslanpencesi.html",
 "price": "10.00",
 "priceCurrency": "AZN",
-"availability": "https://schema.org/InStock"
+"availability": "https://schema.org/InStock",
+"itemCondition": "https://schema.org/NewCondition",
+"seller": { "@type": "Organization", "name": "Herbal Bazar" }
+},
+"aggregateRating": {
+"@type": "AggregateRating",
+"ratingValue": "4.8",
+"reviewCount": "156"
+},
+"category": "Təbii Bitki Məhsulları",
+"weight": { "@type": "QuantitativeValue", "value": "50", "unitCode": "GRM" }
 }
+</script>
+
+<!-- BreadcrumbList -->
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Ana Səhifə",
+"item": "https://www.herbal-az.store/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Bitki Məhsulları",
+"item": "https://www.herbal-az.store/bitkiler.html"
+},
+{
+"@type": "ListItem",
+"position": 3,
+"name": "Aslan Pəncəsi",
+"item": "https://www.herbal-az.store/aslanpencesi.html"
+}
+]
 }
 </script>
 
@@ -52,7 +94,7 @@
 :root {
 --bg-color: #000;
 --card-bg: #0a0a0a;
---accent-yellow: #fff9c4; /* Çoban Çökərtən sarısı */
+--accent-yellow: #fff9c4;
 --text-main: #fff;
 --text-dim: #ccc;
 --border-color: #1a1a1a;
@@ -87,7 +129,6 @@ border-radius: 20px;
 padding: 25px;
 }
 
-/* Şəkil kodu sizin orijinal kodunuzdakı kimidir */
 .product-image {
 width: 100%;
 border-radius: 15px;
@@ -96,7 +137,6 @@ border: 1px solid #222;
 display: block;
 }
 
-/* Qiymət Etiketi - Çoban Çökərtən Stili */
 .price-tag {
 display: inline-block;
 border: 2px dashed var(--accent-yellow);
@@ -149,33 +189,115 @@ left: 0;
 font-size: 16px;
 }
 
-/* Naviqasiya Düymələri - Çoban Çökərtən Stili */
+/* ============================================
+   NAVİQASİYA DÜYMƏLƏRİ - YAKIOTU.HTML STİLİ
+   ============================================ */
 .nav-buttons {
 display: flex;
+justify-content: space-between;
 gap: 10px;
 margin-top: 40px;
+width: 100%;
 }
 
 .btn {
-flex: 1;
+flex: 1 1 0;
+min-width: 0;
 text-align: center;
-padding: 14px;
+padding: 14px 8px;
 border-radius: 10px;
 background-color: #111;
 border: 1px solid #333;
-color: var(--accent-yellow); 
+color: var(--accent-yellow);
 text-decoration: none;
 font-family: 'Architects Daughter', cursive;
-transition: 0.3s;
+transition: all 0.3s ease;
 font-size: 16px;
+font-weight: 600;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 }
 
 .btn:hover {
 background-color: var(--accent-yellow);
 color: #000;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(255, 249, 196, 0.2);
 }
 
-/* Instagram Footer */
+/* ============================================
+   MOBİL RESPONSİVE - DÜYMƏLƏR YAN-YANA
+   ============================================ */
+@media (max-width: 600px) {
+.container {
+padding: 15px;
+}
+
+header h2 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+article.product-detail {
+padding: 20px;
+}
+
+h1 {
+font-size: 22px;
+}
+
+.content h2 {
+font-size: 19px;
+padding-left: 12px;
+border-left-width: 3px;
+}
+
+.content p, .content ul {
+font-size: 15px;
+}
+
+.price-tag {
+font-size: 18px;
+padding: 6px 16px;
+}
+
+/* ƏSAS DÜZƏLİŞ: Düymələr yan-yana qalır! */
+.nav-buttons {
+flex-direction: row; /* ← HEÇ VAXT column olmasın! */
+gap: 8px;
+margin-top: 30px;
+}
+
+.btn {
+padding: 12px 4px;
+font-size: 13px;
+border-radius: 8px;
+}
+}
+
+@media (max-width: 400px) {
+.nav-buttons {
+gap: 6px;
+}
+
+.btn {
+padding: 10px 2px;
+font-size: 12px;
+}
+}
+
+@media (max-width: 320px) {
+.btn {
+padding: 8px 1px;
+font-size: 11px;
+letter-spacing: -0.3px;
+}
+}
+
+/* ============================================
+   SOSYAL MEDYA FOOTER
+   ============================================ */
 .social-link {
 text-align: center;
 margin-top: 30px;
@@ -205,10 +327,6 @@ padding: 40px 20px;
 color: #666;
 font-size: 13px;
 }
-
-@media (max-width: 600px) {
-.nav-buttons { flex-direction: column; }
-}
 </style>
 </head>
 <body>
@@ -219,8 +337,7 @@ font-size: 13px;
 </header>
 
 <article class="product-detail">
-<!-- Şəkil yolu sizin kodunuzdakı kimi qaldı -->
-<img src="/bitkiler/images/aslan-pencesi.jpg" alt="Aslan Pəncəsi Otu - Herbal Bazar" class="product-image">
+<img src="images/aslan-pencesi.jpg" alt="Aslan Pəncəsi Otu - Herbal Bazar" class="product-image">
 
 <div class="price-tag">50 qr - 10 AZN</div>
 
@@ -250,14 +367,14 @@ font-size: 13px;
 <p>Hamiləlik dövründə istifadəsi tövsiyə edilmir. Hər hansı xroniki xəstəliyiniz varsa, həkimlə məsləhətləşin.</p>
 </div>
 
-    <div class="nav-buttons">
-      <a href="hayit.html" class="btn">⇦ Geri</a>
-      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="karabas.html" class="btn">İrəli ⇨</a>
-    </div>
+<nav class="nav-buttons" aria-label="Məhsul naviqasiyası">
+<a href="https://www.herbal-az.store/hayit.html" class="btn" rel="prev">⇦ Geri</a>
+<a href="https://www.herbal-az.store/bitkiler.html" class="btn">🏠 Ana səhifə</a>
+<a href="https://www.herbal-az.store/karabas.html" class="btn" rel="next">⇨ İrəli</a>
+</nav>
 
 <div class="social-link">
-<a href="https://instagram.com/derman_bitkileri" target="_blank">
+<a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
 <img src="images/instaqram1.jpg" alt="Instagram"> Instagram: @derman_bitkileri
 </a>
 </div>
