@@ -276,16 +276,16 @@
        ============================================ */
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
       margin: 35px 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 5px;
+      padding: 10px 15px;
       background-color: #000;
       border: 1px solid #fff9c4;
       color: #fff9c4;
@@ -296,7 +296,7 @@
       font-weight: bold;
       transition: all 0.3s ease;
       white-space: nowrap;
-      min-width: 100px;
+      max-width: 140px;
     }
 
     .btn:hover, .btn:focus {
@@ -323,7 +323,7 @@
     .instagram-footer a {
       color: #fff;
       text-decoration: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
@@ -392,15 +392,16 @@
 
       .btn {
         font-size: 13px;
-        padding: 10px 4px;
-        min-width: 80px;
+        padding: 8px 10px;
+        max-width: 120px;
       }
     }
 
     @media (max-width: 360px) {
       .btn {
         font-size: 12px;
-        padding: 8px 3px;
+        padding: 8px 8px;
+        max-width: 100px;
       }
     }
 
@@ -480,7 +481,7 @@
     <meta itemprop="name" content="Şərbətçi Otu (Humulus Lupulus)">
     <meta itemprop="brand" content="Herbal Bazar">
     
-    <img src="images/serbetciotu.jpg" 
+    <img src="/bitkiler/images/serbetciotu.jpg" 
          alt="Şərbətçi Otu (Humulus Lupulus) - Yuxu və stress əleyhinə təbii bitki - Herbal Bazar" 
          class="product-image"
          itemprop="image"
@@ -499,6 +500,15 @@
       <h1>🌿 Şərbətçi Otu (Humulus Lupulus)</h1>
       <p itemprop="description">Şərbətçi otu əsrlər boyu ənənəvi təbabətdə istifadə olunan və xüsusilə sinir sistemi, yuxu problemləri, stress və rahatlıq üzərində müsbət təsirləri ilə tanınan təbii bitkidir.</p>
 
+      <h2>🌸 Sinə Böyütmək İstəyənlər Üçün:</h2>
+      <ul>
+        <li>Şərbetçi otu, tərkibindəki fitoöstrojenler (bitki mənşəli estrogenlər) sayəsində sinə ölçüsünü böyütmək və formaya salmaq istəyənlər tərəfindən geniş istifadə olunur.</li>
+        <li>Bu bitki, estrogen hormonuna bənzər təsir göstərərək sinələrin dolğunlaşmasına kömək edə bilər.</li>
+        <li>Təbii Östrojen Mənbəyi: Tərkibindəki 8-prenilnaringenin adlı flavonoid vasitəsilə qadınlıq hormonu olan östrojen səviyyəsini dəstəkləyir, bu da sinələrdə dolğunluq yarada bilər.</li>
+        <li>Masaj Yağı Təsiri: Şərbetçi otu yağı ilə sinə bölgəsinə edilən masaj, qan dövranını artıraraq toxumaların sıxlaşmasına və böyüməsinə kömək edə bilər.</li>
+      </ul>
+
+      
       <h2>🌸 Yuxu və Rahatlıq</h2>
       <ul>
         <li>Şərbətçi otu ən çox yuxu və rahatlıq üçün istifadə olunur.</li>
@@ -556,9 +566,9 @@
     </div>
 
     <nav class="nav-buttons" aria-label="Məhsul naviqasiyası">
-      <a href="https://www.herbal-az.store/enginar.html" class="btn" rel="prev">⇦ Geri</a>
-      <a href="https://www.herbal-az.store/bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="https://www.herbal-az.store/cobancantasi.html" class="btn" rel="next">İrəli ⇨</a>
+      <a href="enginar.html" class="btn" rel="prev">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="cobancantasi.html" class="btn" rel="next">İrəli ⇨</a>
     </nav>
 
     <div class="instagram-footer">
