@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -102,15 +106,16 @@
 
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
       margin: 35px 0;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 5px;
+      padding: 10px 15px;
       background-color: #000;
       border: 1px solid #fff9c4;
       color: #fff9c4;
@@ -121,6 +126,7 @@
       font-weight: bold;
       transition: 0.3s;
       white-space: nowrap;
+      max-width: 140px;
     }
 
     .btn:hover {
@@ -135,7 +141,7 @@
     .instagram-footer a {
       color: #fff;
       text-decoration: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
@@ -144,6 +150,7 @@
 
     .instagram-footer img {
       width: 28px;
+      height: 28px;
       border-radius: 5px;
     }
 
@@ -153,6 +160,23 @@
       color: #555;
       font-size: 13px;
     }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 22px;
+      }
+      
+      .btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        max-width: 120px;
+      }
+      
+      .price-tag {
+        font-size: 18px;
+        padding: 8px 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -161,7 +185,7 @@
   <h2 class="main-title">🌿 Təbiətin sakitləşdirici gücü</h2>
 
   <div class="product-card">
-    <img src="images/melissa.jpg" alt="Limon Melissa (Melissa officinalis)" class="product-image">
+    <img src="/bitkiler/images/melissa.jpg" alt="Limon Melissa (Melissa officinalis)" class="product-image">
     
     <div class="price-tag">50 qr - 8 AZN</div>
 
@@ -214,22 +238,22 @@
       </ul>
     </div>
 
-    <div class="nav-buttons">
-      <a href="bitkiler.html" class="btn">⇦ Geri</a>
+    <nav class="nav-buttons">
+      <a href="karabas.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="enginar.html" class="btn">İrəli ⇨</a>
-    </div>
+    </nav>
 
     <div class="instagram-footer">
-      <a href="https://instagram.com/derman_bitkileri" target="_blank">
-        <img src="images/instaqram1.jpg" alt="IG">
-        Instagram: @derman_bitkileri
+      <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        <span>Instagram: @derman_bitkileri</span>
       </a>
     </div>
   </div>
 
   <footer>
-    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+    <p>&copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.</p>
   </footer>
 </div>
 
