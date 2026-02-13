@@ -277,16 +277,16 @@
        ============================================ */
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
       margin: 35px 0;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 5px;
+      padding: 10px 15px;
       background-color: #222;
       border: 1px solid #444;
       color: #fff;
@@ -296,7 +296,7 @@
       font-weight: 600;
       transition: all 0.3s ease;
       white-space: nowrap;
-      min-width: 100px;
+      max-width: 140px;
     }
 
     .btn:hover, .btn:focus {
@@ -327,7 +327,7 @@
       font-size: 18px;
       font-weight: 600;
       text-decoration: none;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
@@ -396,15 +396,16 @@
 
       .btn {
         font-size: 13px;
-        padding: 10px 4px;
-        min-width: 80px;
+        padding: 8px 10px;
+        max-width: 120px;
       }
     }
 
     @media (max-width: 360px) {
       .btn {
         font-size: 12px;
-        padding: 8px 3px;
+        padding: 8px 8px;
+        max-width: 100px;
       }
     }
 
@@ -473,7 +474,7 @@
     <meta itemprop="name" content="Çoban Çantası (Capsella bursa-pastoris)">
     <meta itemprop="brand" content="Herbal Bazar">
     
-    <img src="images/cobancantasi.jpg" 
+    <img src="/bitkiler/images/cobancantasi.jpg" 
          alt="Çoban Çantası (Capsella bursa-pastoris) - Qanaxma və qadın sağlamlığı üçün xalq təbabətində istifadə olunan şəfalı bitki - Herbal Bazar" 
          class="product-image"
          itemprop="image"
@@ -539,9 +540,9 @@
     </div>
 
     <nav class="nav-buttons" aria-label="Məhsul naviqasiyası">
-      <a href="https://www.herbal-az.store/serbetciotu.html" class="btn" rel="prev">⇦ Geri</a>
-      <a href="https://www.herbal-az.store/bitkiler.html" class="btn">🏠 Ana səhifə</a>
-      <a href="https://www.herbal-az.store/sariballibaba.html" class="btn" rel="next">⇨ İrəli</a>
+      <a href="serbetciotu.html" class="btn" rel="prev">⇦ Geri</a>
+      <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+      <a href="sariballibaba.html" class="btn" rel="next">İrəli ⇨</a>
     </nav>
 
     <div class="instagram-footer">
