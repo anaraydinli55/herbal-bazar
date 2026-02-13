@@ -8,6 +8,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -116,20 +120,20 @@
       font-size: 14px;
     }
 
-    /* LİMON MELİSSA İLƏ TAM EYNİ YAN-YANA DÜYMƏLƏR */
     .nav-buttons {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       gap: 10px;
       margin-top: 40px;
+      flex-wrap: nowrap;
     }
 
     .btn {
       flex: 1;
       text-align: center;
-      padding: 12px 5px;
+      padding: 10px 15px;
       background-color: #111;
-      border: 1px solid #fff9c4; /* Limon Melissa rəngi */
+      border: 1px solid #fff9c4;
       color: #fff9c4;
       text-decoration: none;
       border-radius: 10px;
@@ -138,6 +142,7 @@
       font-weight: bold;
       transition: 0.3s;
       white-space: nowrap;
+      max-width: 140px;
     }
 
     .btn:hover {
@@ -146,7 +151,7 @@
     }
 
     .instagram-link {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
@@ -158,6 +163,7 @@
 
     .instagram-link img {
       width: 30px;
+      height: 30px;
       border-radius: 8px;
     }
 
@@ -167,6 +173,30 @@
       color: #555;
       font-size: 13px;
     }
+
+    @media (max-width: 480px) {
+      .main-title {
+        font-size: 24px;
+      }
+      
+      h1 {
+        font-size: 22px;
+      }
+      
+      h2 {
+        font-size: 18px;
+      }
+      
+      .btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        max-width: 120px;
+      }
+      
+      .price-text {
+        font-size: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -175,7 +205,7 @@
   <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
 
   <article class="product-card">
-    <img src="images/gingkobiloba.jpg" alt="Gingko Biloba" class="product-image">
+    <img src="/bitkiler/images/gingkobiloba.jpg" alt="Gingko Biloba" class="product-image">
     
     <div class="price-container">
       <span class="price-text">60 qr - 10 AZN</span>
@@ -205,21 +235,22 @@
       <p>Hamiləlik dövründə və qan durulducu dərmanlar istifadə edənlər həkimlə məsləhətləşməlidir.</p>
     </div>
 
-    <!-- YAN-YANA DÜYMƏLƏR -->
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
       <a href="cobancokerten.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="altinbasak.html" class="btn">İrəli ⇨</a>
-    </div>
+    </nav>
 
-    <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank">
-      <img src="images/instaqram1.jpg" alt="Instagram">
-      <span>Instagram: @derman_bitkileri</span>
-    </a>
+    <div style="text-align: center;">
+      <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank" rel="noopener noreferrer">
+        <img src="images/instaqram1.jpg" alt="Instagram">
+        <span>Instagram: @derman_bitkileri</span>
+      </a>
+    </div>
   </article>
 
   <footer>
-    &copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.
+    <p>&copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.</p>
   </footer>
 </div>
 
