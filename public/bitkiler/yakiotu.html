@@ -137,13 +137,13 @@
     .nav-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       margin-top: 40px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
     }
 
     .btn {
-      padding: 12px 25px;
+      padding: 10px 20px;
       background-color: #111;
       border: 1px solid #333;
       border-radius: 10px;
@@ -153,12 +153,16 @@
       font-family: 'Architects Daughter', cursive;
       transition: all 0.3s ease;
       display: inline-block;
+      white-space: nowrap;
+      font-size: 16px;
+      flex: 1;
+      text-align: center;
+      max-width: 140px;
     }
 
     .btn:hover {
       background-color: var(--accent-yellow);
       color: #000;
-      transform: translateY(-2px);
     }
 
     .instagram-footer {
@@ -196,7 +200,7 @@
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
       .product-card {
         padding: 20px;
       }
@@ -211,6 +215,12 @@
       
       h1 {
         font-size: 20px;
+      }
+      
+      .btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        max-width: 120px;
       }
     }
   </style>
@@ -269,7 +279,7 @@
 
     <h2>🌿 Yakı otu – istifadə qaydaları:</h2>
     <ul>
-      <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifafə formasıdır.</li>
+      <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
       <li>1 çay qaşığı qurudulmuş yakı otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
       <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər (sakitləşdirici təsiri var).</li>
       <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
