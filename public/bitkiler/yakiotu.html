@@ -3,36 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="images/android-icon-512x512.png">
-<link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
-<meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="theme-color" content="#000000">
   <title>Yakı Otu (İvan Çayı) - Herbal Bazar</title>
+  
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="images/android-icon-512x512.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+  <meta name="msapplication-TileImage" content="images/ms-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#000000">
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
       --bg-color: #000;
       --card-bg: #0a0a0a;
-      --accent-yellow: #fff9c4; 
+      --accent-yellow: #fff9c4;
       --text-main: #fff;
       --text-dim: #ccc;
       --border-color: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -45,7 +51,7 @@
 
     .container {
       max-width: 850px;
-      margin: auto;
+      margin: 0 auto;
       padding: 20px 20px 60px;
     }
 
@@ -64,11 +70,12 @@
       padding: 30px;
     }
 
-    img.main-img {
+    .main-img {
       width: 100%;
       border-radius: 14px;
       margin-bottom: 25px;
       border: 1px solid #222;
+      display: block;
     }
 
     h3 {
@@ -132,6 +139,7 @@
       justify-content: center;
       gap: 15px;
       margin-top: 40px;
+      flex-wrap: wrap;
     }
 
     .btn {
@@ -143,19 +151,21 @@
       text-decoration: none;
       font-weight: 600;
       font-family: 'Architects Daughter', cursive;
-      transition: 0.3s;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
 
     .btn:hover {
       background-color: var(--accent-yellow);
       color: #000;
+      transform: translateY(-2px);
     }
 
     .instagram-footer {
       text-align: center;
       margin-top: 40px;
       padding-top: 20px;
-      border-top: 1px solid #1a1a1a;
+      border-top: 1px solid var(--border-color);
     }
 
     .instagram-footer a {
@@ -163,12 +173,19 @@
       text-decoration: none;
       font-family: 'Architects Daughter', cursive;
       font-size: 18px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.3s;
+    }
+
+    .instagram-footer a:hover {
+      color: var(--accent-yellow);
     }
 
     .instagram-footer img {
       width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      height: 28px;
       border-radius: 5px;
     }
 
@@ -177,6 +194,24 @@
       padding: 30px;
       color: #555;
       font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      .product-card {
+        padding: 20px;
+      }
+      
+      header h2 {
+        font-size: 24px;
+      }
+      
+      h3 {
+        font-size: 22px;
+      }
+      
+      h1 {
+        font-size: 20px;
+      }
     }
   </style>
 </head>
@@ -188,7 +223,7 @@
     <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
   </header>
 
-  <div class="product-card">
+  <article class="product-card">
     <img src="/bitkiler/images/yakiotu.jpg" alt="Yakı otu (İvan çayı)" class="main-img">
 
     <h3>Yakı Otu - иван-чай</h3>
@@ -234,7 +269,7 @@
 
     <h2>🌿 Yakı otu – istifadə qaydaları:</h2>
     <ul>
-      <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifadə formasıdır.</li>
+      <li>☕ <strong>Çay şəklində istifadə:</strong> Ən geniş yayılmış və təhlükəsiz istifafə formasıdır.</li>
       <li>1 çay qaşığı qurudulmuş yakı otu. 1 stəkan (200 ml) qaynar su. Çay kimi 10–15 dəqiqə dəmlənir. Süzülərək içilir.</li>
       <li>Gündə 1–2 dəfə. Yeməkdən sonra içilməsi tövsiyə olunur. Axşam saatlarında içilə bilər (sakitləşdirici təsiri var).</li>
       <li>2–3 həftəlik kurs şəklində istifadə edilir. 7–10 gün fasilə verildikdən sonra yenidən davam etmək olar.</li>
@@ -248,23 +283,23 @@
       <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
     </ul>
 
-    <div class="nav-buttons">
+    <nav class="nav-buttons">
       <a href="hayit.html" class="btn">⇦ Geri</a>
       <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="karabas.html" class="btn">İrəli ⇨</a>
-    </div>
+    </nav>
 
     <div class="instagram-footer">
-      <a href="https://instagram.com/derman_bitkileri" target="_blank">
+      <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
         <img src="images/instaqram1.jpg" alt="Instagram">
-        Instagram: @derman_bitkileri
+        <span>Instagram: @derman_bitkileri</span>
       </a>
     </div>
-  </div>
+  </article>
 </div>
 
 <footer>
-  &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+  <p>&copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.</p>
 </footer>
 
 </body>
