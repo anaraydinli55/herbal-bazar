@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Herbal Bazar - Təbii Bitki Məhsulları | Bakı</title>
+  <meta name="description" content="Herbal Bazar - Azərbaycanda təbii bitki məhsulları, orqanik çaylar, saf toxum yağları, arı məhsulları və bitki kremləri.">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +12,11 @@
   
   <style>
     :root {
-      --primary: #9b59b6;
-      --primary-dark: #8e44ad;
-      --secondary: #27ae60;
-      --bg-dark: #0f0f0f;
-      --card-bg: #1a1a1a;
+      --primary: #9b59b6; /* Bənövşəyi */
+      --secondary: #27ae60; /* Yaşıl */
+      --bg-dark: #0a0a0a;
+      --card-bg: #161616;
       --text-light: #eee;
-      --text-dim: #aaa;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,21 +25,21 @@
       background-color: var(--bg-dark);
       color: var(--text-light);
       line-height: 1.6;
-      overflow-x: hidden;
     }
-
+    
     h1, h2, h3, .logo { font-family: 'Architects Daughter', cursive; }
+    a { text-decoration: none; color: inherit; }
 
-    /* Header & Nav */
+    /* Header */
     header {
-      background: rgba(26, 26, 26, 0.95);
+      background: #1a1a1a;
       padding: 15px 0;
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 2px solid var(--primary);
     }
-
+    
     .header-container {
       max-width: 1200px;
       margin: 0 auto;
@@ -50,35 +49,33 @@
       align-items: center;
     }
 
-    .logo { font-size: 26px; color: var(--primary); font-weight: bold; }
+    .logo { font-size: 28px; color: var(--primary); }
 
     nav ul { display: flex; gap: 20px; list-style: none; }
-    nav a { font-weight: 600; color: var(--text-light); text-decoration: none; transition: 0.3s; padding: 5px 10px; border-radius: 5px; }
-    nav a:hover { color: var(--primary); background: rgba(155, 89, 182, 0.1); }
+    nav a:hover { color: var(--primary); }
 
     .cart-trigger {
-      position: relative;
-      cursor: pointer;
-      font-size: 20px;
       background: var(--primary);
       padding: 8px 15px;
       border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    #cart-count { background: white; color: var(--primary); padding: 2px 7px; border-radius: 50%; font-size: 12px; font-weight: bold; }
+    #cart-count { background: white; color: var(--primary); padding: 2px 8px; border-radius: 50%; font-size: 12px; }
 
-    /* Floating Buttons (WhatsApp & Music) */
-    .floating-container {
+    /* Floating Buttons */
+    .floating-controls {
       position: fixed;
       bottom: 20px;
       right: 20px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      z-index: 9999;
+      gap: 12px;
+      z-index: 2000;
     }
 
     .float-btn {
@@ -88,112 +85,99 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      color: white;
-      text-decoration: none;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
       transition: 0.3s;
       cursor: pointer;
       border: none;
     }
 
-    .float-btn:hover { transform: scale(1.1); }
-    .whatsapp-btn { background-color: #25d366; font-size: 30px; }
-    .music-btn { background-color: var(--primary); font-size: 24px; animation: pulse 2s infinite; }
+    .wa-btn { background: #25d366; }
+    .music-btn { background: var(--primary); font-size: 22px; animation: pulse 2s infinite; }
 
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7); }
-      70% { box-shadow: 0 0 0 15px rgba(155, 89, 182, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0); }
+      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(155, 89, 182, 0); }
+      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(155, 89, 182, 0); }
     }
 
-    /* Product Cards */
-    main { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
-    .product-grid {
+    /* Product Grid */
+    main { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    
+    .section-header { text-align: center; margin-bottom: 50px; }
+    .section-header h1 { font-size: 40px; color: var(--primary); margin-bottom: 10px; }
+
+    .category-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
 
     .product-card {
       background: var(--card-bg);
-      border-radius: 15px;
+      border-radius: 20px;
       overflow: hidden;
-      border: 1px solid #333;
-      transition: 0.3s;
-    }
-
-    .product-card:hover { border-color: var(--primary); transform: translateY(-5px); }
-
-    .product-img { width: 100%; height: 220px; object-fit: cover; }
-    .product-info { padding: 20px; text-align: center; }
-    .product-info h3 { margin-bottom: 10px; color: var(--primary); }
-    .product-info p { font-size: 14px; color: var(--text-dim); margin-bottom: 15px; height: 45px; overflow: hidden; }
-
-    .add-to-cart {
-      background: var(--secondary);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      font-weight: 600;
-      width: 100%;
-      transition: 0.3s;
-    }
-
-    .add-to-cart:hover { background: #219150; }
-
-    /* Səbət Modalı */
-    #cart-modal {
-      position: fixed;
-      top: 0; right: -100%;
-      width: 350px; height: 100%;
-      background: #111;
-      z-index: 2000;
-      box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+      border: 1px solid #222;
       transition: 0.4s;
-      padding: 25px;
-      display: flex;
-      flex-direction: column;
+      text-align: center;
     }
 
-    #cart-modal.active { right: 0; }
-    .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-    .close-cart { cursor: pointer; font-size: 24px; }
+    .product-card:hover { transform: translateY(-10px); border-color: var(--primary); }
+
+    .product-image { height: 240px; position: relative; overflow: hidden; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; }
     
-    #cart-items { flex-grow: 1; overflow-y: auto; list-style: none; }
-    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; }
-    .remove-item { color: #e74c3c; cursor: pointer; font-size: 12px; }
-
-    .sifaris-et {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 15px;
-      border-radius: 10px;
-      font-weight: bold;
-      margin-top: 20px;
-      cursor: pointer;
+    .product-badge {
+      position: absolute; top: 10px; right: 10px;
+      background: var(--primary); padding: 5px 12px; border-radius: 15px; font-size: 11px; font-weight: bold;
     }
 
-    /* Responsive */
+    .product-content { padding: 25px; }
+    .product-content h3 { color: var(--primary); margin-bottom: 15px; }
+    .product-content p { color: #aaa; font-size: 14px; margin-bottom: 20px; height: 45px; overflow: hidden; }
+
+    .btn-view {
+      display: inline-block;
+      width: 100%;
+      padding: 12px;
+      background: transparent;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-view:hover { background: var(--primary); color: white; }
+
+    /* Cart Sidebar */
+    #cart-sidebar {
+      position: fixed; top: 0; right: -100%; width: 350px; height: 100%;
+      background: #111; z-index: 3000; transition: 0.4s; padding: 30px;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+      display: flex; flex-direction: column;
+    }
+    #cart-sidebar.active { right: 0; }
+    
+    .cart-items-container { flex-grow: 1; overflow-y: auto; margin: 20px 0; }
+    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; }
+    .btn-order { background: var(--secondary); color: white; border: none; padding: 15px; border-radius: 10px; font-weight: bold; cursor: pointer; }
+
     @media (max-width: 768px) {
-      nav { display: none; } /* Sadəlik üçün mobil menyu gizlədildi, hamburger əlavə edilə bilər */
-      #cart-modal { width: 100%; }
+        #cart-sidebar { width: 100%; }
+        nav { display: none; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="header-container">
       <div class="logo">🌿 Herbal Bazar</div>
       <nav>
         <ul>
-          <li><a href="#">Ana Səhifə</a></li>
-          <li><a href="#">Məhsullar</a></li>
-          <li><a href="#">Əlaqə</a></li>
+          <li><a href="/">Ana Səhifə</a></li>
+          <li><a href="/bitkiler/">Bitkilər</a></li>
+          <li><a href="/elaqe/">Əlaqə</a></li>
         </ul>
       </nav>
       <div class="cart-trigger" onclick="toggleCart()">
@@ -203,113 +187,228 @@
   </header>
 
   <!-- Floating Buttons -->
-  <div class="floating-container">
-    <!-- Music Button -->
-    <button class="float-btn music-btn" onclick="toggleMusic()" title="Musiqi">
-      🎵
-    </button>
-    <!-- WhatsApp Button -->
+  <div class="floating-controls">
+    <button class="float-btn music-btn" onclick="playMusic()" title="Musiqi">🎵</button>
     <a href="https://wa.me/994554828424?text=Salam!%20Mən%20bitki%20məhsulları%20ilə%20əlaqədar%20məlumat%20almaq%20istəyirəm" 
-       class="float-btn whatsapp-btn" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
+       class="float-btn wa-btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="30" alt="WhatsApp">
     </a>
   </div>
 
   <main>
-    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
-      <h1 style="font-size: 36px; color: var(--primary);">Məhsul Kataloqu</h1>
-      <p style="color: var(--text-dim);">Səbətə əlavə edin və WhatsApp ilə birbaşa sifariş verin</p>
+    <div class="section-header">
+      <h1>🌿 Herbal Bazar Məhsul Kataloqu</h1>
+      <p>Təbii müalicə, orqanik bitkilər və sağlam yaşam üçün hər şey</p>
     </div>
 
-    <div class="product-grid">
-      <!-- Məhsul 1 -->
-      <div class="product-card">
-        <img src="images/mehsul1.jpg" alt="Bitki Çayı" class="product-img">
-        <div class="product-info">
+    <div class="category-grid">
+      
+      <!-- 1. Bitki Çayları -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/mehsul1.jpg" alt="Bitki Çayları">
+          <span class="product-badge">60+ Növ</span>
+        </div>
+        <div class="product-content">
           <h3>Bitki Çayları</h3>
-          <p>İmmunitet gücləndirici orqanik dağ çayları.</p>
-          <button class="add-to-cart" onclick="addToCart('Bitki Çayı')">Səbətə at</button>
+          <p>Müalicəvi dəmsə çayları, immunitet gücləndiricilər.</p>
+          <a href="bitkiler/bitkiler.html" class="btn-view">Məhsulları Gör</a>
         </div>
-      </div>
+      </article>
 
-      <!-- Məhsul 2 -->
-      <div class="product-card">
-        <img src="images/yaglar.jpeg" alt="Qarazirə Yağı" class="product-img">
-        <div class="product-info">
-          <h3>Qarazirə Yağı</h3>
-          <p>100% saf soyuq sıxım toxum yağı.</p>
-          <button class="add-to-cart" onclick="addToCart('Qarazirə Yağı')">Səbətə at</button>
+      <!-- 2. Toxum Yağları -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/yaglar.jpeg" alt="Toxum Yağları">
         </div>
-      </div>
+        <div class="product-content">
+          <h3>100% Saf Toxum Yağları</h3>
+          <p>Soyuq preslənmiş qarazirə, balqabaq, kətan və s. yağlar.</p>
+          <a href="bitkiler/yagsixma.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
 
-      <!-- Məhsul 3 -->
-      <div class="product-card">
-        <img src="images/ari-sutu.jpg" alt="Arı Südü" class="product-img">
-        <div class="product-info">
-          <h3>Təbii Arı Südü</h3>
-          <p>Enerji verən, hüceyrə yeniləyici möcüzə.</p>
-          <button class="add-to-cart" onclick="addToCart('Arı Südü')">Səbətə at</button>
+      <!-- 3. Təbii Qarışımlar -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/banka.jpg" alt="Təbii Qarışımlar">
         </div>
-      </div>
+        <div class="product-content">
+          <h3>Təbii Qarışımlar</h3>
+          <p>Müalicəvi məcunlar və qədim reseptli formulalar.</p>
+          <a href="bitkiler/kudretnari.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
 
-      <!-- Məhsul 4 -->
-      <div class="product-card">
-        <img src="images/caytikani.jpeg" alt="Çaytikanı Yağı" class="product-img">
-        <div class="product-info">
-          <h3>Çaytikanı Yağı</h3>
-          <p>Mədə və qastrit problemləri üçün təbii həll.</p>
-          <button class="add-to-cart" onclick="addToCart('Çaytikanı Yağı')">Səbətə at</button>
+      <!-- 4. Bitki Suları -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/sular.jpg" alt="Bitki Suları">
         </div>
-      </div>
+        <div class="product-content">
+          <h3>Bitki Suları (Hidrolatlar)</h3>
+          <p>Damcılatma yolu ilə çəkilmiş təbii gül və lavanda suları.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 5. Təbii Sabunlar -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/sabun.jpg" alt="Təbii Sabunlar">
+        </div>
+        <div class="product-content">
+          <h3>Təbii Bitki Sabunları</h3>
+          <p>100% təbii əl işi zeytun yağlı və ballı sabunlar.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 6. Təbii Şampunlar -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/sampun.jpg" alt="Təbii Şampunlar">
+        </div>
+        <div class="product-content">
+          <h3>Təbii Şampunlar</h3>
+          <p>Saç tökülməsinə qarşı bitki tərkibli xüsusi şampunlar.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 7. Ginseng Arı Südü -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/ginsengli1.jpg" alt="Ginseng Arı Südü">
+        </div>
+        <div class="product-content">
+          <h3>Ginseng - Arı Südü - Propolis</h3>
+          <p>Enerji və immunitet üçün güclü təbii kompleks.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 8. Arı Məhsulları Kompleksi -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/ginsengli.jpg" alt="Arı Məhsulları">
+        </div>
+        <div class="product-content">
+          <h3>Arı Südü - Polen - Bal</h3>
+          <p>Fiziki və zehni yorğunluğa qarşı vitamin deposu.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 9. Bitki Kremləri -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/krem.jpg" alt="Bitki Kremləri">
+        </div>
+        <div class="product-content">
+          <h3>Bitki Tərkibli Kremlər</h3>
+          <p>Egzema və dəri problemləri üçün müalicəvi kremlər.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 10. Enfoil -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/enfoil.jpg" alt="Enfoil">
+        </div>
+        <div class="product-content">
+          <h3>Enfoil Qaymarit - Sinuzit</h3>
+          <p>Burun açıcı və iltihab əleyhinə təbii damcılar.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 11. Ecazkar Yağlar -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/tala.jpg" alt="Ecazkar Yağlar">
+        </div>
+        <div class="product-content">
+          <h3>Ecazkar Yağlar</h3>
+          <p>Qarışqa yumurtası yağı və tük əleyhinə formulalar.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 12. Çaytikanı Yağı -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/caytikani.jpeg" alt="Çaytikanı Yağı">
+        </div>
+        <div class="product-content">
+          <h3>Çaytikanı Yağı (Oblepixa)</h3>
+          <p>Mədə xorası və qastrit üçün təbii müalicəvi yağ.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 13. Arı Südü Tubik -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/ari-sutu.jpg" alt="Arı Südü">
+        </div>
+        <div class="product-content">
+          <h3>Təbii Arı Südü (Tubik)</h3>
+          <p>Hüceyrə yeniləyici və enerji mübadiləsini dəstəkləyən.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
+      <!-- 14. Bamya Toxumu -->
+      <article class="product-card">
+        <div class="product-image">
+          <img src="images/bamya.jpg" alt="Bamya Toxumu">
+        </div>
+        <div class="product-content">
+          <h3>Bamya Toxumu</h3>
+          <p>Diabet (şəkər) üçün faydalı təbii toxumlar.</p>
+          <a href="bitkiler/ayarlar.html" class="btn-view">Məhsulları Gör</a>
+        </div>
+      </article>
+
     </div>
   </main>
 
   <!-- Səbət Modalı -->
-  <div id="cart-modal">
-    <div class="cart-header">
-      <h3>Səbətim</h3>
-      <span class="close-cart" onclick="toggleCart()">&times;</span>
+  <div id="cart-sidebar">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>🛒 Səbətim</h3>
+      <span onclick="toggleCart()" style="cursor:pointer; font-size:30px;">&times;</span>
     </div>
-    <ul id="cart-items">
-      <!-- Məhsullar bura gələcək -->
-    </ul>
-    <div id="cart-empty-msg" style="text-align: center; color: #666; margin-top: 20px;">Səbət boşdur</div>
-    <button class="sifaris-et" onclick="sendOrder()">Sifariş et (WhatsApp)</button>
+    <div class="cart-items-container" id="cart-items-list">
+      <!-- Səbət boşdursa mesaj çıxacaq -->
+    </div>
+    <button class="btn-order" onclick="checkout()">Sifarişi Tamamla (WhatsApp)</button>
   </div>
 
   <script>
-    let cart = [];
+    // Səbət Sisteminin Yaddaşda Saxlanması
+    let cart = JSON.parse(localStorage.getItem('herbal_bazar_cart')) || [];
 
-    // Səbətə əlavə etmək
-    function addToCart(name) {
-      cart.push(name);
-      updateCartUI();
-      // Kiçik effekt
-      const btn = event.target;
-      btn.innerText = "Əlavə edildi! ✓";
-      btn.style.background = "#27ae60";
-      setTimeout(() => {
-        btn.innerText = "Səbətə at";
-        btn.style.background = "#27ae60";
-      }, 1000);
-    }
-
-    // Səbəti yeniləmək
     function updateCartUI() {
-      const list = document.getElementById('cart-items');
+      const list = document.getElementById('cart-items-list');
       const count = document.getElementById('cart-count');
-      const emptyMsg = document.getElementById('cart-empty-msg');
       
-      list.innerHTML = "";
-      cart.forEach((item, index) => {
-        const li = document.createElement('li');
-        li.className = 'cart-item';
-        li.innerHTML = `<span>${item}</span> <span class="remove-item" onclick="removeItem(${index})">Sil</span>`;
-        list.appendChild(li);
-      });
-
       count.innerText = cart.length;
-      emptyMsg.style.display = cart.length === 0 ? "block" : "none";
+      list.innerHTML = cart.length === 0 ? '<p style="color:#666; text-align:center;">Səbətiniz boşdur</p>' : '';
+      
+      cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item}</span>
+          <span style="color:#e74c3c; cursor:pointer;" onclick="removeItem(${index})">Sil</span>
+        `;
+        list.appendChild(div);
+      });
+      
+      localStorage.setItem('herbal_bazar_cart', JSON.stringify(cart));
     }
 
     function removeItem(index) {
@@ -318,32 +417,39 @@
     }
 
     function toggleCart() {
-      document.getElementById('cart-modal').classList.toggle('active');
+      document.getElementById('cart-sidebar').classList.toggle('active');
     }
 
-    // WhatsApp-a sifariş göndərmək
-    function sendOrder() {
+    // WhatsApp Sifariş Funksiyası
+    function checkout() {
       if (cart.length === 0) {
-        alert("Səbət boşdur!");
+        alert("Səbətiniz boşdur!");
         return;
       }
-
-      const phoneNumber = "994554828424";
-      let message = "Salam, Herbal Bazar! Aşağıdakı məhsulları sifariş vermək istəyirəm:\n\n";
       
-      cart.forEach((item, i) => {
-        message += `${i+1}. ${item}\n`;
+      let message = "Salam Herbal Bazar! Mən aşağıdakı məhsulları sifariş etmək istəyirəm:\n\n";
+      cart.forEach((item, index) => {
+        message += `${index + 1}. ${item}\n`;
       });
-
-      message += "\nÇatdırılma barədə məlumat verərdiniz zəhmət olmasa.";
+      message += "\nÇatdırılma üçün məlumat verərdiniz zəhmət olmasa.";
       
-      const encodedMsg = encodeURIComponent(message);
-      window.open(`https://wa.me/${phoneNumber}?text=${encodedMsg}`, '_blank');
+      const whatsappURL = `https://wa.me/994554828424?text=${encodeURIComponent(message)}`;
+      window.open(whatsappURL, '_blank');
     }
 
-    // Musiqi düyməsi (Simulyasiya)
-    function toggleMusic() {
-      alert("Musiqi pleyeri qoşulur... (Bura audio fayl linki əlavə edə bilərsiniz)");
+    function playMusic() {
+      alert("Musiqi pleyeri aktivləşdirilir...");
+      // Buraya bir Audio obyekti əlavə edə bilərsiniz: new Audio('link').play();
+    }
+
+    // Səhifə yüklənəndə səbəti göstər
+    window.onload = updateCartUI;
+
+    // Digər səhifələrdə (Məsələn bitki çayları) addToCart('Məhsul Adı') funksiyasını çağıracaqsınız.
+    function addToCart(name) {
+      cart.push(name);
+      updateCartUI();
+      toggleCart();
     }
   </script>
 
