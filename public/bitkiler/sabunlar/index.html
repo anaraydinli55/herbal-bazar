@@ -21,6 +21,7 @@
       font-family: 'Open Sans', sans-serif;
       background-color: var(--bg-dark);
       color: var(--text-light);
+      line-height: 1.6;
     }
 
     header {
@@ -43,16 +44,20 @@
       border-radius: 20px;
       cursor: pointer;
       font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
+    #cart-count { background: white; color: var(--primary); padding: 2px 7px; border-radius: 50%; font-size: 12px; }
+
     main { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-    
     .page-title { text-align: center; margin-bottom: 40px; font-family: 'Architects Daughter', cursive; color: var(--primary); font-size: 32px; }
 
-    /* Sabun Grid Sistemi */
+    /* Sabun Grid */
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 25px;
     }
 
@@ -64,30 +69,30 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      position: relative;
     }
 
-    .product-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+    .product-card:hover { border-color: var(--primary); transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
 
     .product-link { text-decoration: none; color: inherit; display: block; }
-
-    .product-img { width: 100%; height: 200px; object-fit: cover; transition: 0.3s; }
-    .product-card:hover .product-img { opacity: 0.8; }
+    .product-img { width: 100%; height: 200px; object-fit: cover; border-bottom: 1px solid #222; }
 
     .product-info { padding: 15px; flex-grow: 1; text-align: center; }
-    .product-name { color: var(--primary); font-size: 18px; margin-bottom: 8px; }
+    .product-name { color: var(--primary); font-size: 18px; margin-bottom: 8px; font-weight: 700; }
     .product-desc { font-size: 13px; color: #aaa; margin-bottom: 12px; height: 40px; overflow: hidden; }
-    .product-price { font-size: 20px; font-weight: bold; color: var(--secondary); margin-bottom: 15px; }
+    .product-price { font-size: 20px; font-weight: bold; color: var(--secondary); margin-bottom: 10px; }
 
     .add-to-cart-btn {
       width: 100%;
-      padding: 10px;
+      padding: 12px;
       background: var(--primary);
       color: white;
       border: none;
-      border-radius: 0 0 15px 15px;
       cursor: pointer;
       font-weight: bold;
       transition: 0.3s;
+      text-transform: uppercase;
+      font-size: 14px;
     }
 
     .add-to-cart-btn:hover { background: var(--secondary); }
@@ -97,9 +102,11 @@
       position: fixed; top: 0; right: -100%; width: 350px; height: 100%;
       background: #111; z-index: 3000; transition: 0.4s; padding: 30px;
       box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+      display: flex; flex-direction: column;
     }
     #cart-sidebar.active { right: 0; }
-    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; }
+    .cart-items-container { flex-grow: 1; overflow-y: auto; margin: 20px 0; }
+    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; font-size: 14px; }
 
     @media (max-width: 768px) { #cart-sidebar { width: 100%; } }
   </style>
@@ -108,77 +115,347 @@
 
   <header>
     <a href="index.html" class="logo">🌿 Herbal Bazar</a>
-    <div class="cart-trigger" onclick="toggleCart()">🛒 Səbət (<span id="cart-count">0</span>)</div>
+    <div class="cart-trigger" onclick="toggleCart()">🛒 Səbət <span id="cart-count">0</span></div>
   </header>
 
   <main>
     <h1 class="page-title">Təbii Bitki Sabunları</h1>
 
-    <div class="product-grid" id="soap-container">
-      <!-- Məhsullar JS ilə və ya əllə bura əlavə olunacaq -->
+    <div class="product-grid" id="soap-grid">
       
-      <!-- Nümunə Məhsul 1 -->
+      <!-- 1. Düyü Sabunu -->
       <div class="product-card">
-        <a href="sabunlar/lavanda-sabunu.html" class="product-link">
-          <img src="images/sabun-lavanda.jpg" alt="Lavanda Sabunu" class="product-img">
+        <a href="sabunlar/duyu-sabunu.html" class="product-link">
+          <img src="images/duyu-sabunu.jpg" alt="Düyü Sabunu" class="product-img">
           <div class="product-info">
-            <h3 class="product-name">Lavanda Sabunu</h3>
-            <p class="product-desc">Sakitləşdirici təsirli, dərini təravətləndirən təbii sabun.</p>
-            <div class="product-price">4.50 AZN</div>
-          </div>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('Lavanda Sabunu', '4.50 AZN')">Səbətə at</button>
-      </div>
-
-      <!-- Nümunə Məhsul 2 -->
-      <div class="product-card">
-        <a href="sabunlar/ardic-sabunu.html" class="product-link">
-          <img src="images/sabun-ardic.jpg" alt="Ardıc Sabunu" class="product-img">
-          <div class="product-info">
-            <h3 class="product-name">Ardıc Sabunu</h3>
-            <p class="product-desc">Dəri problemləri və sızanaqlara qarşı effektiv həll.</p>
+            <h3 class="product-name">Düyü Sabunu</h3>
+            <p class="product-desc">Dəri rəngini açan və ləkələrə qarşı ağardıcı təsirli.</p>
             <div class="product-price">5.00 AZN</div>
           </div>
         </a>
-        <button class="add-to-cart-btn" onclick="addToCart('Ardıc Sabunu', '5.00 AZN')">Səbətə at</button>
+        <button class="add-to-cart-btn" onclick="addToCart('Düyü Sabunu', '5.00 AZN')">Səbətə at</button>
       </div>
 
-      <!-- Bura 40-a qədər bu şəkildə davam edə bilərsiniz -->
+      <!-- 2. Bıttım Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/bittim-sabunu.html" class="product-link">
+          <img src="images/bittim-sabunu.jpg" alt="Bıttım Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Bıttım Sabunu</h3>
+            <p class="product-desc">Saç tökülməsinə və kəpəyə qarşı ən məşhur təbii həll.</p>
+            <div class="product-price">6.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Bıttım Sabunu', '6.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 3. Kükürdlü Sabun -->
+      <div class="product-card">
+        <a href="sabunlar/kukurdlü-sabun.html" class="product-link">
+          <img src="images/kukurdlü-sabun.jpg" alt="Kükürdlü Sabun" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Kükürdlü Sabun</h3>
+            <p class="product-desc">Sızanaq, akne və yağlı dərilər üçün dərin təmizlik.</p>
+            <div class="product-price">4.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Kükürdlü Sabun', '4.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 4. Dəfnə Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/defne-sabunu.html" class="product-link">
+          <img src="images/defne-sabunu.jpg" alt="Dəfnə Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Dəfnə Sabunu</h3>
+            <p class="product-desc">Dərini nəmləndirir və təbii parlaqlıq bəxş edir.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Dəfnə Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 5. Zeytun Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/zeytun-sabunu.html" class="product-link">
+          <img src="images/zeytun-sabunu.jpg" alt="Zeytun Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Zeytun Sabunu</h3>
+            <p class="product-desc">Klassik təmizlik, həm saç həm də bədən üçün uyğundur.</p>
+            <div class="product-price">4.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Zeytun Sabunu', '4.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 6. Kefir Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/kefir-sabunu.html" class="product-link">
+          <img src="images/kefir-sabunu.jpg" alt="Kefir Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Kefir Sabunu</h3>
+            <p class="product-desc">Probiotik tərkibli, dərini qidalandıran və canlandıran.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Kefir Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 7. Gül Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/gul-sabunu.html" class="product-link">
+          <img src="images/gul-sabunu.jpg" alt="Gül Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Gül Sabunu</h3>
+            <p class="product-desc">Xoş ətirli, dərini yumşaldan və gəncləşdirən.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Gül Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 8. Keçi Südü Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/keci-sudu-sabunu.html" class="product-link">
+          <img src="images/keci-sudu-sabunu.jpg" alt="Keçi Südü Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Keçi Südü Sabunu</h3>
+            <p class="product-desc">Həssas dərilər üçün pH balanslı, mükəmməl nəmləndirici.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Keçi Südü Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 9. Papatya Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/papatya-sabunu.html" class="product-link">
+          <img src="images/papatya.jpg" alt="Papatya Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Papatya Sabunu</h3>
+            <p class="product-desc">Dərini sakitləşdirir, qızarıqlıqları aradan qaldırır.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Papatya Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 10. Eşşək Südü Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/essek-sudu-sabunu.html" class="product-link">
+          <img src="images/essek-sudu.jpg" alt="Eşşək Südü Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Eşşək Südü Sabunu</h3>
+            <p class="product-desc">Təbii botoks təsirli, qırışlara və ekzemaya qarşı.</p>
+            <div class="product-price">6.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Eşşək Südü Sabunu', '6.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 11. Bibəriyə Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/biberiye-sabunu.html" class="product-link">
+          <img src="images/biberiye.jpg" alt="Bibəriyə Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Bibəriyə Sabunu</h3>
+            <p class="product-desc">Qan dövranını sürətləndirir, sellülit əleyhinə effektivdir.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Bibəriyə Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 12. Bal Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/bal-sabunu.html" class="product-link">
+          <img src="images/bal-sabunu.jpg" alt="Bal Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Bal Sabunu</h3>
+            <p class="product-desc">Dərini qidalandırır, antibakterial qoruma təmin edir.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Bal Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 13. Ardıc Qətranı Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/ardic-qetrani.html" class="product-link">
+          <img src="images/ardic.jpg" alt="Ardıc Qətranı Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Ardıc Qətranı Sabunu</h3>
+            <p class="product-desc">Psoriaz, ekzema və göbələk xəstəliklərində köməkçi.</p>
+            <div class="product-price">6.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Ardıc Qətranı Sabunu', '6.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 14. Portağal Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/portagal-sabunu.html" class="product-link">
+          <img src="images/portagal.jpg" alt="Portağal Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Portağal Sabunu</h3>
+            <p class="product-desc">C vitamini deposu, dərini canlandırır və enerji verir.</p>
+            <div class="product-price">4.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Portağal Sabunu', '4.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 15. Hindistan Cevizi Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/hindistan-cevizi.html" class="product-link">
+          <img src="images/coconut.jpg" alt="Hindistan Cevizi" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Hindistan Cevizi Sabunu</h3>
+            <p class="product-desc">Bol köpüklü, dərini dərindən təmizləyir və qoxusu möhtəşəmdir.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Hindistan Cevizi Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 16. Argan Yağlı Sabun -->
+      <div class="product-card">
+        <a href="sabunlar/argan-sabunu.html" class="product-link">
+          <img src="images/argan.jpg" alt="Argan Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Argan Yağlı Sabun</h3>
+            <p class="product-desc">Dərinin elastikliyini artırır, saçları parlaqlaşdırır.</p>
+            <div class="product-price">6.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Argan Yağlı Sabun', '6.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 17. Shea Yağı Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/shea-sabunu.html" class="product-link">
+          <img src="images/shea.jpg" alt="Shea Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Shea Yağı Sabunu</h3>
+            <p class="product-desc">Quru dərilər üçün ultra nəmləndirici və bərpaedici.</p>
+            <div class="product-price">6.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Shea Yağı Sabunu', '6.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 18. Dəniz Duzu Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/deniz-duzu.html" class="product-link">
+          <img src="images/salt.jpg" alt="Dəniz Duzu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Dəniz Duzu Sabunu</h3>
+            <p class="product-desc">Mineral baxımından zəngin, təbii pilinq effekti verir.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Dəniz Duzu Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 19. Kakao Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/kakao-sabunu.html" class="product-link">
+          <img src="images/kakao.jpg" alt="Kakao Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Kakao Sabunu</h3>
+            <p class="product-desc">Dərini yumşaldır, çatlara qarşı dərini qoruyur.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Kakao Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 20. Aloe Vera Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/aloe-vera.html" class="product-link">
+          <img src="images/aloe.jpg" alt="Aloe Vera" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Aloe Vera Sabunu</h3>
+            <p class="product-desc">Günəş yanığı və dərini sərinləşdirən bərpaedici təsir.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Aloe Vera Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 21. Çay Ağacı Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/cay-agaci.html" class="product-link">
+          <img src="images/teatree.jpg" alt="Çay Ağacı" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Çay Ağacı Yağlı Sabun</h3>
+            <p class="product-desc">Güclü antiseptik, sızanaqlar üçün ən yaxşı seçim.</p>
+            <div class="product-price">6.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Çay Ağacı Sabunu', '6.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 22. Badem Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/badem-sabunu.html" class="product-link">
+          <img src="images/badem.jpg" alt="Badem Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Badem Sabunu</h3>
+            <p class="product-desc">Həssas dəriləri qidalandırır və ipək kimi yumşaqlıq verir.</p>
+            <div class="product-price">5.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Badem Sabunu', '5.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- 23. Kil Sabunu -->
+      <div class="product-card">
+        <a href="sabunlar/kil-sabunu.html" class="product-link">
+          <img src="images/kil.jpg" alt="Kil Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Kil Sabunu</h3>
+            <p class="product-desc">Məsamələri sıxlaşdırır, dərini toksinlərdən təmizləyir.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Kil Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
 
     </div>
   </main>
 
   <!-- Səbət Sidebar -->
   <div id="cart-sidebar">
-    <div style="display:flex; justify-content:space-between; align-items:center;">
+    <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid #333; padding-bottom: 15px;">
       <h3>🛒 Səbətim</h3>
       <span onclick="toggleCart()" style="cursor:pointer; font-size:30px;">&times;</span>
     </div>
-    <div id="cart-items-list" style="margin: 20px 0; max-height: 70vh; overflow-y: auto;"></div>
-    <button onclick="checkout()" style="width:100%; padding:15px; background:var(--secondary); color:white; border:none; border-radius:10px; font-weight:bold; cursor:pointer;">
+    <div class="cart-items-container" id="cart-items-list"></div>
+    <button onclick="checkout()" style="width:100%; padding:15px; background:var(--secondary); color:white; border:none; border-radius:10px; font-weight:bold; cursor:pointer; font-size:16px;">
       WhatsApp ilə Sifariş Et
     </button>
   </div>
 
   <script>
-    // Səbət Sistemi (LocalStorage ilə Ana Səhifəyə Bağlıdır)
+    // Səbət Sistemi (LocalStorage)
     let cart = JSON.parse(localStorage.getItem('herbal_bazar_cart')) || [];
 
     function updateCartUI() {
-      const count = document.getElementById('cart-count');
-      const list = document.getElementById('cart-items-list');
+      const countEl = document.getElementById('cart-count');
+      const listEl = document.getElementById('cart-items-list');
       
-      count.innerText = cart.length;
-      list.innerHTML = cart.length === 0 ? '<p>Səbət boşdur</p>' : '';
+      countEl.innerText = cart.length;
+      listEl.innerHTML = cart.length === 0 ? '<p style="text-align:center; color:#666; margin-top:20px;">Səbət boşdur</p>' : '';
       
       cart.forEach((item, index) => {
         const div = document.createElement('div');
         div.className = 'cart-item';
         div.innerHTML = `
-          <span>${item.name} - ${item.price}</span>
+          <span>${item.name} (${item.price})</span>
           <span style="color:#ff4d4d; cursor:pointer;" onclick="removeItem(${index})">Sil</span>
         `;
-        list.appendChild(div);
+        listEl.appendChild(div);
       });
       
       localStorage.setItem('herbal_bazar_cart', JSON.stringify(cart));
@@ -187,7 +464,7 @@
     function addToCart(name, price) {
       cart.push({name, price});
       updateCartUI();
-      // Effekti görmək üçün səbəti açmaq olar
+      // Effekti görmək üçün səbəti açmaq olar:
       // toggleCart(); 
     }
 
@@ -202,8 +479,8 @@
 
     function checkout() {
       if(cart.length === 0) return alert("Səbətiniz boşdur!");
-      let msg = "Salam Herbal Bazar! Bu sabunları sifariş edirəm:\n\n";
-      cart.forEach((item, i) => msg += `${i+1}. ${item.name} (${item.price})\n`);
+      let msg = "Salam Herbal Bazar! Aşağıdakı sabunları sifariş edirəm:\n\n";
+      cart.forEach((item, i) => msg += `${i+1}. ${item.name} - ${item.price}\n`);
       window.open(`https://wa.me/994554828424?text=${encodeURIComponent(msg)}`, '_blank');
     }
 
