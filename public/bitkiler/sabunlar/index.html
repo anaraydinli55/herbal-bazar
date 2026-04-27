@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Təbii Sabunlar - Herbal Bazar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #9b59b6;
+      --secondary: #27ae60;
+      --bg-dark: #0a0a0a;
+      --card-bg: #161616;
+      --text-light: #eee;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 15px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { font-family: 'Architects Daughter', cursive; font-size: 24px; color: var(--primary); text-decoration: none; }
+
+    .cart-trigger {
+      background: var(--primary);
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    main { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+    
+    .page-title { text-align: center; margin-bottom: 40px; font-family: 'Architects Daughter', cursive; color: var(--primary); font-size: 32px; }
+
+    /* Sabun Grid Sistemi */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      border: 1px solid #222;
+      transition: 0.3s;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+    .product-link { text-decoration: none; color: inherit; display: block; }
+
+    .product-img { width: 100%; height: 200px; object-fit: cover; transition: 0.3s; }
+    .product-card:hover .product-img { opacity: 0.8; }
+
+    .product-info { padding: 15px; flex-grow: 1; text-align: center; }
+    .product-name { color: var(--primary); font-size: 18px; margin-bottom: 8px; }
+    .product-desc { font-size: 13px; color: #aaa; margin-bottom: 12px; height: 40px; overflow: hidden; }
+    .product-price { font-size: 20px; font-weight: bold; color: var(--secondary); margin-bottom: 15px; }
+
+    .add-to-cart-btn {
+      width: 100%;
+      padding: 10px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 0 0 15px 15px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .add-to-cart-btn:hover { background: var(--secondary); }
+
+    /* Səbət Sidebar */
+    #cart-sidebar {
+      position: fixed; top: 0; right: -100%; width: 350px; height: 100%;
+      background: #111; z-index: 3000; transition: 0.4s; padding: 30px;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.8);
+    }
+    #cart-sidebar.active { right: 0; }
+    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; }
+
+    @media (max-width: 768px) { #cart-sidebar { width: 100%; } }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">🌿 Herbal Bazar</a>
+    <div class="cart-trigger" onclick="toggleCart()">🛒 Səbət (<span id="cart-count">0</span>)</div>
+  </header>
+
+  <main>
+    <h1 class="page-title">Təbii Bitki Sabunları</h1>
+
+    <div class="product-grid" id="soap-container">
+      <!-- Məhsullar JS ilə və ya əllə bura əlavə olunacaq -->
+      
+      <!-- Nümunə Məhsul 1 -->
+      <div class="product-card">
+        <a href="sabunlar/lavanda-sabunu.html" class="product-link">
+          <img src="images/sabun-lavanda.jpg" alt="Lavanda Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Lavanda Sabunu</h3>
+            <p class="product-desc">Sakitləşdirici təsirli, dərini təravətləndirən təbii sabun.</p>
+            <div class="product-price">4.50 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Lavanda Sabunu', '4.50 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- Nümunə Məhsul 2 -->
+      <div class="product-card">
+        <a href="sabunlar/ardic-sabunu.html" class="product-link">
+          <img src="images/sabun-ardic.jpg" alt="Ardıc Sabunu" class="product-img">
+          <div class="product-info">
+            <h3 class="product-name">Ardıc Sabunu</h3>
+            <p class="product-desc">Dəri problemləri və sızanaqlara qarşı effektiv həll.</p>
+            <div class="product-price">5.00 AZN</div>
+          </div>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('Ardıc Sabunu', '5.00 AZN')">Səbətə at</button>
+      </div>
+
+      <!-- Bura 40-a qədər bu şəkildə davam edə bilərsiniz -->
+
+    </div>
+  </main>
+
+  <!-- Səbət Sidebar -->
+  <div id="cart-sidebar">
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3>🛒 Səbətim</h3>
+      <span onclick="toggleCart()" style="cursor:pointer; font-size:30px;">&times;</span>
+    </div>
+    <div id="cart-items-list" style="margin: 20px 0; max-height: 70vh; overflow-y: auto;"></div>
+    <button onclick="checkout()" style="width:100%; padding:15px; background:var(--secondary); color:white; border:none; border-radius:10px; font-weight:bold; cursor:pointer;">
+      WhatsApp ilə Sifariş Et
+    </button>
+  </div>
+
+  <script>
+    // Səbət Sistemi (LocalStorage ilə Ana Səhifəyə Bağlıdır)
+    let cart = JSON.parse(localStorage.getItem('herbal_bazar_cart')) || [];
+
+    function updateCartUI() {
+      const count = document.getElementById('cart-count');
+      const list = document.getElementById('cart-items-list');
+      
+      count.innerText = cart.length;
+      list.innerHTML = cart.length === 0 ? '<p>Səbət boşdur</p>' : '';
+      
+      cart.forEach((item, index) => {
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <span>${item.name} - ${item.price}</span>
+          <span style="color:#ff4d4d; cursor:pointer;" onclick="removeItem(${index})">Sil</span>
+        `;
+        list.appendChild(div);
+      });
+      
+      localStorage.setItem('herbal_bazar_cart', JSON.stringify(cart));
+    }
+
+    function addToCart(name, price) {
+      cart.push({name, price});
+      updateCartUI();
+      // Effekti görmək üçün səbəti açmaq olar
+      // toggleCart(); 
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      document.getElementById('cart-sidebar').classList.toggle('active');
+    }
+
+    function checkout() {
+      if(cart.length === 0) return alert("Səbətiniz boşdur!");
+      let msg = "Salam Herbal Bazar! Bu sabunları sifariş edirəm:\n\n";
+      cart.forEach((item, i) => msg += `${i+1}. ${item.name} (${item.price})\n`);
+      window.open(`https://wa.me/994554828424?text=${encodeURIComponent(msg)}`, '_blank');
+    }
+
+    window.onload = updateCartUI;
+  </script>
+
+</body>
+</html>
