@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herbal Bazar - Təbii Bitki Məhsulları | Bakı</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #9b59b6;
+      --primary-dark: #8e44ad;
+      --secondary: #27ae60;
+      --bg-dark: #0f0f0f;
+      --card-bg: #1a1a1a;
+      --text-light: #eee;
+      --text-dim: #aaa;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, .logo { font-family: 'Architects Daughter', cursive; }
+
+    /* Header & Nav */
+    header {
+      background: rgba(26, 26, 26, 0.95);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--primary);
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo { font-size: 26px; color: var(--primary); font-weight: bold; }
+
+    nav ul { display: flex; gap: 20px; list-style: none; }
+    nav a { font-weight: 600; color: var(--text-light); text-decoration: none; transition: 0.3s; padding: 5px 10px; border-radius: 5px; }
+    nav a:hover { color: var(--primary); background: rgba(155, 89, 182, 0.1); }
+
+    .cart-trigger {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      background: var(--primary);
+      padding: 8px 15px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #cart-count { background: white; color: var(--primary); padding: 2px 7px; border-radius: 50%; font-size: 12px; font-weight: bold; }
+
+    /* Floating Buttons (WhatsApp & Music) */
+    .floating-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 9999;
+    }
+
+    .float-btn {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .float-btn:hover { transform: scale(1.1); }
+    .whatsapp-btn { background-color: #25d366; font-size: 30px; }
+    .music-btn { background-color: var(--primary); font-size: 24px; animation: pulse 2s infinite; }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(155, 89, 182, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(155, 89, 182, 0); }
+    }
+
+    /* Product Cards */
+    main { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .product-card {
+      background: var(--card-bg);
+      border-radius: 15px;
+      overflow: hidden;
+      border: 1px solid #333;
+      transition: 0.3s;
+    }
+
+    .product-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+    .product-img { width: 100%; height: 220px; object-fit: cover; }
+    .product-info { padding: 20px; text-align: center; }
+    .product-info h3 { margin-bottom: 10px; color: var(--primary); }
+    .product-info p { font-size: 14px; color: var(--text-dim); margin-bottom: 15px; height: 45px; overflow: hidden; }
+
+    .add-to-cart {
+      background: var(--secondary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      width: 100%;
+      transition: 0.3s;
+    }
+
+    .add-to-cart:hover { background: #219150; }
+
+    /* Səbət Modalı */
+    #cart-modal {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 350px; height: 100%;
+      background: #111;
+      z-index: 2000;
+      box-shadow: -5px 0 20px rgba(0,0,0,0.5);
+      transition: 0.4s;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #cart-modal.active { right: 0; }
+    .cart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .close-cart { cursor: pointer; font-size: 24px; }
+    
+    #cart-items { flex-grow: 1; overflow-y: auto; list-style: none; }
+    .cart-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #222; }
+    .remove-item { color: #e74c3c; cursor: pointer; font-size: 12px; }
+
+    .sifaris-et {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav { display: none; } /* Sadəlik üçün mobil menyu gizlədildi, hamburger əlavə edilə bilər */
+      #cart-modal { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo">🌿 Herbal Bazar</div>
+      <nav>
+        <ul>
+          <li><a href="#">Ana Səhifə</a></li>
+          <li><a href="#">Məhsullar</a></li>
+          <li><a href="#">Əlaqə</a></li>
+        </ul>
+      </nav>
+      <div class="cart-trigger" onclick="toggleCart()">
+        🛒 Səbət <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Floating Buttons -->
+  <div class="floating-container">
+    <!-- Music Button -->
+    <button class="float-btn music-btn" onclick="toggleMusic()" title="Musiqi">
+      🎵
+    </button>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/994554828424?text=Salam!%20Mən%20bitki%20məhsulları%20ilə%20əlaqədar%20məlumat%20almaq%20istəyirəm" 
+       class="float-btn whatsapp-btn" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="35" alt="WA">
+    </a>
+  </div>
+
+  <main>
+    <div class="section-header" style="text-align: center; margin-bottom: 40px;">
+      <h1 style="font-size: 36px; color: var(--primary);">Məhsul Kataloqu</h1>
+      <p style="color: var(--text-dim);">Səbətə əlavə edin və WhatsApp ilə birbaşa sifariş verin</p>
+    </div>
+
+    <div class="product-grid">
+      <!-- Məhsul 1 -->
+      <div class="product-card">
+        <img src="images/mehsul1.jpg" alt="Bitki Çayı" class="product-img">
+        <div class="product-info">
+          <h3>Bitki Çayları</h3>
+          <p>İmmunitet gücləndirici orqanik dağ çayları.</p>
+          <button class="add-to-cart" onclick="addToCart('Bitki Çayı')">Səbətə at</button>
+        </div>
+      </div>
+
+      <!-- Məhsul 2 -->
+      <div class="product-card">
+        <img src="images/yaglar.jpeg" alt="Qarazirə Yağı" class="product-img">
+        <div class="product-info">
+          <h3>Qarazirə Yağı</h3>
+          <p>100% saf soyuq sıxım toxum yağı.</p>
+          <button class="add-to-cart" onclick="addToCart('Qarazirə Yağı')">Səbətə at</button>
+        </div>
+      </div>
+
+      <!-- Məhsul 3 -->
+      <div class="product-card">
+        <img src="images/ari-sutu.jpg" alt="Arı Südü" class="product-img">
+        <div class="product-info">
+          <h3>Təbii Arı Südü</h3>
+          <p>Enerji verən, hüceyrə yeniləyici möcüzə.</p>
+          <button class="add-to-cart" onclick="addToCart('Arı Südü')">Səbətə at</button>
+        </div>
+      </div>
+
+      <!-- Məhsul 4 -->
+      <div class="product-card">
+        <img src="images/caytikani.jpeg" alt="Çaytikanı Yağı" class="product-img">
+        <div class="product-info">
+          <h3>Çaytikanı Yağı</h3>
+          <p>Mədə və qastrit problemləri üçün təbii həll.</p>
+          <button class="add-to-cart" onclick="addToCart('Çaytikanı Yağı')">Səbətə at</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Səbət Modalı -->
+  <div id="cart-modal">
+    <div class="cart-header">
+      <h3>Səbətim</h3>
+      <span class="close-cart" onclick="toggleCart()">&times;</span>
+    </div>
+    <ul id="cart-items">
+      <!-- Məhsullar bura gələcək -->
+    </ul>
+    <div id="cart-empty-msg" style="text-align: center; color: #666; margin-top: 20px;">Səbət boşdur</div>
+    <button class="sifaris-et" onclick="sendOrder()">Sifariş et (WhatsApp)</button>
+  </div>
+
+  <script>
+    let cart = [];
+
+    // Səbətə əlavə etmək
+    function addToCart(name) {
+      cart.push(name);
+      updateCartUI();
+      // Kiçik effekt
+      const btn = event.target;
+      btn.innerText = "Əlavə edildi! ✓";
+      btn.style.background = "#27ae60";
+      setTimeout(() => {
+        btn.innerText = "Səbətə at";
+        btn.style.background = "#27ae60";
+      }, 1000);
+    }
+
+    // Səbəti yeniləmək
+    function updateCartUI() {
+      const list = document.getElementById('cart-items');
+      const count = document.getElementById('cart-count');
+      const emptyMsg = document.getElementById('cart-empty-msg');
+      
+      list.innerHTML = "";
+      cart.forEach((item, index) => {
+        const li = document.createElement('li');
+        li.className = 'cart-item';
+        li.innerHTML = `<span>${item}</span> <span class="remove-item" onclick="removeItem(${index})">Sil</span>`;
+        list.appendChild(li);
+      });
+
+      count.innerText = cart.length;
+      emptyMsg.style.display = cart.length === 0 ? "block" : "none";
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCart() {
+      document.getElementById('cart-modal').classList.toggle('active');
+    }
+
+    // WhatsApp-a sifariş göndərmək
+    function sendOrder() {
+      if (cart.length === 0) {
+        alert("Səbət boşdur!");
+        return;
+      }
+
+      const phoneNumber = "994554828424";
+      let message = "Salam, Herbal Bazar! Aşağıdakı məhsulları sifariş vermək istəyirəm:\n\n";
+      
+      cart.forEach((item, i) => {
+        message += `${i+1}. ${item}\n`;
+      });
+
+      message += "\nÇatdırılma barədə məlumat verərdiniz zəhmət olmasa.";
+      
+      const encodedMsg = encodeURIComponent(message);
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMsg}`, '_blank');
+    }
+
+    // Musiqi düyməsi (Simulyasiya)
+    function toggleMusic() {
+      alert("Musiqi pleyeri qoşulur... (Bura audio fayl linki əlavə edə bilərsiniz)");
+    }
+  </script>
+
+</body>
+</html>
