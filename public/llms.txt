@@ -1,0 +1,56 @@
+# Herbal Bazar
+
+> Herbal Bazar (herbal-az.store) — 100% təbii, orqanik soyuq sıxma bitki yağları (qarazirə yağı, çaytikanı yağı) və 50-yə yaxın şəfalı bitki haqqında ətraflı məlumat, faydalar və istifadə qaydalarını təqdim edən Azərbaycan dilli platformadır.
+
+## Əsas Səhifələr
+
+- [Ana Səhifə](https://www.herbal-az.store/): Herbal Bazar saytının əsas səhifəsi və kateqoriyalar.
+- [Soyuq Yağ Sıxma (Qarazirə və Çaytikanı Yağları)](https://www.herbal-az.store/bitkiler/yagsixma): 100% orqanik soyuq pres qarazirə yağı (250 ml - 30 AZN, 500 ml - 55 AZN, 1 lt - 100 AZN) və çaytikanı yağı haqqında tərkib, faydalar və istifadə qaydaları.
+- [Herbal Bazar Haqqında / Məhsullar](https://www.herbal-az.store/herbal-bazar.html): Bitki məhsulları və ümumi məlumat.
+- [Sayt Xəritəsi](https://www.herbal-az.store/sitemap.html): Saytdakı bütün bitki səhifələrinin siyahısı.
+
+## Şəfalı Bitkilər Kataloqu
+
+- [Adaçayı](https://www.herbal-az.store/adacayi.html): Adaçayı bitkisinin faydaları və istifadəsi.
+- [Alıç yarpağı](https://www.herbal-az.store/alicyapragi.html): Alıç yarpağının xüsusiyyətləri.
+- [Altınbaşak](https://www.herbal-az.store/altinbasak.html): Altınbaşak otu haqqında məlumat.
+- [Aslanpəncəsi](https://www.herbal-az.store/aslanpencesi.html): Aslanpəncəsi bitkisinin faydaları.
+- [Avokado yarpağı](https://www.herbal-az.store/avokado.html): Avokado yarpağı haqqında məlumat.
+- [Aynısəfa](https://www.herbal-az.store/aynisefa.html): Aynısəfa (kalendula) bitkisinin faydaları.
+- [Ayrık otu](https://www.herbal-az.store/ayrikotu.html): Ayrık otunun xüsusiyyətləri.
+- [Acı yavşan](https://herbal-az.store -> https://www.herbal-az.store/aciyavsan.html): Acı yavşan bitkisi haqqında məlumat.
+- [Açlıq otu](https://www.herbal-az.store/aclikotu.html): Açlıq otunun istifadəsi.
+- [Çarkıfelek](https://www.herbal-az.store/carkifelek.html): Çarkıfelek (passiflora) bitkisi haqqında məlumat.
+- [Çoban çantası](https://www.herbal-az.store/cobancantasi.html): Çoban çantası bitkisinin faydaları.
+- [Çoban çökərtən](https://www.herbal-az.store/cobancokerten.html): Çoban çökərtən bitkisi haqqında məlumat.
+- [Damla saqqızı](https://www.herbal-az.store/damlasakizi.html): Damla saqqızının faydaları.
+- [Ekinezya](https://www.herbal-az.store/ekinezya.html): İmmunitet üçün ekinezya bitkisi.
+- [Enginar](https://www.herbal-az.store/enginar.html): Enginar yarpağının faydaları.
+- [Funda](https://www.herbal-az.store/funda.html): Funda yarpağı haqqında məlumat.
+- [Ginkgo Biloba](https://www.herbal-az.store/gingkobiloba.html): Ginkgo biloba yarpağının faydaları.
+- [Hayıt](https://www.herbal-az.store/hayit.html): Hayıt toxumu və bitkisinin faydaları.
+- [Hazanbel](https://www.herbal-az.store/hazanbel.html): Hazanbel kökü haqqında məlumat.
+- [Havlıcan](https://www.herbal-az.store/havlican.html): Havlıcan bitkisinin faydaları.
+- [Karabaş otu](https://www.herbal-az.store/karabas.html): Karabaş otunun faydaları.
+- [Kırkkilit otu](https://www.herbal-az.store/kirkkilit.html): Kırkkilit (atquyruğu) bitkisinin xüsusiyyətləri.
+- [Lavanda](https://www.herbal-az.store/lavanda.html): Lavanda bitkisinin faydaları və istifadəsi.
+- [Limon melissa](https://www.herbal-az.store/limonmelissa.html): Limon melissa (oğulotu) haqqında məlumat.
+- [Mahlep](https://www.herbal-az.store/mahlep.html): Mahlep bitkisi haqqında məlumat.
+- [Mersin yarpağı](https://www.herbal-az.store/mersinyapragi.html): Mersin yarpağının faydaları.
+- [Mələk otu](https://www.herbal-az.store/melekotu.html): Mələk otu haqqında məlumat.
+- [Mürver çiçəyi](https://www.herbal-az.store/murvercicegi.html): Mürver çiçəyinin faydaları.
+- [Okaliptus](https://www.herbal-az.store/okaliptus.html): Okaliptus yarpağının faydaları.
+- [Pelin otu](https://www.herbal-az.store/pelinotu.html): Pelin otunun xüsusiyyətləri.
+- [Sarı kantaron](https://www.herbal-az.store/sarikantaron.html): Sarı kantaron bitkisinin faydaları.
+- [Səhləb](https://www.herbal-az.store/sahlep.html): Səhləb haqqında məlumat.
+- [Sinameki](https://www.herbal-az.store/sinameki.html): Sinameki yarpağı və istifadə qaydası.
+- [Sinirli ot](https://www.herbal-az.store/sinirliot.html): Sinirli otun (bağayarpağı) faydaları.
+- [Solmaz çiçəyi](https://www.herbal-az.store/solmazcicegi.html): Solmaz çiçəyi (ölmez çiçek) faydaları.
+- [Stevia](https://www.herbal-az.store/stevia.html): Təbii dadlandırıcı stevia yarpağı.
+- [Şərbətçiotu](https://www.herbal-az.store/serbetci.html): Şərbətçiotu bitkisi haqqında məlumat.
+- [Yakı otu](https://www.herbal-az.store/yakiotu.html): Yakı otunun faydaları.
+- [Yoğurt otu](https://www.herbal-az.store/yogurt.html): Yoğurt otunun xüsusiyyətləri.
+- [Zeytun yarpağı](https://www.herbal-az.store/zeytinyapragi.html): Zeytun yarpağının faydaları.
+
+## Əlaqə
+- Instagram: https://instagram.com/derman_bitkileri
