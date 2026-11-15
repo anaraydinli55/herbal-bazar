@@ -116,6 +116,30 @@
     .card button:hover { background-color: #6f2a9f; }
   </style>
 </head>
+
+  <script>
+  function slideHimalaya(btn, dir) {
+    const wrap = btn.closest('.himalaya-slider-wrap');
+    const slider = wrap.querySelector('.himalaya-slider');
+    const step = slider.clientWidth;
+    if (dir === 1 && slider.scrollLeft + step >= slider.scrollWidth - 5) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    } else if (dir === -1 && slider.scrollLeft <= 5) {
+      slider.scrollTo({ left: slider.scrollWidth, behavior: 'smooth' });
+    } else {
+      slider.scrollBy({ left: dir * step, behavior: 'smooth' });
+    }
+  }
+
+  function updateHimalayaCounter(slider) {
+    const wrap = slider.closest('.himalaya-slider-wrap');
+    const counter = wrap.querySelector('.slider-counter');
+    const total = slider.querySelectorAll('img').length;
+    const index = Math.round(slider.scrollLeft / slider.clientWidth) + 1;
+    counter.textContent = Math.min(Math.max(index, 1), total) + ' / ' + total;
+  }
+</script>
+  
 <body>
 
 <div class="slider">
