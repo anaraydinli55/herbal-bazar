@@ -1,5 +1,38 @@
 User-agent: *
 Allow: /
 
-# Axtarış motorlarına sitemap-in harada olduğunu bildiririk
-Sitemap: https://herbal-bazar.vercel.app/sitemap.xml
+# OpenAI (ChatGPT Axtarış və Model)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Axtarış və Gemini / AI Overviews)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.herbal-az.store/sitemap.xml
