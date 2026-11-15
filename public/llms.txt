@@ -14,18 +14,18 @@
 - [Adaçayı](https://www.herbal-az.store/adacayi.html): Adaçayı bitkisinin faydaları və istifadəsi.
 - [Alıç yarpağı](https://www.herbal-az.store/alicyapragi.html): Alıç yarpağının xüsusiyyətləri.
 - [Altınbaşak](https://www.herbal-az.store/altinbasak.html): Altınbaşak otu haqqında məlumat.
-- [Aslanpəncəsi](https://www.herbal-az.store/aslanpencesi.html): Aslanpəncəsi bitkisinin faydaları.
+- [Aslanpəncəsi](https://www.herbal-az.store/aslanpencesi.html): Aslan pəncəsi bitkisinin faydaları.
 - [Avokado yarpağı](https://www.herbal-az.store/avokado.html): Avokado yarpağı haqqında məlumat.
 - [Aynısəfa](https://www.herbal-az.store/aynisefa.html): Aynısəfa (kalendula) bitkisinin faydaları.
 - [Ayrık otu](https://www.herbal-az.store/ayrikotu.html): Ayrık otunun xüsusiyyətləri.
-- [Acı yavşan](https://herbal-az.store -> https://www.herbal-az.store/aciyavsan.html): Acı yavşan bitkisi haqqında məlumat.
+- [Acı yavşan](https://www.herbal-az.store/aciyavsan.html): Acı yavşan bitkisi haqqında məlumat.
 - [Açlıq otu](https://www.herbal-az.store/aclikotu.html): Açlıq otunun istifadəsi.
 - [Çarkıfelek](https://www.herbal-az.store/carkifelek.html): Çarkıfelek (passiflora) bitkisi haqqında məlumat.
 - [Çoban çantası](https://www.herbal-az.store/cobancantasi.html): Çoban çantası bitkisinin faydaları.
 - [Çoban çökərtən](https://www.herbal-az.store/cobancokerten.html): Çoban çökərtən bitkisi haqqında məlumat.
 - [Damla saqqızı](https://www.herbal-az.store/damlasakizi.html): Damla saqqızının faydaları.
-- [Ekinezya](https://www.herbal-az.store/ekinezya.html): İmmunitet üçün ekinezya bitkisi.
-- [Enginar](https://www.herbal-az.store/enginar.html): Enginar yarpağının faydaları.
+- [Ekinezya](https://www.herbal-az.store/ekinezya.html): İmmunitet üçün exineziya bitkisi.
+- [Enginar](https://www.herbal-az.store/enginar.html): Ənginar yarpağının faydaları.
 - [Funda](https://www.herbal-az.store/funda.html): Funda yarpağı haqqında məlumat.
 - [Ginkgo Biloba](https://www.herbal-az.store/gingkobiloba.html): Ginkgo biloba yarpağının faydaları.
 - [Hayıt](https://www.herbal-az.store/hayit.html): Hayıt toxumu və bitkisinin faydaları.
@@ -38,14 +38,14 @@
 - [Mahlep](https://www.herbal-az.store/mahlep.html): Mahlep bitkisi haqqında məlumat.
 - [Mersin yarpağı](https://www.herbal-az.store/mersinyapragi.html): Mersin yarpağının faydaları.
 - [Mələk otu](https://www.herbal-az.store/melekotu.html): Mələk otu haqqında məlumat.
-- [Mürver çiçəyi](https://www.herbal-az.store/murvercicegi.html): Mürver çiçəyinin faydaları.
-- [Okaliptus](https://www.herbal-az.store/okaliptus.html): Okaliptus yarpağının faydaları.
+- [Mürver çiçəyi](https://www.herbal-az.store/murvercicegi.html): Mürvər çiçəyinin faydaları.
+- [Okaliptus](https://www.herbal-az.store/okaliptus.html): Evkalipt yarpağının faydaları.
 - [Pelin otu](https://www.herbal-az.store/pelinotu.html): Pelin otunun xüsusiyyətləri.
-- [Sarı kantaron](https://www.herbal-az.store/sarikantaron.html): Sarı kantaron bitkisinin faydaları.
+- [Sarı kantaron](https://www.herbal-az.store/sarikantaron.html): Sarı kantaron (dazı otu) bitkisinin faydaları.
 - [Səhləb](https://www.herbal-az.store/sahlep.html): Səhləb haqqında məlumat.
-- [Sinameki](https://www.herbal-az.store/sinameki.html): Sinameki yarpağı və istifadə qaydası.
+- [Sinameki](https://www.herbal-az.store/sinameki.html): Sinameki (sənna) yarpağı və istifadə qaydası.
 - [Sinirli ot](https://www.herbal-az.store/sinirliot.html): Sinirli otun (bağayarpağı) faydaları.
-- [Solmaz çiçəyi](https://www.herbal-az.store/solmazcicegi.html): Solmaz çiçəyi (ölmez çiçek) faydaları.
+- [Solmaz çiçəyi](https://www.herbal-az.store/solmazcicegi.html): Solmaz çiçəyi (ölməz çiçək) faydaları.
 - [Stevia](https://www.herbal-az.store/stevia.html): Təbii dadlandırıcı stevia yarpağı.
 - [Şərbətçiotu](https://www.herbal-az.store/serbetci.html): Şərbətçiotu bitkisi haqqında məlumat.
 - [Yakı otu](https://www.herbal-az.store/yakiotu.html): Yakı otunun faydaları.
@@ -54,3 +54,4 @@
 
 ## Əlaqə
 - Instagram: https://instagram.com/derman_bitkileri
+- Whatsapp: 070 547 09 47
