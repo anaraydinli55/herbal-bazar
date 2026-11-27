@@ -3,113 +3,395 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Herbal Bazar – Bitkilər</title>
+  <title>Soyuq Sıxma Yağlar – Qarazirə və Çaytikanı Yağı | Herbal Bazar</title>
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
-  <link rel="apple-touch-icon" href="images/favicon.png">
+  <link rel="icon" href="/favicon.ico?v=2" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon.png?v=2">
+  <link rel="apple-touch-icon" href="/favicon.png?v=2">
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="bitkiler.css">
+  <link rel="stylesheet" href="/bitkiler/bitkiler.css">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: 'Architects Daughter', cursive;
-      background-color: #000;
-      color: #fff;
+      background-color: #070709;
+      color: #eee;
     }
 
-    h2 {
+    .page-header {
       text-align: center;
-      margin: 40px 0 20px;
+      padding: 34px 20px 10px;
+    }
+
+    .page-header h1 {
+      margin: 0 0 10px;
       color: #fff;
-      font-size: 32px;
-      font-weight: 700;
+      font-size: clamp(26px, 4vw, 38px);
     }
 
-    /* Kartlar */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      padding: 0 20px 60px;
+    .page-header p {
+      margin: 0 auto;
+      max-width: 680px;
+      color: #bbb;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
-    .card {
-      background-color: #111;
-      border-radius: 16px;
+    /* Yuxarı video bölməsi (hər iki kart eyni səviyyədən başlasın deyə) */
+    .video-showcase {
+      max-width: 820px;
+      margin: 24px auto 38px;
+      padding: 0 20px;
+    }
+
+    .video-box {
+      background: linear-gradient(145deg, #141118, #0e0d11);
+      border: 1px solid rgba(155, 89, 182, 0.35);
+      border-radius: 18px;
       padding: 16px;
       text-align: center;
-      transition: transform 0.3s ease;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.5);
     }
 
-    .card:hover {
-      transform: scale(1.02);
-    }
-
-    .card img {
+    .video-box .product-video {
       width: 100%;
+      max-height: 360px;
+      object-fit: cover;
       border-radius: 12px;
+      display: block;
     }
 
-    .card h3 {
-      margin: 14px 0 8px;
-      font-size: 20px;
+    .video-caption {
+      margin-top: 12px;
+      font-size: 16px;
+      color: #d7b2ec;
+    }
+
+    /* İki yağ kartı - tam bərabər hündürlük */
+    .oils-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      max-width: 1280px;
+      margin: 0 auto 50px;
+      padding: 0 20px;
+      align-items: stretch;
+    }
+
+    @media (max-width: 920px) {
+      .oils-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .oil-card {
+      background: linear-gradient(180deg, #131117 0%, #0e0e12 100%);
+      border: 1px solid #24202b;
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+
+    .oil-card.seabuckthorn {
+      border-color: rgba(230, 126, 34, 0.35);
+    }
+
+    .oil-card.blackseed {
+      border-color: rgba(155, 89, 182, 0.35);
+    }
+
+    /* Kart üst vizual sahəsi */
+    .oil-media {
+      position: relative;
+      width: 100%;
+      height: 290px;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #09090b;
+      border: 1px solid #26262e;
+    }
+
+    .oil-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.25s ease;
+    }
+
+    /* Çaytikanı interaktiv qalereya düymələri və miniatürləri */
+    .gallery-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.65);
       color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .gallery-btn:hover { background: rgba(230, 126, 34, 0.85); }
+    .gallery-btn.prev { left: 10px; }
+    .gallery-btn.next { right: 10px; }
+
+    .thumb-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .thumb-strip img {
+      width: 100%;
+      height: 54px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+      opacity: 0.6;
+      border: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .thumb-strip img.active,
+    .thumb-strip img:hover {
+      opacity: 1;
+      border-color: #f39c12;
+    }
+
+    /* Qarazirə kartında başlıqların hizalanması üçün xüsusi zolaq */
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+      min-height: 54px;
+    }
+
+    .feature-pill {
+      background: rgba(155, 89, 182, 0.12);
+      border: 1px solid rgba(155, 89, 182, 0.32);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 12px;
+      color: #dfb9f5;
+      padding: 6px;
+    }
+
+    .oil-title {
+      margin: 18px 0 8px;
+      font-size: 24px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .oil-card.blackseed .oil-title { color: #d39ef2; }
+    .oil-card.seabuckthorn .oil-title { color: #ffb36b; }
+
+    .oil-quote {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 3px solid #9b59b6;
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin: 12px 0 18px;
+      font-size: 14px;
+      color: #ddd;
+      line-height: 1.5;
+    }
+
+    .oil-card.seabuckthorn .oil-quote {
+      border-left-color: #f39c12;
+    }
+
+    .oil-quote p { margin: 4px 0; }
+
+    /* Qiymətlər bölməsi */
+    .prices-title {
+      text-align: center;
+      font-size: 18px;
+      margin: 6px 0 10px;
+      color: #fff;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .price-item {
+      background: #1a1720;
+      border: 1px solid #2f293a;
+      border-radius: 10px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+
+    .oil-card.seabuckthorn .price-item {
+      background: #1d1712;
+      border-color: #3f2d1c;
+    }
+
+    .price-item .vol {
+      display: block;
+      font-size: 13px;
+      color: #bbb;
+    }
+
+    .price-item .val {
+      display: block;
+      font-size: 17px;
       font-weight: 700;
+      color: #fff;
+      margin-top: 2px;
     }
 
-    .card p {
-      font-size: 15px;
-      color: #ccc;
-      line-height: 1.4;
-    }
-
-    .card ul {
+    /* Məlumat və faydalar bölməsi */
+    .oil-details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
       text-align: left;
+    }
+
+    .oil-details h2 {
+      font-size: 17px;
+      margin: 18px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #26232d;
+      color: #d39ef2;
+      text-align: left;
+    }
+
+    .oil-card.seabuckthorn .oil-details h2 {
+      color: #ffb36b;
+      border-bottom-color: #33261b;
+    }
+
+    .oil-details p {
+      font-size: 14px;
       color: #ccc;
+      line-height: 1.55;
+      margin: 6px 0 10px;
+    }
+
+    .oil-details ul {
+      margin: 0 0 8px;
+      padding-left: 20px;
+      color: #ccc;
+      font-size: 14px;
       line-height: 1.6;
     }
 
-    .card button {
-      margin-top: 12px;
-      padding: 10px 18px;
-      background-color: #222;
-      color: #fff;
-      border: 1px solid #444;
-      border-radius: 8px;
-      font-weight: 600;
+    /* Çaytikanı əlavə foto-şəbəkə */
+    .extra-gallery-title {
+      font-size: 17px;
+      margin: 22px 0 10px;
+      color: #ffb36b;
+      border-bottom: 1px solid #33261b;
+      padding-bottom: 4px;
+    }
+
+    .seabuck-photo-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 10px 0 18px;
+    }
+
+    .seabuck-photo-grid img {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid rgba(243, 156, 18, 0.35);
       cursor: pointer;
+      transition: transform 0.2s ease;
     }
 
-    .card button:hover {
-      background-color: #333;
+    .seabuck-photo-grid img:hover {
+      transform: scale(1.02);
     }
 
-    /* Instagram */
+    .caution-box {
+      margin-top: auto;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px dashed #333;
+      border-radius: 12px;
+      padding: 12px 16px;
+    }
+
+    .caution-box h2 {
+      margin-top: 0 !important;
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+
+    /* Alt naviqasiya və footer */
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      padding: 10px 20px 24px;
+    }
+
+    .nav-buttons .btn {
+      background-color: #8e44ad;
+      color: #fff;
+      padding: 11px 22px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.25s;
+    }
+
+    .nav-buttons .btn:hover { background-color: #6f2a9f; }
+
     .instagram-footer {
       text-align: center;
-      padding: 30px 0 10px;
+      padding: 18px 0 10px;
     }
 
     .instagram-footer a {
-      color: #fff;
+      color: #E1306C;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
     }
 
     .instagram-footer img {
-      width: 28px;
-      vertical-align: middle;
-      margin-right: 8px;
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
     }
 
-    /* Footer */
     footer {
       background-color: #000;
       color: #aaa;
       text-align: center;
-      padding: 20px 10px;
+      padding: 18px 10px;
       font-size: 14px;
     }
   </style>
@@ -117,40 +399,52 @@
 
 <body>
 
-<h2>🌿 Sağlamlığın təməli təbiətdir</h2>
+<header class="page-header">
+  <h1>🌿 Sağlamlığın təməli təbiətdir</h1>
+  <p>Soyuq sıxma (soyuq pres) üsulu ilə istilik vermədən əldə edilən 100% təbii və qatqısız bitki yağları</p>
+</header>
 
-<div class="products">
-
-  <!-- 1. KART: QARAZİRƏ YAĞI -->
-  <div class="card">
-
-   <video class="product-video" autoplay muted loop playsinline width="100%">
+<section class="video-showcase">
+  <div class="video-box">
+    <video class="product-video" autoplay muted loop playsinline>
       <source src="/bitkiler/images/yagsixma.mp4" type="video/mp4">
     </video>
-    
-    <h2>Soyuq Yağ Sıxma</h2>
-    <h3>Ətraflı məlumat 👇</h3>
+    <div class="video-caption">💧 Soyuq Yağ Sıxma Prosesi — Ətraflı məlumat aşağıda 👇</div>
+  </div>
+</section>
 
-    <div class="content"></div>
+<main class="oils-grid">
 
-    <div class="card">
-      <img src="../images/yaglar.jpeg" alt="Qarazirə yağı (Nigella sativa) 100% orqanik soyuq pres">
-      <h3>Qarazirə Yağı / 100% orqanik soyuq pres</h3>
+  <!-- 1. KART: QARAZİRƏ YAĞI -->
+  <article class="oil-card blackseed">
+    <div class="oil-media">
+      <img src="/images/yaglar.jpeg" alt="Qarazirə yağı (Nigella sativa) 100% orqanik soyuq pres">
+    </div>
+
+    <div class="feature-strip">
+      <div class="feature-pill">100% Soyuq Pres</div>
+      <div class="feature-pill">Zəngin Timoquinon</div>
+      <div class="feature-pill">Omega 3 • 6 • 9</div>
+    </div>
+
+    <h2 class="oil-title">Qarazirə Yağı / 100% orqanik soyuq pres</h2>
+
+    <div class="oil-quote">
       <p><strong>🌿 Peyğəmbərimizin (s.ə.s) qara zirə haqqında sözləri:</strong></p>
       <p>📖 Ən məşhur hədis:</p>
       <p><strong>“Qara zirəni istifadə edin. Çünki onda ölümdən başqa hər dərdin dərmanı vardır.”</strong></p>
       <p>— (Buxari, Tibb 7; Müslim, Səlam 88)</p>
-
-      <h1>Qiymətlər</h1>
-      <ul>
-        <li><strong>250 ML - 30 AZN</strong></li>
-        <li><strong>500 ML - 55 AZN</strong></li>
-        <li><strong>1 LT - 100 AZN</strong></li>
-      </ul>
     </div>
 
-    <div class="container">
-      <h1>🌿 Qarazirə Yağı – Ətraflı Faydaları</h1>
+    <div class="prices-title">Qiymətlər</div>
+    <div class="price-grid">
+      <div class="price-item"><span class="vol">250 ML</span><span class="val">30 AZN</span></div>
+      <div class="price-item"><span class="vol">500 ML</span><span class="val">55 AZN</span></div>
+      <div class="price-item"><span class="vol">1 LT</span><span class="val">100 AZN</span></div>
+    </div>
+
+    <div class="oil-details">
+      <h2>🌿 Qarazirə Yağı – Ətraflı Faydaları</h2>
       <p>
         <strong>Qarazirə yağı (Nigella sativa)</strong> qədimdən “hər dərdin dərmanı” kimi tanınan,
         zəngin biokimyəvi tərkibə malik təbii bitki yağıdır. Tərkibindəki timoquinon maddəsi
@@ -219,42 +513,51 @@
         <li><strong>Qarışıq:</strong> Bal, qatıq və ya ilıq su ilə birlikdə</li>
       </ul>
 
-      <h2>⚠️ İstifadə zamanı diqqət</h2>
-      <ul>
-        <li>Ölçüsüz istifadə tövsiyə olunmur</li>
-        <li>Hamilə və süd verən qadınlar üçün uyğun deyil</li>
-        <li>Xroniki xəstəliyi olanlar həkimlə məsləhətləşməlidir</li>
-        <li>Uşaqlar üçün dozaya diqqət edilməlidir</li>
-      </ul>
+      <div class="caution-box">
+        <h2>⚠️ İstifadə zamanı diqqət</h2>
+        <ul>
+          <li>Ölçüsüz istifadə tövsiyə olunmur</li>
+          <li>Hamilə və süd verən qadınlar üçün uyğun deyil</li>
+          <li>Xroniki xəstəliyi olanlar həkimlə məsləhətləşməlidir</li>
+          <li>Uşaqlar üçün dozaya diqqət edilməlidir</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </article>
 
   <!-- 2. KART: ÇAYTİKANI YAĞI -->
-  <div class="card">
-
-    <h2>Soyuq Yağ Sıxma</h2>
-    <h3>Ətraflı məlumat 👇</h3>
-
-    <div class="content"></div>
-
-    <div class="card">
-      <!-- Şəkil faylının adını öz qovluğunuza uyğun yoxlayın -->
-      <img src="../images/caytikani.jpeg" alt="Çaytikanı yağı (Hippophae rhamnoides) 100% orqanik soyuq pres">
-      <h3>Çaytikanı Yağı / 100% orqanik soyuq pres</h3>
-      <p><strong>🧡 Təbiətin “qızıl mayesi” adlandırılan şəfalı yağ</strong></p>
-      <p>Nadir Omega-7 yağ turşusu, yüksək C və E vitamini tərkibi ilə həm daxili orqanlar, həm də dəri bərpası üçün əvəzolunmaz təbii dəstəkdir.</p>
-
-      <h1>Qiymətlər</h1>
-      <ul>        
-        <li><strong>100 ML - 30 AZN</strong></li>
-        <li><strong>250 ML - 65 AZN</strong></li>
-        <li><strong>500 ML - 110 AZN</strong></li>
-        <li><strong>1 LT - 190 AZN</strong></li>
-      </ul>
+  <article class="oil-card seabuckthorn">
+    <div class="oil-media">
+      <button type="button" class="gallery-btn prev" onclick="stepCaytikani(-1)" aria-label="Əvvəlki şəkil">❮</button>
+      <img id="caytikani-main" src="/images/caytikani.jpeg" alt="Çaytikanı yağı (Hippophae rhamnoides) 100% orqanik soyuq pres">
+      <button type="button" class="gallery-btn next" onclick="stepCaytikani(1)" aria-label="Növbəti şəkil">❯</button>
     </div>
 
-    <div class="container">
-      <h1>🧡 Çaytikanı Yağı – Ətraflı Faydaları</h1>
+    <div class="thumb-strip" id="caytikani-thumbs">
+      <img src="/images/caytikani.jpeg" alt="Çaytikanı yağı 1" class="active" onclick="setCaytikani(0)">
+      <img src="/images/caytikani-2.webp" alt="Çaytikanı yağı 2" onclick="setCaytikani(1)">
+      <img src="/images/caytikani-3.webp" alt="Çaytikanı yağı 3" onclick="setCaytikani(2)">
+      <img src="/images/caytikani-4.webp" alt="Çaytikanı yağı 4" onclick="setCaytikani(3)">
+      <img src="/images/caytikani-5.webp" alt="Çaytikanı yağı 5" onclick="setCaytikani(4)">
+    </div>
+
+    <h2 class="oil-title">Çaytikanı Yağı / 100% orqanik soyuq pres</h2>
+
+    <div class="oil-quote">
+      <p><strong>🧡 Təbiətin “qızıl mayesi” adlandırılan şəfalı yağ</strong></p>
+      <p>Nadir Omega-7 yağ turşusu, yüksək C və E vitamini tərkibi ilə həm daxili orqanlar, həm də dəri bərpası üçün əvəzolunmaz təbii dəstəkdir.</p>
+    </div>
+
+    <div class="prices-title">Qiymətlər</div>
+    <div class="price-grid">
+      <div class="price-item"><span class="vol">100 ML</span><span class="val">30 AZN</span></div>
+      <div class="price-item"><span class="vol">250 ML</span><span class="val">65 AZN</span></div>
+      <div class="price-item"><span class="vol">500 ML</span><span class="val">110 AZN</span></div>
+      <div class="price-item"><span class="vol">1 LT</span><span class="val">190 AZN</span></div>
+    </div>
+
+    <div class="oil-details">
+      <h2>🧡 Çaytikanı Yağı – Ətraflı Faydaları</h2>
       <p>
         <strong>Çaytikanı yağı (Sea Buckthorn)</strong> meyvələrindən soyuq sıxma üsulu ilə əldə olunan,
         karotinoidlər və nadir yağ turşuları ilə zəngin təbii bitki yağıdır.
@@ -298,6 +601,14 @@
         <li>Beta-karotin tərkibi sayəsində göz sağlamlığını dəstəkləyir</li>
       </ul>
 
+      <div class="extra-gallery-title">📸 Çaytikanı Yağı – Məhsul Görünüşləri</div>
+      <div class="seabuck-photo-grid">
+        <img src="/images/caytikani-2.webp" alt="Çaytikanı yağı qablaşdırma 1" loading="lazy" onclick="setCaytikani(1); window.scrollTo({top: document.getElementById('caytikani-main').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'})">
+        <img src="/images/caytikani-3.webp" alt="Çaytikanı yağı qablaşdırma 2" loading="lazy" onclick="setCaytikani(2); window.scrollTo({top: document.getElementById('caytikani-main').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'})">
+        <img src="/images/caytikani-4.webp" alt="Çaytikanı yağı meyvəsi və yağı" loading="lazy" onclick="setCaytikani(3); window.scrollTo({top: document.getElementById('caytikani-main').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'})">
+        <img src="/images/caytikani-5.webp" alt="100% təbii soyuq sıxma çaytikanı yağı" loading="lazy" onclick="setCaytikani(4); window.scrollTo({top: document.getElementById('caytikani-main').getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth'})">
+      </div>
+
       <h2>🥄 İstifadə qaydası</h2>
       <ul>
         <li><strong>Daxilə:</strong> Gündə 1 çay qaşığı (yeməkdən 20-30 dəqiqə əvvəl və ya yeməklə birlikdə)</li>
@@ -305,29 +616,30 @@
         <li><strong>Qarışıq:</strong> İlıq su, bal və ya salatların üzərinə əlavə edilərək</li>
       </ul>
 
-      <h2>⚠️ İstifadə zamanı diqqət</h2>
-      <ul>
-        <li>Kəskin öd kisəsi, pankreatit və qaraciyər xəstəlikləri zamanı həkimlə məsləhətləşin</li>
-        <li>Allergik reaksiya ehtimalına qarşı ilk dəfə kiçik miqdarda sınayın</li>
-        <li>Hamilə, süd verən qadınlar və uşaqlar üçün istifadədən əvvəl həkim məsləhəti tövsiyə olunur</li>
-        <li>Qaranlıq və sərin yerdə saxlayın</li>
-      </ul>
+      <div class="caution-box">
+        <h2>⚠️ İstifadə zamanı diqqət</h2>
+        <ul>
+          <li>Kəskin öd kisəsi, pankreatit və qaraciyər xəstəlikləri zamanı həkimlə məsləhətləşin</li>
+          <li>Allergik reaksiya ehtimalına qarşı ilk dəfə kiçik miqdarda sınayın</li>
+          <li>Hamilə, süd verən qadınlar və uşaqlar üçün istifadədən əvvəl həkim məsləhəti tövsiyə olunur</li>
+          <li>Qaranlıq və sərin yerdə saxlayın</li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </article>
 
-</div> <!-- .products sonu -->
+</main>
 
 <!-- NAV BUTTONLAR -->
 <div class="nav-buttons">
-  <a href="bitkiler.html" class="btn">⇦ Geri</a>
-  <a href="bitkiler.html" class="btn">⇨ İrəli</a>
-  <a href="bitkiler.html" class="btn">🏠 Ana səhifə</a>
+  <a href="/bitkiler.html" class="btn">⇦ Bitkilər</a>
+  <a href="/" class="btn">🏠 Ana səhifə</a>
 </div>
 
 <!-- INSTAGRAM -->
 <div class="instagram-footer">
-  <a href="https://instagram.com/derman_bitkileri" target="_blank">
-    <img src="images/instaqram1.jpg" alt="Instagram">
+  <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener">
+    <img src="/images/instaqram1.jpg" alt="Instagram">
     Instagram
   </a>
 </div>
@@ -335,6 +647,28 @@
 <footer>
   &copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
 </footer>
+
+<script>
+  const caytikaniImages = [
+    "/images/caytikani.jpeg",
+    "/images/caytikani-2.webp",
+    "/images/caytikani-3.webp",
+    "/images/caytikani-4.webp",
+    "/images/caytikani-5.webp"
+  ];
+  let caytikaniIdx = 0;
+
+  function setCaytikani(idx) {
+    caytikaniIdx = (idx + caytikaniImages.length) % caytikaniImages.length;
+    document.getElementById("caytikani-main").src = caytikaniImages[caytikaniIdx];
+    const thumbs = document.querySelectorAll("#caytikani-thumbs img");
+    thumbs.forEach((img, i) => img.classList.toggle("active", i === caytikaniIdx));
+  }
+
+  function stepCaytikani(dir) {
+    setCaytikani(caytikaniIdx + dir);
+  }
+</script>
 
 </body>
 </html>
