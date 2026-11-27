@@ -5,7 +5,7 @@
 ## Əsas Səhifələr
 
 - [Ana Səhifə](https://www.herbal-az.store/): Herbal Bazar saytının əsas səhifəsi və kateqoriyalar.
-- [Soyuq Yağ Sıxma (Qarazirə və Çaytikanı Yağları)](https://www.herbal-az.store/bitkiler/yagsixma): 100% orqanik soyuq pres qarazirə yağı (250 ml - 30 AZN, 500 ml - 55 AZN, 1 lt - 100 AZN) və çaytikanı yağı haqqında tərkib, faydalar və istifadə qaydaları.
+- [Soyuq Yağ Sıxma (Qarazirə və Çaytikanı Yağları)](https://www.herbal-az.store/yagsixma): 100% orqanik soyuq pres qarazirə yağı (250 ml - 30 AZN, 500 ml - 55 AZN, 1 lt - 100 AZN) və çaytikanı yağı haqqında tərkib, faydalar və istifadə qaydaları.
 - [Herbal Bazar Haqqında / Məhsullar](https://www.herbal-az.store/herbal-bazar.html): Bitki məhsulları və ümumi məlumat.
 - [Sayt Xəritəsi](https://www.herbal-az.store/sitemap.html): Saytdakı bütün bitki səhifələrinin siyahısı.
 
