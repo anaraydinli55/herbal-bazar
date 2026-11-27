@@ -204,7 +204,11 @@
 .himalaya-card-link {
   text-decoration: none;
   color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
 }
       
   </style>
@@ -400,9 +404,8 @@
       <p><strong>Arı südü hüceyrələrin enerji mübadiləsini dəstəkləyir.</strong></p>
       <a href="/ayarlar.html" class="card-btn">Məhsulu gör</a>
     </div>
-       <div class="card">
-      <!-- HİMALAY DUZ LAMPASI KARTI (11 ŞƏKİLLİ) -->
-<div class="card himalaya-card">
+    <!-- HİMALAY DUZ LAMPASI KARTI (11 ŞƏKİLLİ) -->
+    <div class="card himalaya-card">
   <div class="himalaya-slider-wrap">
     <button type="button" class="slider-btn prev" onclick="slideHimalaya(this, -1)" aria-label="Əvvəlki şəkil">❮</button>
     <div class="himalaya-slider" onscroll="updateHimalayaCounter(this)">
