@@ -241,3 +241,38 @@ footer {
   background-color: #6f2a9f; /* hover effekti */
 }
 
+
+/* ================== BOTONİK ZÜMRÜD TEMA (ANA SƏHİFƏ) ================== */
+body {
+  background: radial-gradient(circle at top center, #183226 0%, #0d1813 48%, #08100c 100%) !important;
+  background-color: #0b1410 !important;
+  color: #eef5f0 !important;
+}
+
+h2 {
+  color: #8ce0b3 !important;
+}
+
+.card {
+  background: linear-gradient(180deg, #13221b 0%, #0e1a14 100%) !important;
+  border: 1px solid rgba(116, 198, 157, 0.2);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+}
+
+.card h3 {
+  color: #8ce0b3 !important;
+}
+
+.card p {
+  color: #cde0d5 !important;
+}
+
+.nav-buttons {
+  background-color: transparent !important;
+}
+
+footer {
+  background-color: #070e0a !important;
+  border-top: 1px solid rgba(116, 198, 157, 0.16);
+  color: #a8bdb1 !important;
+}

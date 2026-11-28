@@ -573,3 +573,75 @@ body .nav-buttons .btn:hover {
     font-size: 13px;
   }
 }
+
+/* ================== BOTONİK ZÜMRÜD TEMA (BİTKİ SƏHİFƏLƏRİ) ================== */
+body.plant-page {
+  background: radial-gradient(circle at top center, #183226 0%, #0d1813 48%, #08100c 100%);
+  background-color: #0b1410;
+  color: #eef5f0;
+}
+
+.site-header {
+  background: rgba(11, 20, 16, 0.92);
+  border-bottom: 1px solid rgba(116, 198, 157, 0.26);
+}
+
+.site-logo {
+  color: #8ce0b3;
+}
+
+.site-nav a:hover {
+  background: rgba(116, 198, 157, 0.16);
+  color: #fff;
+}
+
+.contact-tel {
+  background: rgba(116, 198, 157, 0.14);
+  border-color: rgba(116, 198, 157, 0.42);
+  color: #ddf5e8;
+}
+
+.plant-hero-heading {
+  color: #95d5b2;
+}
+
+.plant-media-card,
+.plant-info-card {
+  background: linear-gradient(180deg, #13221b 0%, #0e1a14 100%);
+  border-color: rgba(116, 198, 157, 0.22);
+}
+
+.plant-price-badge {
+  background: rgba(116, 198, 157, 0.16);
+  border-color: #52b788;
+  color: #cef5df;
+}
+
+.plant-info-card .content h1,
+.plant-info-card .content h2 {
+  color: #8ce0b3;
+}
+
+.plant-info-card .content p,
+.plant-info-card .content li {
+  color: #d3e5da;
+}
+
+body .nav-buttons .btn {
+  background: rgba(116, 198, 157, 0.14);
+  border-color: rgba(116, 198, 157, 0.45);
+  color: #ddf5e8;
+}
+
+body .nav-buttons .btn:hover {
+  background: #2d6a4f;
+  border-color: #52b788;
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(45, 106, 79, 0.4);
+}
+
+body.plant-page footer {
+  background-color: #070e0a;
+  border-top: 1px solid rgba(116, 198, 157, 0.16);
+  color: #a8bdb1;
+}
