@@ -513,3 +513,16 @@ body.plant-page {
   display: block;
   filter: drop-shadow(0 4px 12px rgba(37, 211, 102, 0.35));
 }
+
+.contact-wa {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.contact-wa-icon {
+  width: 19px;
+  height: 19px;
+  display: block;
+  flex-shrink: 0;
+}
