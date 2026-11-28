@@ -353,3 +353,48 @@ footer {
   .site-header { padding: 12px 14px; }
   .header-contact { margin-left: 0; }
 }
+
+/* ================== SLİDER YAZI QUTUSU (DÜZƏLİŞ) ================== */
+.slides {
+  display: flex;
+  width: 100% !important;
+  height: 100%;
+}
+.slide {
+  flex: 0 0 100% !important;
+  width: 100% !important;
+}
+.slide-content {
+  position: absolute;
+  bottom: 36px !important;
+  left: 36px !important;
+  max-width: 560px !important;
+  padding: 18px 22px !important;
+  background: rgba(8, 16, 12, 0.62) !important;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(235, 215, 167, 0.22);
+  border-radius: 14px !important;
+  z-index: 10;
+}
+.slide-content h1,
+.slide-content h2 {
+  font-size: clamp(20px, 2.6vw, 30px) !important;
+  color: #f4efe6 !important;
+  margin: 0 0 8px 0 !important;
+  line-height: 1.25;
+}
+.slide-content p {
+  font-size: clamp(14px, 1.5vw, 17px) !important;
+  color: #dce4df !important;
+  margin: 0 !important;
+  line-height: 1.45;
+}
+@media (max-width: 768px) {
+  .slide-content {
+    bottom: 16px !important;
+    left: 16px !important;
+    right: 16px !important;
+    max-width: calc(100% - 32px) !important;
+    padding: 12px 14px !important;
+  }
+}
