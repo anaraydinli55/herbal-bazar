@@ -251,3 +251,234 @@ footer {
         gap: 10px;
       }
     }
+
+/* ================== ÜST NAVİQASİYA HEADER ================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 10, 14, 0.94);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(142, 68, 173, 0.35);
+  padding: 12px 24px;
+}
+
+.site-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #d39ef2;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: #e2e2e8;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 7px 12px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover {
+  background: rgba(142, 68, 173, 0.22);
+  color: #fff;
+}
+
+.header-contact {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.header-contact a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 13px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: transform 0.15s, opacity 0.2s;
+}
+
+.header-contact a:hover {
+  transform: translateY(-1px);
+  opacity: 0.92;
+}
+
+.contact-tel {
+  background: rgba(142, 68, 173, 0.2);
+  border: 1px solid rgba(155, 89, 182, 0.5);
+  color: #f3e5ff;
+}
+
+.contact-wa {
+  background: #1ebe5d;
+  color: #fff;
+}
+
+@media (max-width: 960px) {
+  .site-header { padding: 12px 14px; }
+  .header-contact { margin-left: 0; }
+}
+
+/* ================== BİTKİ SƏHİFƏSİ 2-SÜTUNLU DÜZÜLÜŞ ================== */
+body.plant-page {
+  margin: 0;
+  font-family: 'Architects Daughter', cursive;
+  background-color: #070709;
+  color: #eee;
+}
+
+.plant-hero-heading {
+  text-align: center;
+  margin: 26px 16px 8px;
+  color: #d39ef2;
+  font-size: clamp(22px, 3vw, 30px);
+}
+
+.plant-layout {
+  max-width: 1280px;
+  margin: 20px auto 40px;
+  padding: 0 22px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 30px;
+  align-items: start;
+}
+
+.plant-media-card {
+  position: sticky;
+  top: 86px;
+  background: #111015;
+  border: 1px solid rgba(142, 68, 173, 0.32);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.plant-media-card img {
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.plant-media-card h1 {
+  margin: 16px 0 6px;
+  font-size: 26px;
+  color: #fff;
+}
+
+.plant-price-badge {
+  display: inline-block;
+  margin: 6px 0 16px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(142, 68, 173, 0.22);
+  border: 1px solid #9b59b6;
+  color: #ead1fa;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.plant-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plant-wa-btn,
+.plant-tel-btn {
+  flex: 1 1 160px;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  transition: opacity 0.2s, transform 0.15s;
+}
+
+.plant-wa-btn {
+  background: #1ebe5d;
+  color: #fff;
+}
+
+.plant-tel-btn {
+  background: #8e44ad;
+  color: #fff;
+}
+
+.plant-wa-btn:hover,
+.plant-tel-btn:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.plant-info-card {
+  background: #111015;
+  border: 1px solid #24212b;
+  border-radius: 18px;
+  padding: 26px 28px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.plant-info-card .content {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-family: 'Architects Daughter', cursive;
+}
+
+.plant-info-card .content h1,
+.plant-info-card .content h2 {
+  text-align: left;
+  color: #d39ef2;
+  margin-top: 20px;
+}
+
+.plant-info-card .content h1:first-child,
+.plant-info-card .content h2:first-child {
+  margin-top: 0;
+}
+
+.plant-layout + .nav-buttons .btn {
+  max-width: 220px;
+}
+
+@media (max-width: 900px) {
+  .plant-layout {
+    grid-template-columns: 1fr;
+    padding: 0 14px;
+    gap: 20px;
+  }
+  .plant-media-card {
+    position: static;
+  }
+  .plant-info-card {
+    padding: 20px 18px;
+  }
+}
