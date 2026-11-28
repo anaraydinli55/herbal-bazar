@@ -10,212 +10,49 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  
 
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #cfcfcf; 
-      font-family: 'Inter', sans-serif; 
-      line-height: 1.8;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    h1, h2, .main-title {
-      font-family: 'Architects Daughter', cursive;
-      color: #fff9c4; 
-      text-align: center;
-    }
-
-    .main-title {
-      font-size: 30px;
-      margin: 40px 0;
-      color: #fff;
-    }
-
-    h1 {
-      font-size: 26px;
-      margin-bottom: 25px;
-      border-bottom: 1px solid #222;
-      padding-bottom: 15px;
-    }
-
-    h2 {
-      font-size: 22px;
-      text-align: left;
-      margin-top: 35px;
-      border-left: 3px solid #fff9c4;
-      padding-left: 15px;
-    }
-
-    .price-container {
-      border: 2px dashed #fff9c4;
-      border-radius: 15px;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 300px;
-      text-align: center;
-      background-color: rgba(255, 249, 196, 0.05);
-    }
-
-    .price-text {
-      font-family: 'Architects Daughter', cursive;
-      font-size: 24px;
-      color: #fff9c4;
-      font-weight: bold;
-      display: block;
-    }
-
-    .product-card {
-      background-color: #0a0a0a;
-      border-radius: 20px;
-      padding: 30px;
-      border: 1px solid #1a1a1a;
-    }
-
-    .product-image {
-      width: 100%;
-      max-width: 500px;
-      display: block;
-      margin: 0 auto 25px;
-      border-radius: 15px;
-    }
-
-    .content p {
-      font-size: 17px;
-      margin-bottom: 20px;
-    }
-
-    .highlight-box {
-      background-color: rgba(255, 249, 196, 0.08);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 25px 0;
-      border-left: 4px solid #fff9c4;
-    }
-
-    ul {
-      padding-left: 5px;
-      list-style: none;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      padding-left: 25px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: "🌿";
-      position: absolute;
-      left: 0;
-      font-size: 14px;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 40px;
-      flex-wrap: nowrap;
-    }
-
-    .btn {
-      flex: 1;
-      text-align: center;
-      padding: 10px 15px;
-      background-color: #111;
-      border: 1px solid #333;
-      color: #fff9c4;
-      text-decoration: none;
-      border-radius: 10px;
-      font-family: 'Architects Daughter', cursive;
-      font-size: 16px;
-      transition: 0.3s;
-      white-space: nowrap;
-      max-width: 140px;
-    }
-
-    .btn:hover {
-      background-color: #fff9c4;
-      color: #000;
-      border-color: #fff9c4;
-    }
-
-    .instagram-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      margin: 40px 0;
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Architects Daughter', cursive;
-    }
-
-    .instagram-link img {
-      width: 30px;
-      height: 30px;
-      border-radius: 8px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #555;
-      font-size: 13px;
-    }
-
-    @media (max-width: 480px) {
-      .main-title {
-        font-size: 24px;
-      }
-      
-      h1 {
-        font-size: 22px;
-      }
-      
-      h2 {
-        font-size: 18px;
-      }
-      
-      .btn {
-        padding: 8px 10px;
-        font-size: 14px;
-        max-width: 120px;
-      }
-      
-      .price-text {
-        font-size: 20px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/bitkiler.css">
 </head>
-<body>
+<body class="plant-page">
 
-<div class="container">
-  <h2 class="main-title">🌿 Sağlamlığın təməli təbiətdir</h2>
-
-  <article class="product-card">
-    <img src="/images/cobancokerten.jpg" alt="Çoban Çökərtən" class="product-image">
-    
-    <div class="price-container">
-      <span class="price-text">50 qr - 10 AZN</span>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">🌿 Herbal Bazar</a>
+    <nav class="site-nav" aria-label="Əsas keçidlər">
+      <a href="/">Ana səhifə</a>
+      <a href="/bitkiler.html">Bitkilər</a>
+      <a href="/yagsixma">Soyuq Yağlar</a>
+      <a href="/sabunlar/">Sabunlar</a>
+      <a href="/himalay-duz-lampasi">Himalay Lampası</a>
+      <a href="/kudretnari.html">Kudret Narı</a>
+    </nav>
+    <div class="header-contact">
+      <a href="tel:+994705470947" class="contact-tel">📞 +994 70 547 09 47</a>
+      <a href="https://wa.me/994705470947?text=Salam!%20Bitki%20m%C9%99hsullar%C4%B1%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m" target="_blank" rel="noopener" class="contact-wa"><svg class="contact-wa-icon" viewBox="0 0 32 32" width="19" height="19" aria-hidden="true"><path fill="#ffffff" d="M23.3 8.7A10.2 10.2 0 0 0 7.2 21.1L5.8 26.2l5.2-1.4a10.2 10.2 0 0 0 12.3-16.1zm-7.3 15.7a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.5 8.5 0 1 1 7.1 3.9zm4.7-6.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg><span>Əlaqə</span></a>
     </div>
+  </div>
+</header>
 
-    <h1>🌿 Çoban Çökərtən (Tribulus)</h1>
+<h2 class="plant-hero-heading">🌿 Sağlamlığın təməli təbiətdir</h2>
 
+<main class="plant-layout">
+  <aside class="plant-media-card">
+    <img src="/images/cobancokerten.jpg" alt="Çoban Çökərtən">
+    <h1>Çoban Çökərtən</h1>
+    
+    <div class="plant-actions">
+      <a href="https://wa.me/994705470947?text=Salam%21%20%C3%87oban%20%C3%87%C3%B6k%C9%99rt%C9%99n%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20v%C9%99%20sifari%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" class="plant-wa-order" aria-label="WhatsApp Sifariş">
+        <span class="plant-wa-order-label">WhatsApp Sifariş</span>
+        <svg class="plant-wa-icon" viewBox="0 0 32 32" width="54" height="54" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#ffffff" d="M23.3 8.7A10.2 10.2 0 0 0 7.2 21.1L5.8 26.2l5.2-1.4a10.2 10.2 0 0 0 12.3-16.1zm-7.3 15.7a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.5 8.5 0 1 1 7.1 3.9zm4.7-6.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+      </a>
+    </div>
+  </aside>
+
+  <section class="plant-info-card">
     <div class="content">
-      <p><strong>Çoban çökərtən</strong> bədənin ümumi tonusunu artıran, hormonal balansı tənzimləyən və enerji verən ən effektiv təbii vasitələrdən biridir.</p>
+<h1>🌿 Çoban Çökərtən (Tribulus)</h1>
+<p><strong>Çoban çökərtən</strong> bədənin ümumi tonusunu artıran, hormonal balansı tənzimləyən və enerji verən ən effektiv təbii vasitələrdən biridir.</p>
 
       <div class="highlight-box">
         <p style="margin:0; color:#fff9c4;"><strong>Kişi Sağlamlığı Üçün:</strong> Bu bitki bədəndə testosteron səviyyəsini təbii yolla dəstəkləyir, fiziki gücü və dözümlülüyü artırır. Kişilər üçün ən vacib təbii enerji mənbəyidir.</p>
@@ -234,26 +71,26 @@
 
       <h2 style="border-left-color: #ff5252;">⚠️ Diqqət</h2>
       <p>Hamiləlik dövründə və ciddi xroniki xəstəliklər zamanı həkimlə məsləhətləşmək vacibdir.</p>
-    </div>
+</div>
+  </section>
+</main>
 
-    <nav class="nav-buttons">
+<nav class="nav-buttons">
       <a href="limonmelissa.html" class="btn">⇦ Geri</a>
       <a href="/bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="gingkobiloba.html" class="btn">İrəli ⇨</a>
     </nav>
 
-    <div style="text-align: center;">
-      <a href="https://instagram.com/derman_bitkileri" class="instagram-link" target="_blank" rel="noopener noreferrer">
-        <img src="/images/instaqram1.jpg" alt="Instagram">
-        <span>Instagram: @derman_bitkileri</span>
-      </a>
-    </div>
-  </article>
-
-  <footer>
-    <p>&copy; 2025 Herbal Bazar. Bütün hüquqlar qorunur.</p>
-  </footer>
+<div class="instagram-footer">
+  <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener">
+    <img src="/images/instaqram1.jpg" alt="Instagram">
+    Instagram
+  </a>
 </div>
+
+<footer>
+  &copy; 2025 Herbal Bazar – Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
+</footer>
 
 </body>
 </html>

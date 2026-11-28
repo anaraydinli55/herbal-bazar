@@ -10,214 +10,48 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg-color: #000;
-      --card-bg: #0a0a0a;
-      --accent-yellow: #fff9c4; 
-      --text-main: #fff;
-      --text-dim: #ccc;
-      --border-color: #1a1a1a;
-    }
+  
 
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
-      line-height: 1.7;
-    }
-
-    .container {
-      max-width: 850px;
-      margin: auto;
-      padding: 20px 20px 60px;
-    }
-
-    header h2 {
-      font-family: 'Architects Daughter', cursive;
-      text-align: center;
-      margin: 40px 0;
-      font-size: 32px;
-      color: var(--text-main);
-    }
-
-    .product-card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border-color);
-      border-radius: 20px;
-      padding: 30px;
-    }
-
-    img.main-img {
-      width: 100%;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      border: 1px solid #222;
-    }
-
-    h3 {
-      font-family: 'Architects Daughter', cursive;
-      color: var(--accent-yellow);
-      font-size: 28px;
-      margin: 10px 0;
-    }
-
-    .price {
-      display: inline-block;
-      border: 2px dashed var(--accent-yellow);
-      color: var(--accent-yellow);
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-weight: bold;
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      font-size: 24px;
-      color: #fff;
-      margin: 25px 0;
-      line-height: 1.4;
-      border-left: 4px solid var(--accent-yellow);
-      padding-left: 15px;
-      font-family: 'Architects Daughter', cursive;
-    }
-
-    h2 {
-      font-family: 'Architects Daughter', cursive;
-      color: var(--accent-yellow);
-      font-size: 22px;
-      margin-top: 35px;
-    }
-
-    p, ul {
-      color: var(--text-dim);
-      font-size: 17px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul li {
-      margin-bottom: 12px;
-      padding-left: 25px;
-      position: relative;
-    }
-
-    ul li::before {
-      content: "🌿";
-      position: absolute;
-      left: 0;
-    }
-
-    .nav-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-top: 40px;
-      flex-wrap: nowrap;
-    }
-
-    .btn {
-      flex: 1;
-      padding: 10px 20px;
-      background-color: #111;
-      border: 1px solid #333;
-      border-radius: 10px;
-      color: var(--accent-yellow);
-      text-decoration: none;
-      font-weight: 600;
-      font-family: 'Architects Daughter', cursive;
-      transition: 0.3s;
-      text-align: center;
-      white-space: nowrap;
-      font-size: 16px;
-      max-width: 140px;
-    }
-
-    .btn:hover {
-      background-color: var(--accent-yellow);
-      color: #000;
-    }
-
-    .instagram-footer {
-      text-align: center;
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid #1a1a1a;
-    }
-
-    .instagram-footer a {
-      color: #fff;
-      text-decoration: none;
-      font-family: 'Architects Daughter', cursive;
-      font-size: 18px;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .instagram-footer img {
-      width: 28px;
-      height: 28px;
-      border-radius: 5px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px;
-      color: #555;
-      font-size: 14px;
-    }
-
-    @media (max-width: 480px) {
-      .product-card {
-        padding: 20px;
-      }
-      
-      header h2 {
-        font-size: 24px;
-      }
-      
-      h3 {
-        font-size: 22px;
-      }
-      
-      h1 {
-        font-size: 20px;
-      }
-      
-      .btn {
-        padding: 8px 12px;
-        font-size: 14px;
-        max-width: 120px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="/bitkiler.css">
 </head>
+<body class="plant-page">
 
-<body>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">🌿 Herbal Bazar</a>
+    <nav class="site-nav" aria-label="Əsas keçidlər">
+      <a href="/">Ana səhifə</a>
+      <a href="/bitkiler.html">Bitkilər</a>
+      <a href="/yagsixma">Soyuq Yağlar</a>
+      <a href="/sabunlar/">Sabunlar</a>
+      <a href="/himalay-duz-lampasi">Himalay Lampası</a>
+      <a href="/kudretnari.html">Kudret Narı</a>
+    </nav>
+    <div class="header-contact">
+      <a href="tel:+994705470947" class="contact-tel">📞 +994 70 547 09 47</a>
+      <a href="https://wa.me/994705470947?text=Salam!%20Bitki%20m%C9%99hsullar%C4%B1%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20ist%C9%99yir%C9%99m" target="_blank" rel="noopener" class="contact-wa"><svg class="contact-wa-icon" viewBox="0 0 32 32" width="19" height="19" aria-hidden="true"><path fill="#ffffff" d="M23.3 8.7A10.2 10.2 0 0 0 7.2 21.1L5.8 26.2l5.2-1.4a10.2 10.2 0 0 0 12.3-16.1zm-7.3 15.7a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.5 8.5 0 1 1 7.1 3.9zm4.7-6.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg><span>Əlaqə</span></a>
+    </div>
+  </div>
+</header>
 
-<div class="container">
-  <header>
-    <h2>🌿 Sağlamlığın təməli təbiətdir</h2>
-  </header>
+<h2 class="plant-hero-heading">🌿 Sağlamlığın təməli təbiətdir</h2>
 
-  <div class="product-card">
-    <img src="/images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)" class="main-img">
+<main class="plant-layout">
+  <aside class="plant-media-card">
+    <img src="/images/karabas.jpg" alt="Karabaş otu (Lavandula stoechas)">
+    <h1>Karabaş Otu</h1>
+    <div class="plant-price-badge">50 qr - 10 AZN</div>
+    <div class="plant-actions">
+      <a href="https://wa.me/994705470947?text=Salam%21%20Karaba%C5%9F%20Otu%20haqq%C4%B1nda%20m%C9%99lumat%20almaq%20v%C9%99%20sifari%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m." target="_blank" rel="noopener" class="plant-wa-order" aria-label="WhatsApp Sifariş">
+        <span class="plant-wa-order-label">WhatsApp Sifariş</span>
+        <svg class="plant-wa-icon" viewBox="0 0 32 32" width="54" height="54" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#25D366"/><path fill="#ffffff" d="M23.3 8.7A10.2 10.2 0 0 0 7.2 21.1L5.8 26.2l5.2-1.4a10.2 10.2 0 0 0 12.3-16.1zm-7.3 15.7a8.5 8.5 0 0 1-4.3-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.5 8.5 0 1 1 7.1 3.9zm4.7-6.4c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.6.1-.3-.1-1.1-.4-2.1-1.3-.8-.7-1.3-1.5-1.4-1.8-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.3 0-.5-.1-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3s1 2.7 1.1 2.9c.1.2 1.9 3 4.7 4.2.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.5-.3z"/></svg>
+      </a>
+    </div>
+  </aside>
 
-    <h3>Karabaş Otu</h3>
-    <div class="price">50 qr - 10 AZN</div>
-
+  <section class="plant-info-card">
     <div class="content">
-      <h1>🌿 Sinir sistemi, baş ağrıları və tənəffüs yolları</h1>
+<h1>🌿 Sinir sistemi, baş ağrıları və tənəffüs yolları</h1>
       <p><strong>Karabaş otu ən çox sinir sisteminə sakitləşdirici təsiri ilə məşhurdur. Stress, əsəbilik, narahatlıq, qorxu hissi və yuxusuzluq zamanı rahatladıcı təsir göstərə bilər. Müntəzəm istifadə edildikdə zehni gərginliyi azaldır, diqqət və yaddaşın güclənməsinə kömək edə bilər. Xalq arasında "beyin otu" kimi tanınmasının səbəbi də məhz bu təsiridir.</strong></p>
 
       <h2>🌸 İltihab əleyhinə və antiseptik xüsusiyyətləri</h2>
@@ -258,25 +92,25 @@
         <li>Karabaş otu güclü təsirə malik bitkidir. Hamilə və süd verən qadınlar, epilepsiya və ciddi sinir sistemi xəstəlikləri olan şəxslər istifadədən əvvəl mütləq həkimlə məsləhətləşməlidir.</li>
         <li>Yüksək dozada uzun müddət istifadədən çəkinmək lazımdır</li>
       </ul>
-    </div>
+</div>
+  </section>
+</main>
 
-    <nav class="nav-buttons">
+<nav class="nav-buttons">
       <a href="yakiotu.html" class="btn">⇦ Geri</a>
       <a href="/bitkiler.html" class="btn">🏠 Ana səhifə</a>
       <a href="limonmelissa.html" class="btn">İrəli ⇨</a>
     </nav>
 
-    <div class="instagram-footer">
-      <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener noreferrer">
-        <img src="/images/instaqram1.jpg" alt="Instagram">
-        <span>Instagram: @derman_bitkileri</span>
-      </a>
-    </div>
-  </div>
+<div class="instagram-footer">
+  <a href="https://instagram.com/derman_bitkileri" target="_blank" rel="noopener">
+    <img src="/images/instaqram1.jpg" alt="Instagram">
+    Instagram
+  </a>
 </div>
 
 <footer>
-  <p>&copy; 2025 Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.</p>
+  &copy; 2025 Herbal Bazar – Şəfalı bitki məhsulları. Bütün hüquqlar qorunur.
 </footer>
 
 </body>
